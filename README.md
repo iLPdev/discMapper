@@ -1,9 +1,5 @@
 # discMapper
- Discworld MUD mapping script for Mudlet
-<!--
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** iLPdev, discMapper, twitter_handle, ian@ilpdev.com
--->
+ Mudlet mapping script for Discworld MUD
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -18,9 +14,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -39,7 +32,7 @@
     <br />
     <a href="https://github.com/iLPdev/discMapper">View Demo</a>
     ·
-    <a href="https://github.com/iLPdev/discMapper/issues">discMapperrt Bug</a>
+    <a href="https://github.com/iLPdev/discMapper/issues">Report Bug</a>
     ·
     <a href="https://github.com/iLPdev/discMapper/issues">Request Feature</a>
   </p>
@@ -166,16 +159,14 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[contributors-shield]: https://img.shields.io/github/contributors/iLPdev/discMapper.svg?style=flat-square
+[contributors-url]: https://github.com/iLPdev/discMapper/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/iLPdev/discMapper.svg?style=flat-square
+[forks-url]: https://github.com/iLPdev/discMapper/network/members
+[stars-shield]: https://img.shields.io/github/stars/iLPdev/discMapper.svg?style=flat-square
+[stars-url]: https://github.com/iLPdev/discMapper/stargazers
+[issues-shield]: https://img.shields.io/github/issues/iLPdev/discMapper.svg?style=flat-square
+[issues-url]: https://github.com/iLPdev/discMapper/issues
+[license-shield]: https://img.shields.io/github/license/iLPdev/discMapper.svg?style=flat-square
+[license-url]: https://github.com/iLPdev/discMapper/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
