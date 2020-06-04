@@ -25,7 +25,7 @@
   <h3 align="center">discMapper</h3>
 
   <p align="center">
-    Discworld MUD mapping script for Mudlet
+    Mudlet mapping script for Discworld MUD
     <br />
     <a href="https://github.com/iLPdev/discMapper"><strong>Explore the docs »</strong></a>
     <br />
