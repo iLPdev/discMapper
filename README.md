@@ -2,13 +2,6 @@
  Discworld MUD mapping script for Mudlet
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -62,14 +55,12 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`iLPdev`, `discMapper`, `twitter_handle`, `ian@ilpdev.com`
+
 
 
 ### Built With
 
-* []()
+* [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
 * []()
 * []()
 
@@ -133,14 +124,14 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under GML v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - ian@ilpdev.com
+@Stack on [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9) - stack@ilpdev.com
 
 Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
 
