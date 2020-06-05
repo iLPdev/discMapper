@@ -124,7 +124,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under GML v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
+Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
 
 
 
