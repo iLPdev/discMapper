@@ -1,5 +1,5 @@
 # discMapper
- Mudlet mapping script for Discworld MUD
+ Discworld MUD mapping script for Mudlet
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -13,7 +13,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![GPL License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -25,7 +25,7 @@
   <h3 align="center">discMapper</h3>
 
   <p align="center">
-    Mudlet mapping script for Discworld MUD
+    Discworld MUD mapping script for Mudlet
     <br />
     <a href="https://github.com/iLPdev/discMapper"><strong>Explore the docs »</strong></a>
     <br />
