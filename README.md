@@ -56,6 +56,9 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
+### Features
+* 2D and 3D map rendering of the disc
+* Built-in pathfinding
 
 
 ### Built With
