@@ -18,13 +18,13 @@
   <h3 align="center">discMapper</h3>
 
   <p align="center">
-    Discworld MUD mapping script for Mudlet
+    Mudlet package for mapping the Discworld MUD
     <br />
     <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo">View Demo</a>
-    ·
+    <!-- <a href="https://github.com/github_username/repo">View Demo</a> 
+    · -->
     <a href="https://github.com/github_username/repo/issues">Report Bug</a>
     ·
     <a href="https://github.com/github_username/repo/issues">Request Feature</a>
