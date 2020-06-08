@@ -11,28 +11,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/iLPdev/discMapper">
+  <a href="https://github.com/iLPdev/discmapper">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">discMapper</h3>
 
   <p align="center">
- 
     Discworld MUD mapping script for Mudlet
     <br />
-    <a href="https://github.com/iLPdev/discMapper"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/iLPdev/discMapper">View Demo</a>
+    <a href="https://github.com/github_username/repo">View Demo</a>
     ·
-    <a href="https://github.com/iLPdev/discMapper/issues">Report Bug</a>
+    <a href="https://github.com/github_username/repo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/iLPdev/discMapper/issues">Request Feature</a>
+    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
