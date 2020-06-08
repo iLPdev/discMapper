@@ -8,16 +8,18 @@
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO 
 <br />
 <p align="center">
   <a href="https://github.com/iLPdev/discMapper">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
+-->
   <h3 align="center">discMapper</h3>
 
   <p align="center">
+     
+ 
     Discworld MUD mapping script for Mudlet
     <br />
     <a href="https://github.com/iLPdev/discMapper"><strong>Explore the docs »</strong></a>
