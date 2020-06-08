@@ -1,13 +1,6 @@
 # discMapper
  Discworld MUD mapping script for Mudlet
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -18,18 +11,24 @@
   <h3 align="center">discMapper</h3>
 
   <p align="center">
-    Mudlet package for mapping the Discworld MUD
-     <!--<br />
-    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo">View Demo</a> 
-    · -->
+    A Mudlet package for mapping the Discworld MUD
+     <br />
+    <!-- <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
+              <br />
+              <br />
+              <a href="https://github.com/github_username/repo">View Demo</a> 
+              · -->
     <a href="https://github.com/github_username/repo/issues">Report Bug</a>
     ·
     <a href="https://github.com/github_username/repo/issues">Request Feature</a>
   </p>
 </p>
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPL License][license-shield]][license-url]
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
