@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/iLPdev/discmapper">
+  <a href="https://github.com/iLPdev/discMapper/images/disMapper_logo.png">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
