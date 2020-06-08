@@ -18,7 +18,6 @@
   <h3 align="center">discMapper</h3>
 
   <p align="center">
-     
  
     Discworld MUD mapping script for Mudlet
     <br />
