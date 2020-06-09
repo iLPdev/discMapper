@@ -27,6 +27,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
+[![standard-readme compliant][standard-readme-shield]][standard-readme-url]
 
   
 <!-- TABLE OF CONTENTS -->
@@ -40,11 +41,9 @@
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Maintainer](#maintainer)
+* [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
 * [License](#license)
-
-* [Acknowledgements](#acknowledgements)
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -109,7 +108,6 @@ npm install npm@latest -g
 
 <!-- ROADMAP -->
 ## Roadmap
-
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of proposed features (and known issues).
 
 
@@ -129,8 +127,6 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 * []()
 * []()
 * []()
-
-
 
 
 
@@ -183,4 +179,6 @@ Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/
 [issues-url]: https://github.com/iLPdev/discMapper/issues
 [license-shield]: https://img.shields.io/github/license/iLPdev/discMapper.svg?style=flat-square
 [license-url]: https://github.com/iLPdev/discMapper/blob/master/LICENSE.txt
+[standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+[standard-readme-url]: https://github.com/RichardLitt/standard-readme
 [product-screenshot]: images/screenshot.png
