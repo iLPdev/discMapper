@@ -23,13 +23,17 @@
     <a href="https://github.com/github_username/repo/issues">Request Feature</a>
   </p>
 </p>
+
 <!-- PROJECT SHIELDS -->
+<p align="center">
+ 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
-
+</p>
+  
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
