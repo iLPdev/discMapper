@@ -27,6 +27,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
+
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
 
   
@@ -169,6 +170,7 @@ Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/iLPdev/discMapper.svg?style=flat-square
 [contributors-url]: https://github.com/iLPdev/discMapper/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/iLPdev/discMapper.svg?style=flat-square
@@ -179,6 +181,6 @@ Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/
 [issues-url]: https://github.com/iLPdev/discMapper/issues
 [license-shield]: https://img.shields.io/github/license/iLPdev/discMapper.svg?style=flat-square
 [license-url]: https://github.com/iLPdev/discMapper/blob/master/LICENSE.txt
-[standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)
+[standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square
 [standard-readme-url]: https://github.com/RichardLitt/standard-readme
 [product-screenshot]: images/screenshot.png
