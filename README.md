@@ -132,7 +132,7 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 ## Acknowledgements
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
-* [ImgBot] GitHub-integrated image optimization
+* [ImgBot](https://github.com/dabutvin/Imgbot) GitHub-integrated image optimization
 * `README.md`:
   * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
   * [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
