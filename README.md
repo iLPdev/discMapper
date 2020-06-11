@@ -40,8 +40,7 @@
   * [Dependencies](#dependencies)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-* [Maintainer](#maintainer)
-  * [Contact](#contact)
+* [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
   * [Contributors](#contributors)
@@ -117,14 +116,9 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 
 
 
-<!-- MAINTAINER -->
-## Maintainer
-[@Stack](https://github.com/iLPdev), [iLP development](https://www.ilpdev.com)
-
-### Contact
-* @Stack on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)
-* stack@ilpdev.com
-* [www.ilpdev.com](http://www.ilpdev./com)
+<!-- CONTACT -->
+## Contact
+This repository is maintained by [@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
 
 
 
