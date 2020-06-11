@@ -27,7 +27,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
-
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
 
   
@@ -42,8 +41,10 @@
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Maintainer](#maintainer)
+  * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
+  * [Contributors](#contributors)
 * [License](#license)
 
 
@@ -54,6 +55,7 @@
      Cover abstract dependencies.
      Cover intellectual provenance: A See Also section is also fitting.
 -->
+Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
 
 ### Features
 * 2D and 3D map rendering of the disc
@@ -117,9 +119,12 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 
 <!-- MAINTAINER -->
 ## Maintainer
-@Stack on [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9) - stack@ilpdev.com
+[@Stack](https://github.com/iLPdev), [iLP development](https://www.ilpdev.com)
 
-Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
+### Contact
+* @Stack on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)
+* stack@ilpdev.com
+* [www.ilpdev.com](http://www.ilpdev./com)
 
 
 
@@ -127,9 +132,9 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 ## Acknowledgements
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
-* []()
-* []()
-* []()
+* `README.md`:
+  * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
+  * [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
 
 
 
@@ -142,10 +147,9 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 Suggestions:
      Link to a CONTRIBUTING file -- if there is one.
      Be as friendly as possible.
-     Link to the GitHub issues.
      Link to a Code of Conduct. A CoC is often in the Contributing section or document, or set elsewhere for an entire organization, so it may not be necessary to include the entire file in each repository. However, it is highly recommended to always link to the code, wherever it lives.
-     A subsection for listing contributors is also welcome here.
 -->
+See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
 Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -156,6 +160,7 @@ Contributions are what make the open source community such an amazing space to b
 5. Open a Pull Request
 
 
+### Contributors
 
 <!-- LICENSE -->
 ## License
@@ -166,7 +171,7 @@ Contributions are what make the open source community such an amazing space to b
 Suggestions:
      Link to longer License file in local repository.
      -->
-Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
+Distributed under GPL v3.0-and-later by _iLP development_. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
 
 
 
