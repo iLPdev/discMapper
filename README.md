@@ -135,6 +135,7 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 * `README.md`:
   * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
   * [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
+  * [Shields.io](https://shields.io/) for serving badges
 
 
 
