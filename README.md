@@ -87,11 +87,13 @@ npm install
 ```
 
 ### Dependencies
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+<a href="https://www.mudlet.org"><img src="https://www.mudlet.org/wp-content/uploads/2017/08/mudlet-wp-logo.png" alt="Mudlet" width="120" height="auto"></a>
+
+To install discMapper, you need the [Mudlet][mudlet-url] application for your operating system (Windows, MacOS, and Linux):
+
+1. Visit [Mudlet's Download page](https://www.mudlet.org/download)
+2. Click the `Download Mudlet` button 
+3. Double-click the downloaded file to install Mudlet
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -184,3 +186,4 @@ Distributed under GPL v3.0-and-later. See [`COPYING`](https://github.com/iLPdev/
 [standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square
 [standard-readme-url]: https://github.com/RichardLitt/standard-readme
 [product-screenshot]: images/screenshot.png
+[mudlet-url]: https://www.mudlet.org
