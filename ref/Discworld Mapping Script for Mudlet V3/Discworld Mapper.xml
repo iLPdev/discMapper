@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Room Name Trigger</name>
+            <script>discMapper[&quot;checkMisclick&quot;] = false --if misclick was set, this sets it back to 0
+if discMapper[&quot;moveCount&quot;] &gt; 0 then discMapper[&quot;moveCount&quot;] = discMapper[&quot;moveCount&quot;] - 1 end --decrements move count if it is more than zero
+if discMapper[&quot;fetchRoomName&quot;] then --checks if the fetchRoomName key is true,
+	setRoomName(discMapper[&quot;activeRoom&quot;], matches[2]) --if so it will assign the name of the active room to the room name it just triggered on
+	indexUniqueRooms(discMapper[&quot;activeRoom&quot;]) --index the room
+	discMapper[&quot;fetchRoomName&quot;] = false
+	end
+if discMapper[&quot;halt&quot;] then --checks if the map following has been halted
+	if discMapper[&quot;moveCount&quot;] == 0 then --makes sure that we are not in the middle of a long queued movement
+		if matches[2] == discMapper[&quot;haltedRoomName&quot;] then --checks if the name it triggered off is the same as the room that mapping was halted in,
+			echo(&quot;\nRoom Found, Following Resumed&quot;) --if it is, it will resume following
+			discMapper[&quot;halt&quot;] = false
+			end
+		if uniqueRooms[matches[2]] then --otherwise it will check if the name it triggered on is a name that is unique to a single room
+			discMapper[&quot;activeRoom&quot;] = uniqueRooms[matches[2]] --if it is, it will resume following from that room
+			centerview(uniqueRooms[matches[2]]) --center on the new room
+			discMapper[&quot;halt&quot;] = false --resume following
+			echo(&quot;\nUnique Room Found, Following Resumed\n&quot;)
+			end
+		end	
+	end</script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList>
+                <string>^\[(.*)]$</string>
+            </regexCodeList>
+            <regexCodePropertyList>
+                <integer>1</integer>
+            </regexCodePropertyList>
+        </Trigger>
+        <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Failure Trigger</name>
+            <script>if discMapper[&quot;checkMisclick&quot;] then --if we are getting this, it means that the failure trigger went off before
+	echo(&quot;\nMisclick Detected, Following Resumed\n&quot;) --the room name trigger, this means that the mapping was halted
+	discMapper[&quot;halt&quot;] = false --on a misclick, so we can resume
+	discMapper[&quot;checkMisclick&quot;] = false
+	end
+
+if discMapper[&quot;moveCount&quot;] &gt; 0 then discMapper[&quot;moveCount&quot;] = discMapper[&quot;moveCount&quot;] - 1 end
+if discMapper[&quot;fetchRoomName&quot;] then discMapper[&quot;fetchRoomName&quot;] = false end --if we just created a room but failed to move, then don't try to fetch the room name</script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList>
+                <string>What?</string>
+                <string>Try something else.</string>
+            </regexCodeList>
+            <regexCodePropertyList>
+                <integer>3</integer>
+                <integer>3</integer>
+            </regexCodePropertyList>
+        </Trigger>
+        <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Exit Trigger</name>
+            <script>if discMapper[&quot;fetchExitStubs&quot;] then
+	for k,v in pairs(matches) do --assigns the words from the exit trigger to v and loops through them all
+		if exitmap[v] then --makes sure that this value is a valid exit 
+			for key, value in pairs(getRoomExits(discMapper[&quot;activeRoom&quot;])) do --iterates through the exits in the active room
+				if key ~= v then --makes sure that we are not creating an exit stub over an existing exit
+			 		setExitStub(discMapper[&quot;activeRoom&quot;], exitmap[v], true) --creates the stub
+					end
+				end
+			end
+		end
+	discMapper[&quot;fetchExitStubs&quot;] = false
+	end</script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList>
+                <string>^There (?:is|are) .*? obvious (?:exit|exits): ([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?([a-z-]*)?(?:, | )?</string>
+            </regexCodeList>
+            <regexCodePropertyList>
+                <integer>1</integer>
+            </regexCodePropertyList>
+        </Trigger>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Movement Aliases</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>North</name>
+                <script>mapperMove(&quot;north&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^n$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>South</name>
+                <script>mapperMove(&quot;south&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^s$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>West</name>
+                <script>mapperMove(&quot;west&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^w$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>East</name>
+                <script>mapperMove(&quot;east&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^e$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Northwest</name>
+                <script>mapperMove(&quot;northwest&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^nw$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Northeast</name>
+                <script>mapperMove(&quot;northeast&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^ne$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Southwest</name>
+                <script>mapperMove(&quot;southwest&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^sw$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Southeast</name>
+                <script>mapperMove(&quot;southeast&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^se$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Down</name>
+                <script>mapperMove(&quot;down&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^down$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Up</name>
+                <script>mapperMove(&quot;up&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^up$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Enter Stall</name>
+                <script>mapperMove(&quot;enter stall&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^enter stall$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Out</name>
+                <script>mapperMove('out')</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^out$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Enter Shop</name>
+                <script>mapperMove(&quot;enter shop&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^enter shop$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Leave</name>
+                <script>mapperMove('leave')</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^leave$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Alley</name>
+                <script>mapperMove(&quot;wander into alley&quot;)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^wander into alley$</regex>
+            </Alias>
+        </AliasGroup>
+        <Alias isActive="yes" isFolder="no">
+            <name>Stop</name>
+            <script>stop()</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^stop$</regex>
+        </Alias>
+        <Alias isActive="yes" isFolder="no">
+            <name>Undo</name>
+            <script>undo()</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^undo$</regex>
+        </Alias>
+        <Alias isActive="yes" isFolder="no">
+            <name>Create Area</name>
+            <script>local newID = addAreaName(matches[2]) --generates a new area ID
+
+if newID == -1 then echo(&quot;That area name is already taken :(\n&quot;) --informs you of either success or failure
+	else echo(&quot;Created new area with the ID of &quot;..newID..&quot;.\n&quot;)
+
+	local previousRoom = discMapper[&quot;activeRoom&quot;] --assigns the ID of the current room to a variable for safe keeping
+	discMapper[&quot;activeArea&quot;] = newID --sets the new area as the active area
+	discMapper[&quot;activeRoom&quot;] = createRoomID() --generates a new room ID and sets it as the active room
+	addRoom(discMapper[&quot;activeRoom&quot;]) --creates the room
+	setRoomArea(discMapper[&quot;activeRoom&quot;], discMapper[&quot;activeArea&quot;]) --assigns the new room to the active area
+	setRoomCoordinates(discMapper[&quot;activeRoom&quot;], 0, 0, 0) --sets the new room as dead center in the new area
+	
+	if exitmap[matches[3]] then --checks to see we were given a direction with the room name, if we were, it links the new room and old room with that direction.
+		setDoubleExit(previousRoom, discMapper[&quot;activeRoom&quot;], matches[3])
+		send(matches[3])
+		end
+
+	discMapperUndo[&quot;undo&quot;] = &quot;area&quot; --hold onto these values incase we want to undo
+	discMapperUndo[&quot;newRoom&quot;] = discMapper[&quot;activeRoom&quot;]
+	discMapperUndo[&quot;oldRoom&quot;] = previousRoom
+	discMapperUndo[&quot;newArea&quot;] = newID
+
+	centerview(discMapper[&quot;activeRoom&quot;]) --centers the map on the new room
+	discMapper[&quot;fetchRoomName&quot;] = true --tells the Room Name Trigger to assign the next name it finds to the active room
+	discMapper[&quot;fetchExitStubs&quot;] = true --same for the exits trigger
+	indexUniqueRooms()
+	send( &quot;look&quot; )
+	
+	end</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^createarea (\S+)\s?(.*)?</regex>
+        </Alias>
+        <Alias isActive="yes" isFolder="no">
+            <name>Delete Area</name>
+            <script>deleteArea(matches[2])</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^deletearea (.*)</regex>
+        </Alias>
+        <Alias isActive="yes" isFolder="no">
+            <name>Create Special Room</name>
+            <script>args = matches[2]
+dir, rdir = args:match(&quot;([^,]+), ([^,]+)&quot;)
+mapperCreateSpecial(dir, rdir)</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^cspecial (.*)</regex>
+        </Alias>
+        <Alias isActive="yes" isFolder="no">
+            <name>Index</name>
+            <script>indexUniqueRooms()</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^index$</regex>
+        </Alias>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <Script isActive="yes" isFolder="no">
+            <name>Mapper Create</name>
+            <packageName></packageName>
+            <script>function mapperCreate(dir, xyDisp)
+
+	if not xyDisp then xyDisp = discMapper.xyDisplacement end
+	local zDisp = discMapper.zDisplacement
+
+
+	local exits = getRoomExits(discMapper[&quot;activeRoom&quot;]) --creates a table of exits from the current room
+
+	if not exits[dir] then --if the exit it was passed is not in the table
+
+		local x,y,z = getRoomCoordinates(discMapper[&quot;activeRoom&quot;]) --get the coordinates of the current room
+		if exitmap[dir] == 1 then y=y+xyDisp --and deduce the position of a room in the direction passed
+		elseif exitmap[dir] == 2 then y=y+xyDisp; x=x+xyDisp
+		elseif exitmap[dir] == 3 then y=y+xyDisp; x=x-xyDisp
+		elseif exitmap[dir] == 4 then x=x+xyDisp
+		elseif exitmap[dir] == 5 then x=x-xyDisp
+		elseif exitmap[dir] == 6 then y=y-xyDisp
+		elseif exitmap[dir] == 7 then y=y-xyDisp; x=x+xyDisp
+		elseif exitmap[dir] == 8 then y=y-xyDisp; x=x-xyDisp
+		elseif exitmap[dir] == 9 then z=z+zDisp
+		elseif exitmap[dir] == 10 then z=z-zDisp
+		end
+
+		local newPosition = select(2, next(getRoomsByPosition(discMapper[&quot;activeArea&quot;],x,y,z))) --get the ID of whatever room is at that position
+		if not newPosition then --if there is no room at that position
+			newRoom = createRoomID() --make a new ID
+			addRoom(newRoom) --create a room with that ID
+			setRoomArea(newRoom, discMapper[&quot;activeArea&quot;]) --assign that room to the active area
+			setRoomCoordinates(newRoom, x, y, z )  --assign that room the coordinates we deduced earlier
+			setDoubleExit(discMapper[&quot;activeRoom&quot;], newRoom, dir) --link the room we started from to the new room
+			setRoomEnv(newRoom, styleEnv[&quot;Street&quot;]) --style it as a street(most new rooms are streets, this saves time)
+			local previousRoom = discMapper[&quot;activeRoom&quot;] --hold onto the current room ID, as we'll need it in a moment
+			discMapper[&quot;activeRoom&quot;] = newRoom --sets the new room as the active room
+			discMapper[&quot;fetchRoomName&quot;] = true --tells the Name Trigger to assign the first room name it finds to the active room
+			discMapper[&quot;fetchExitStubs&quot;] = true --tells the exit trigger to assign exit stubs to the new room
+			
+			discMapperUndo[&quot;undo&quot;] = &quot;room&quot; --hold onto these values incase we want to undo
+			discMapperUndo[&quot;newRoom&quot;] = discMapper[&quot;activeRoom&quot;]
+			discMapperUndo[&quot;oldRoom&quot;] = previousRoom
+
+		else --otherwise, if there is already a room at the new position
+			setDoubleExit(discMapper[&quot;activeRoom&quot;], newPosition, dir) --link that room to the room we started from
+			discMapper[&quot;activeRoom&quot;] = newPosition -- and set the new room as the active room
+		end
+
+	else --otherwise, if there is already an exit in the direction passed
+		discMapper[&quot;activeRoom&quot;] = exits[dir] --set that room as the active room
+	end
+	send(dir, false) --send the direction passed to the mud
+	centerview(discMapper[&quot;activeRoom&quot;]) --center the view on the active room
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>setDoubleExit</name>
+            <packageName></packageName>
+            <script>--takes two room ids and links them both too each other. the first room to the second room in the direction specified,
+--and the second to the first in the opposite direction
+function setDoubleExit(room1, room2, dirUn)
+
+	local dir = exitmap[dirUn]
+
+	setExit(room1, room2, dir)
+	setExit(room2, room1, oppositeDir[dir])
+
+	discMapperUndo[&quot;undo&quot;] = &quot;link&quot; --hold onto these values incase we want to undo
+	discMapperUndo[&quot;newRoom&quot;] = room2
+	discMapperUndo[&quot;oldRoom&quot;] = room1
+	discMapperUndo[&quot;dir&quot;] = dir
+
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>mapMenus</name>
+            <packageName></packageName>
+            <script>--creates some new additions to the right click menu on the mapper
+function mapMenus ()
+	addMapEvent(&quot;Show Room Information&quot;, &quot;showRoomID&quot;)
+	
+	addMapEvent(&quot;Set Focus&quot;, &quot;setFocusRoom&quot;)
+	
+	addMapEvent(&quot;Label Room with Name&quot;, &quot;labelRoomName&quot;)
+
+	addMapEvent(&quot;Clear Exit Stubs&quot;, &quot;clearExitStubs&quot;)
+
+	addMapMenu(&quot;Create Exit Stub&quot;)
+		addMapEvent(&quot;nw&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;northwest&quot;)
+		addMapEvent(&quot;n&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;north&quot;)
+		addMapEvent(&quot;ne&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;northeast&quot;)
+		addMapEvent(&quot;e&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;east&quot;)
+		addMapEvent(&quot;se&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;southeast&quot;)
+		addMapEvent(&quot;s&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;south&quot;)
+		addMapEvent(&quot;sw&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;southwest&quot;)
+		addMapEvent(&quot;w&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;west&quot;)
+		addMapEvent(&quot;u&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;up&quot;)
+		addMapEvent(&quot;d&quot;, &quot;createExitStub&quot;, &quot;Create Exit Stub&quot;, &quot;down&quot;)	
+	addMapMenu(&quot;Link Rooms&quot;)
+		addMapEvent(&quot;northwest&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;northwest&quot;)
+		addMapEvent(&quot;north&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;north&quot;)
+		addMapEvent(&quot;northeast&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;northeast&quot;)
+		addMapEvent(&quot;east&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;east&quot;)
+		addMapEvent(&quot;southeast&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;southeast&quot;)
+		addMapEvent(&quot;south&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;south&quot;)
+		addMapEvent(&quot;southwest&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;southwest&quot;)
+		addMapEvent(&quot;west&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;west&quot;)
+		addMapEvent(&quot;up&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;up&quot;)
+		addMapEvent(&quot;down&quot;, &quot;linkRooms&quot;, &quot;Link Rooms&quot;, &quot;down&quot;)
+	addMapMenu(&quot;Style Room&quot;) --If you want to add another entry to this menu, copy and paste another &quot;addMapEvent&quot; line, changing the first and last value to the name you want displayed 
+		addMapEvent(&quot;Street&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Street&quot;) --you will also need to edit the &quot;styleRooms&quot; script
+		addMapEvent(&quot;Shop&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Shop&quot;)
+		addMapEvent(&quot;General Store&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;General Store&quot;)
+		addMapEvent(&quot;Services&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Services&quot;)
+		addMapEvent(&quot;Bank&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Bank&quot;)
+		addMapEvent(&quot;House&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;House&quot;)
+		addMapEvent(&quot;Temple&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Temple&quot;)
+		addMapEvent(&quot;Custom&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Custom&quot;)
+		addMapEvent(&quot;Player House&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Player House&quot;)
+		addMapEvent(&quot;Player Shop&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Player Shop&quot;)
+		addMapEvent(&quot;Food&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Food&quot;)
+		addMapEvent(&quot;T-Shop&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;T-Shop&quot;)
+		addMapEvent(&quot;Park&quot;, &quot;styleRooms&quot;, &quot;Style Room&quot;, &quot;Park&quot;)
+end
+
+function testMenu()
+
+end</script>
+            <eventHandlerList>
+                <string>mapOpenEvent</string>
+            </eventHandlerList>
+            <Script isActive="yes" isFolder="no">
+                <name>linkRooms</name>
+                <packageName></packageName>
+                <script>function linkRooms(...)
+	setDoubleExit(arg[3], arg[4], arg[2])
+end</script>
+                <eventHandlerList>
+                    <string>linkRooms</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>setFocusRoom</name>
+                <packageName></packageName>
+                <script>--sets active room and active area to the room and area selected
+function setFocusRoom(...)
+	discMapper[&quot;activeRoom&quot;] = arg[3]
+	discMapper[&quot;activeArea&quot;] = getRoomArea(arg[3])
+	discMapper[&quot;halt&quot;] = false
+	centerview(arg[3])
+end</script>
+                <eventHandlerList>
+                    <string>setFocusRoom</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>labelRoomName</name>
+                <packageName></packageName>
+                <script>--labels the selected room with the room name. this doesn't look very good, and it seems a little buggy.
+--the hitbox for the label especially seems a little buggy in this version of mudlet. you might need to zoom in a little to select it for deletion.
+function labelRoomName (...)
+	local x,y,z = getRoomCoordinates(arg[3])
+	local labelID = createMapLabel(discMapper[&quot;activeArea&quot;], getRoomName(arg[3]), x,y,z, 255,255,255, 0,0,0, 200, 10, true)
+	echo(&quot;\nCreated Map Label with ID = &quot; .. labelID ..&quot;\n&quot;)
+end</script>
+                <eventHandlerList>
+                    <string>labelRoomName</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>styleRooms</name>
+                <packageName></packageName>
+                <script>--this function is for faster styling of selected rooms.
+--it is passed the name of the mapevent that called it, and the ID's of the selected rooms.
+--if you are adding another room style to the drop down menu, you will need to add and entry onto the last two tables
+--if the style name you have chosen contains spaces or symbols, you will have to surround it with brackets and single quotes
+
+function styleRooms (...)
+	for i,v in ipairs(arg) do --loop through all of the arguments passed to the function
+		if i &gt; 2 then --skip the first two, as those are not room ID's
+				setRoomEnv(v, styleEnv[arg[2]]) --set the color of the room to that specified in the styleEnv table
+				setRoomChar(v, styleChar[arg[2]]) --set the character of the room to that specified in the styleChar table
+				--if styleLabel[arg[2]] ~= nil then labelRoomName(1, 2, v) end
+				--this ^ function is commented out because I didn't like the way room name labels turned out
+ 		end
+	end
+end
+
+styleLabel = { --this is a of rooms to automatically receive labels. as is, it isn't used anywhere.
+	['General Store'] = 1,
+	Shop = 1,
+	Custom = 1,
+	Food = 1
+}
+
+styleEnv = { --a table of color assigned by room type, the numbers refer to the number assigned to the colors in the &quot;color&quot; right click option on the mapper.
+	['General Store'] = 289,
+	Shop = 266,
+	Services = 290,
+	Bank = 290,
+	House = 291,
+	Custom = 292,
+	Temple = 293,
+	Street = 271,
+	['Player House'] = 291,
+	['Player Shop'] = 269,
+	Food = 294,
+	['T-Shop'] = 264,
+	Park = 258
+}
+
+styleChar = { -- a table of characters assigned to rooms, an underline will not show up, it will just keep the room square in circle view.
+	['General Store'] = &quot;_&quot;,
+	Shop = &quot;_&quot;,
+	Services = &quot;_&quot;,
+	Bank = &quot;$&quot;,
+	House = &quot;_&quot;,
+	Custom = &quot;_&quot;,
+	Temple = &quot;_&quot;,
+	Street = &quot; &quot;,
+	['Player House'] = &quot;P&quot;,
+	['Player Shop'] = &quot;P&quot;,
+	Food = &quot;_&quot;,
+	['T-Shop'] = &quot;T&quot;,
+	Park = &quot; &quot;
+}</script>
+                <eventHandlerList>
+                    <string>styleRooms</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>clearExitStubs</name>
+                <packageName></packageName>
+                <script>function clearExitStubs(...)
+	for k, v in ipairs(arg) do --loop through the room ID's passed
+		if k &gt; 2 then
+			for k2, v2 in pairs(getExitStubs(v)) do --loop through a table of exit stubs
+				setExitStub(v, v2, false) --clear them
+				end
+			end
+		end
+end</script>
+                <eventHandlerList>
+                    <string>clearExitStubs</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>createExitStub</name>
+                <packageName></packageName>
+                <script>function createExitStub(...)
+	for k, v in pairs(arg) do --loop through the arguments
+		if k &gt; 2 then --skips the first two, because they are not room IDs'
+			setExitStub(v, exitmap[arg[2]], true) --set the exit stub in the directin specified
+			end
+	end
+end</script>
+                <eventHandlerList>
+                    <string>createExitStub</string>
+                </eventHandlerList>
+            </Script>
+            <Script isActive="yes" isFolder="no">
+                <name>showID</name>
+                <packageName></packageName>
+                <script>--echos the names and ID's of the selected rooms.
+function showID(...)
+	for k, v in ipairs(arg) do
+		if k &gt; 2 then
+			name = getRoomName(v)
+			echo(&quot;\n&quot; .. name .. &quot; ID = &quot; .. v)
+			end
+		end
+end
+</script>
+                <eventHandlerList>
+                    <string>showRoomID</string>
+                </eventHandlerList>
+            </Script>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Undo</name>
+            <packageName></packageName>
+            <script>--function to undo the last map creation action
+function undo()
+	if discMapperUndo[&quot;undo&quot;] == &quot;area&quot; then --if the last thing we created was an area
+		
+		if discMapper[&quot;activeRoom&quot;] == discMapperUndo[&quot;newRoom&quot;] then --if we are still in the new room
+			discMapper[&quot;activeRoom&quot;] = discMapperUndo[&quot;oldRoom&quot;] --set back to the old room
+			discMapper[&quot;activeArea&quot;] = getRoomArea(discMapper[&quot;activeRoom&quot;]) --and the old area
+			centerview(discMapper[&quot;activeRoom&quot;])
+			end
+		deleteArea(discMapperUndo[&quot;newArea&quot;]) --delete the new area, this also deletes all room assigned to it
+
+		discMapperUndo = {} --clear the undo table
+
+	elseif discMapperUndo[&quot;undo&quot;] == &quot;link&quot; then --if the last thing we created was a link between two rooms
+
+		if discMapper[&quot;activeRoom&quot;] == discMapperUndo[&quot;newRoom&quot;] then --if we are still in the new room
+			discMapper[&quot;activeRoom&quot;] = discMapperUndo[&quot;oldRoom&quot;] --bring us back
+			centerview(discMapper[&quot;activeRoom&quot;])
+			end
+		setExit(discMapperUndo[&quot;oldRoom&quot;], -1, discMapperUndo[&quot;dir&quot;]) --remove the exit from the old room to the new room
+		setExit(discMapperUndo[&quot;newRoom&quot;], -1, oppositeDir[discMapperUndo[&quot;dir&quot;]]) --remove the exit from the new room to the old room
+
+		discMapperUndo = {} --clear the undo table
+
+	elseif discMapperUndo[&quot;undo&quot;] == &quot;room&quot; then --if the last thing we created was a room
+	
+		if discMapper[&quot;activeRoom&quot;] == discMapperUndo[&quot;newRoom&quot;] then --if we are still in the new room
+			discMapper[&quot;activeRoom&quot;] = discMapperUndo[&quot;oldRoom&quot;] --bring us back
+			centerview(discMapper[&quot;activeRoom&quot;])
+			end
+		deleteRoom(discMapperUndo[&quot;newRoom&quot;]) --delete the new room
+
+		discMapperUndo = {} --clear the undo table
+	
+	else
+
+		echo(&quot;Nothing found to undo!&quot;) --the undo key in the table was not a valid option
+
+	end
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>indexUniqueRooms</name>
+            <packageName></packageName>
+            <script>--if this function is not passed arguments it parses through a table of all of the rooms
+--in all of the areas of the mapper and creates a table of rooms with unique names
+--if it is passed a room ID, it will preserve the existing index, and place the new name in the appropriate table
+function indexUniqueRooms(id)
+	
+	if not id then --if it was not passed an ID
+		local allRooms = getRooms() --get a list of all room names in the mud, formatted as key:ID and value:name
+		uniqueRooms = {} --creates the global table uniqueRooms, or clears it if it was already created
+		duplicateRooms = {} --creates the global table duplicateRooms, or clears it if it was already created
+		for k, v in pairs(allRooms) do --loops through allRooms
+			if not uniqueRooms[v] and not duplicateRooms[v] then --if the current name is in neither table
+				uniqueRooms[v] = k --add it to the unique table
+			elseif uniqueRooms[v] then --if it was in the unique room table
+				uniqueRooms[v] = nil --remove it from the unique room table
+				duplicateRooms[v] = k --add it to the duplicate room table
+				end
+			end
+	else --otherwise, if it was passed a room ID
+		local name = getRoomName(id) --store the name of the ID in name
+		if not uniqueRooms[name] and not duplicateRooms[name] then --if the current name is in neither table
+			uniqueRooms[name] = id --add it to the unique table
+		elseif uniqueRooms[name] then --if it was in the unique room table
+			uniqueRooms[name] = nil --remove it from the unique room table
+			duplicateRooms[name] = id --add it to the duplicate room table
+			end
+		end
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>initialize</name>
+            <packageName></packageName>
+            <script>function initialize () --loads the previously saved tables from the mudlet home directory and reindexes the mapped rooms
+	discMapper = discMapper or {}
+	table.load(getMudletHomeDir() .. &quot;/discMapper&quot;, discMapper)
+
+	discMapperUndo = {}
+
+	if not discMapper then --set some things for the first time the script is installed
+		setCustomEnvColor(289, 0,132,132,255) 
+		setCustomEnvColor(290, 255,123,33,255) 
+		setCustomEnvColor(291, 132,66,0,255) 
+		setCustomEnvColor(292, 132,132,198,255) 
+		setCustomEnvColor(293, 0,255,255,255) 
+		setCustomEnvColor(294, 255,0,0,255)
+		discMapper = {
+			halt = false,
+			}
+	end
+
+	discMapper.zDisplacement = 1
+	discMapper.xyDisplacement = 2
+
+	indexUniqueRooms() --indexes from scratch
+
+	discMapper[&quot;moveCount&quot;] = 0
+end</script>
+            <eventHandlerList>
+                <string>sysLoadEvent</string>
+            </eventHandlerList>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>terminate</name>
+            <packageName></packageName>
+            <script>function terminate ()	 --saves our working tables to the mudlet home directory when you quit
+	table.save(getMudletHomeDir() .. &quot;/discMapper&quot;, discMapper)
+	--table.save(getMudletHomeDir() .. &quot;/uniqueRooms&quot;, uniqueRooms)
+	--table.save(getMudletHomeDir() .. &quot;/duplicateRooms&quot;, duplicateRooms)
+end</script>
+            <eventHandlerList>
+                <string>sysExitEvent</string>
+            </eventHandlerList>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Stop</name>
+            <packageName></packageName>
+            <script>function stop()
+	send(&quot;stop&quot;)
+	if discMapper[&quot;moveCount&quot;] &gt; 0 then
+		discMapper[&quot;halt&quot;] = true
+		discMapper[&quot;moveCount&quot;] = 0
+		discMapper[&quot;haltedRoomName&quot;] = getRoomName(discMapper[&quot;activeRoom&quot;])
+		end
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Mapper Move</name>
+            <packageName></packageName>
+            <script>function mapperMove(dir)
+
+	if not discMapper[&quot;halt&quot;] then --if map following has been halted, don't do anything but echo the movement to the mud
+
+		local exits = getRoomExits(discMapper[&quot;activeRoom&quot;]) --stores a list of exit from the active room in a table
+		local sExits = getSpecialExitsSwap(discMapper[&quot;activeRoom&quot;])
+
+		if sExits[dir] then
+			discMapper[&quot;activeRoom&quot;] = sExits[dir]
+			discMapper[&quot;activeArea&quot;] = getRoomArea(discMapper[&quot;activeRoom&quot;])
+			discMapper[&quot;moveCount&quot;] = discMapper[&quot;moveCount&quot;] + 1
+			elseif not exits[dir] then --if the direction passed to the function is not in the table of exits
+				echo(&quot;Unmapped Direction - Map Following Halted&quot;)
+				discMapper[&quot;haltedRoomName&quot;] = getRoomName(discMapper[&quot;activeRoom&quot;]) --store the name of the active room in haltedRoomName key
+				discMapper[&quot;halt&quot;] = true --halt map following
+				discMapper[&quot;checkMisclick&quot;] = true --this is to test if it was a misclick
+			else
+				discMapper[&quot;activeRoom&quot;] = exits[dir] --otherwise if the direction passed was in the table, set the active room to the room that is linked in that direction
+				discMapper[&quot;activeArea&quot;] = getRoomArea(discMapper[&quot;activeRoom&quot;]) --sets the active area to the area of the active room
+				discMapper[&quot;moveCount&quot;] = discMapper[&quot;moveCount&quot;] + 1 --increments the move count value
+		end
+		send(dir, false) --send the direction passed to the mud
+		centerview(discMapper[&quot;activeRoom&quot;]) --center the view on the active room
+	else
+		send(dir, false) --send the direction passed to the mud
+	end
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Cancel Halt</name>
+            <packageName></packageName>
+            <script>function cancelHalt ()
+	discMapper.halt = false
+	echo(&quot;Halt Canceled&quot;)
+end</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Tables and Variables</name>
+            <packageName></packageName>
+            <script>mudlet = mudlet or {}; mudlet.mapper_script = true
+
+
+
+oppositeDir = {
+	[1] = 6,
+	[2] = 8,
+	[3] = 7,
+	[4] = 5,
+	[5] = 4,
+	[6] = 1,
+	[7] = 3,
+	[8] = 2,
+	[9] = 10,
+	[10] = 9,
+	[11] = 12,
+	[12] = 11,
+}
+	
+exitmap = {
+  n = 1,
+  north = 1,
+  ne = 2,
+  northeast = 2,
+  nw = 3,
+  northwest = 3,
+  e = 4,
+  east = 4,
+  w = 5,
+  west = 5,
+  s = 6,
+  south = 6,
+  se = 7,
+  southeast = 7,
+  sw = 8,
+  southwest = 8,
+  u = 9,
+  up = 9,
+  d = 10,
+  down = 10,
+  [&quot;in&quot;] = 11,
+  out = 12,
+  [1] = &quot;north&quot;,
+  [2] = &quot;northeast&quot;,
+  [3] = &quot;northwest&quot;,
+  [4] = &quot;east&quot;,
+  [5] = &quot;west&quot;,
+  [6] = &quot;south&quot;,
+  [7] = &quot;southeast&quot;,
+  [8] = &quot;southwest&quot;,
+  [9] = &quot;up&quot;,
+  [10] = &quot;down&quot;,
+  [11] = &quot;in&quot;,
+  [12] = &quot;out&quot;,
+}
+sOppositeDir = {
+  [&quot;enter stall&quot;] = &quot;out&quot;,
+  out = &quot;enter stall&quot;,
+  ['enter shop'] = 'out',
+  ['wander into alley'] = 'wander into alley',
+}</script>
+            <eventHandlerList/>
+        </Script>
+        <Script isActive="yes" isFolder="no">
+            <name>Mapper Create Special</name>
+            <packageName></packageName>
+            <script>function mapperCreateSpecial(dir, rdir)
+
+	newRoom = createRoomID() --make a new ID
+	addRoom(newRoom) --create a room with that ID
+	setRoomArea(newRoom, discMapper[&quot;activeArea&quot;]) --assign that room to the active area
+	setRoomCoordinates(newRoom, getRoomCoordinates(discMapper[&quot;activeRoom&quot;]) )  --assign that room the coordinates of the original room
+	addSpecialExit(discMapper[&quot;activeRoom&quot;], newRoom, dir)
+	addSpecialExit(newRoom, discMapper[&quot;activeRoom&quot;], rdir)
+	setRoomEnv(newRoom, styleEnv[&quot;Street&quot;]) --style it as a street(most new rooms are streets, this saves time)
+	local previousRoom = discMapper[&quot;activeRoom&quot;] --hold onto the current room ID, as we'll need it in a moment
+	discMapper[&quot;activeRoom&quot;] = newRoom --sets the new room as the active room
+	discMapper[&quot;fetchRoomName&quot;] = true --tells the Name Trigger to assign the first room name it finds to the active room
+	discMapper[&quot;fetchExitStubs&quot;] = true --tells the exit trigger to assign exit stubs to the new room
+			
+	discMapperUndo[&quot;undo&quot;] = &quot;room&quot; --hold onto these values in case we want to undo
+	discMapperUndo[&quot;newRoom&quot;] = discMapper[&quot;activeRoom&quot;]
+	discMapperUndo[&quot;oldRoom&quot;] = previousRoom
+
+
+	send(dir, false) --send the direction passed to the mud
+	centerview(discMapper[&quot;activeRoom&quot;]) --center the view on the active room
+end</script>
+            <eventHandlerList/>
+        </Script>
+    </ScriptPackage>
+    <KeyPackage>
+        <KeyGroup isActive="yes" isFolder="yes">
+            <name>Mapper Move</name>
+            <packageName></packageName>
+            <script></script>
+            <command></command>
+            <keyCode>-1</keyCode>
+            <keyModifier>-1</keyModifier>
+            <Key isActive="yes" isFolder="no">
+                <name>North</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;north&quot;)</script>
+                <command></command>
+                <keyCode>56</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>South</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;south&quot;)</script>
+                <command></command>
+                <keyCode>50</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>West</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;west&quot;)</script>
+                <command></command>
+                <keyCode>52</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>East</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;east&quot;)</script>
+                <command></command>
+                <keyCode>54</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northwest</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;northwest&quot;)</script>
+                <command></command>
+                <keyCode>55</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southwest</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;southwest&quot;)</script>
+                <command></command>
+                <keyCode>49</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northeast</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;northeast&quot;)</script>
+                <command></command>
+                <keyCode>57</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southeast</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;southeast&quot;)</script>
+                <command></command>
+                <keyCode>51</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Up</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;up&quot;)</script>
+                <command></command>
+                <keyCode>45</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Down</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;down&quot;)</script>
+                <command></command>
+                <keyCode>43</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>In</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;in&quot;)</script>
+                <command></command>
+                <keyCode>47</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Out</name>
+                <packageName></packageName>
+                <script>mapperMove(&quot;out&quot;)</script>
+                <command></command>
+                <keyCode>42</keyCode>
+                <keyModifier>536870912</keyModifier>
+            </Key>
+        </KeyGroup>
+        <KeyGroup isActive="yes" isFolder="yes">
+            <name>Mapper Create</name>
+            <packageName></packageName>
+            <script></script>
+            <command></command>
+            <keyCode>-1</keyCode>
+            <keyModifier>-1</keyModifier>
+            <Key isActive="yes" isFolder="no">
+                <name>North</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;north&quot;)</script>
+                <command></command>
+                <keyCode>56</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Down</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;down&quot;)</script>
+                <command></command>
+                <keyCode>43</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Up</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;up&quot;)</script>
+                <command></command>
+                <keyCode>45</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southwest</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;southwest&quot;)</script>
+                <command></command>
+                <keyCode>49</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>South</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;south&quot;)</script>
+                <command></command>
+                <keyCode>50</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southeast</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;southeast&quot;)</script>
+                <command></command>
+                <keyCode>51</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>West</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;west&quot;)</script>
+                <command></command>
+                <keyCode>52</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northeast</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;northeast&quot;)</script>
+                <command></command>
+                <keyCode>57</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>East</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;east&quot;)</script>
+                <command></command>
+                <keyCode>54</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northwest</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;northwest&quot;)</script>
+                <command></command>
+                <keyCode>55</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>In</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;in&quot;)</script>
+                <command></command>
+                <keyCode>47</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Out</name>
+                <packageName></packageName>
+                <script>mapperCreate(&quot;out&quot;)</script>
+                <command></command>
+                <keyCode>42</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Undo</name>
+                <packageName></packageName>
+                <script>undo()</script>
+                <command></command>
+                <keyCode>48</keyCode>
+                <keyModifier>603979776</keyModifier>
+            </Key>
+            <KeyGroup isActive="yes" isFolder="yes">
+                <name>Alt Create</name>
+                <packageName></packageName>
+                <script></script>
+                <command></command>
+                <keyCode>-1</keyCode>
+                <keyModifier>-1</keyModifier>
+                <Key isActive="yes" isFolder="no">
+                    <name>North</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;north&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>56</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>South</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;south&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>50</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>West</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;west&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>52</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>East</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;east&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>54</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>Northeast</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;northeast&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>57</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>Northwest</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;northwest&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>55</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>Southeast</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;southeast&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>51</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+                <Key isActive="yes" isFolder="no">
+                    <name>Southwest</name>
+                    <packageName></packageName>
+                    <script>mapperCreate(&quot;southwest&quot;, 1)</script>
+                    <command></command>
+                    <keyCode>49</keyCode>
+                    <keyModifier>738197504</keyModifier>
+                </Key>
+            </KeyGroup>
+        </KeyGroup>
+        <KeyGroup isActive="yes" isFolder="yes">
+            <name>Mapper Ignore</name>
+            <packageName></packageName>
+            <script></script>
+            <command></command>
+            <keyCode>-1</keyCode>
+            <keyModifier>-1</keyModifier>
+            <Key isActive="yes" isFolder="no">
+                <name>North</name>
+                <packageName></packageName>
+                <script></script>
+                <command>north</command>
+                <keyCode>56</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>South</name>
+                <packageName></packageName>
+                <script></script>
+                <command>south</command>
+                <keyCode>50</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>West</name>
+                <packageName></packageName>
+                <script></script>
+                <command>west</command>
+                <keyCode>52</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>East</name>
+                <packageName></packageName>
+                <script></script>
+                <command>east</command>
+                <keyCode>54</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northwest</name>
+                <packageName></packageName>
+                <script></script>
+                <command>northwest</command>
+                <keyCode>55</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Northeast</name>
+                <packageName></packageName>
+                <script></script>
+                <command>northeast</command>
+                <keyCode>57</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southwest</name>
+                <packageName></packageName>
+                <script></script>
+                <command>southwest</command>
+                <keyCode>49</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Southeast</name>
+                <packageName></packageName>
+                <script></script>
+                <command>southeast</command>
+                <keyCode>51</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Up</name>
+                <packageName></packageName>
+                <script></script>
+                <command>up</command>
+                <keyCode>45</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Down</name>
+                <packageName></packageName>
+                <script></script>
+                <command>down</command>
+                <keyCode>43</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>In</name>
+                <packageName></packageName>
+                <script></script>
+                <command>in</command>
+                <keyCode>47</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+            <Key isActive="yes" isFolder="no">
+                <name>Out</name>
+                <packageName></packageName>
+                <script></script>
+                <command>out</command>
+                <keyCode>42</keyCode>
+                <keyModifier>671088640</keyModifier>
+            </Key>
+        </KeyGroup>
+        <Key isActive="yes" isFolder="no">
+            <name>Emergency Halt</name>
+            <packageName></packageName>
+            <script>stop()</script>
+            <command></command>
+            <keyCode>16777275</keyCode>
+            <keyModifier>0</keyModifier>
+        </Key>
+        <Key isActive="yes" isFolder="no">
+            <name>Cancel Halt</name>
+            <packageName></packageName>
+            <script>cancelHalt()</script>
+            <command></command>
+            <keyCode>46</keyCode>
+            <keyModifier>536870912</keyModifier>
+        </Key>
+        <Key isActive="yes" isFolder="no">
+            <name>Emergency Halt</name>
+            <packageName></packageName>
+            <script>stop()</script>
+            <command></command>
+            <keyCode>48</keyCode>
+            <keyModifier>536870912</keyModifier>
+        </Key>
+    </KeyPackage>
+    <HelpPackage>
+        <helpURL></helpURL>
+    </HelpPackage>
+</MudletPackage>
