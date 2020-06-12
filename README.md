@@ -126,6 +126,7 @@ This repository is maintained by [@Stack](https://github.com/iLPdev) - Stop by a
 ## Acknowledgements
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
+* [Sublime Text](https://www.sublimetext.com)
 * [ImgBot](https://github.com/dabutvin/Imgbot) GitHub-integrated image optimization
 * `README.md`:
   * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
