@@ -57,9 +57,10 @@
 Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
 
 ### Features
-* 2D and 3D map rendering of the disc
-* Built-in pathfinding
-
+* GMCP Room Name Detection
+* GMCP Room Identifier hashing - No more duplicate rooms!
+* Auto Room Color based on Room Type - Defaults consistent with [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) scheme 
+* Auto Room Symbol based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
 * [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
