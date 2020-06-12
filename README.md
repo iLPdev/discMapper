@@ -62,11 +62,11 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
   * Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   * Precision Room Name detection using GMCP Room Name data
 * Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme 
-* Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols.
+* Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
 * [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
-* Discworld Mapper - The Autoset Map Room Color and Character (Symbol) script routines were ported directly.
+* Discworld Mapper - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 
 
 <!-- GETTING STARTED -->
