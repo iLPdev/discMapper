@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/iLPdev/discMapper">
-    <img src="assets/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
+    <img src="src/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
   </a>
   <p align="center">
      Discworld MUD mapping script for Mudlet
