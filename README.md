@@ -21,6 +21,7 @@
   </p>
 </p>
 
+  
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -73,7 +74,6 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 ## Install
 
 <!-- Code block illustrating how to install.
-     Link to prerequisite sites for programming language: npmjs, godocs, etc.
      Include any system-specific information needed for installation.
      An Updating section would be useful for most packages, if there are multiple versions which the user may interface with.
 -->
@@ -83,11 +83,11 @@ The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could 
 To install discMapper, just follow these simple steps:
 
 1. Download the current production build of the discMapper package (available in this repo soon) to your PC.
-2. Open Mudlet on your operating system of choice.
-3. Open an existing Discworld MUD profile or create a new one.
-4. Locate the saved `discMapper.mpackage` file on your PC.
-5. Drag and drop the `discMapper.mpackage` file into your open Discworld MUD profile.
-6. Optionally, delete the `discMapper.mpackage` from your computer.
+1. Open Mudlet on your operating system of choice.
+1. Open an existing Discworld MUD profile or create a new one.
+1. Locate the saved `discMapper.mpackage` file on your PC.
+1. Drag and drop the `discMapper.mpackage` file into your open Discworld MUD profile.
+1. Optionally, delete the `discMapper.mpackage` from your computer.
 
 ### Dependencies
 <a href="https://www.mudlet.org"><img src="https://www.mudlet.org/wp-content/uploads/2017/08/mudlet-wp-logo.png" alt="Mudlet" width="120" height="auto"></a>
@@ -95,8 +95,8 @@ To install discMapper, just follow these simple steps:
 To install discMapper, you need to install and run the [Mudlet][mudlet-url] application for your operating system (Windows, MacOS, and Linux):
 
 1. Visit [Mudlet's Download page](https://www.mudlet.org/download)
-2. Click the `Download Mudlet` button 
-3. Double-click the downloaded file to install Mudlet
+1. Click the `Download Mudlet` button 
+1. Double-click the downloaded file to install Mudlet
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -153,10 +153,10 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+1. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+1. Push to the Branch (`git push origin feature/AmazingFeature`)
+1. Open a Pull Request
 
 
 ### Contributors
