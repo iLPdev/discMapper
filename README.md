@@ -66,8 +66,7 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 
 ### Built With
 * [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
-* []()
-* []()
+* Discworld Mapper - The Autoset Map Room Color and Character (Symbol) script routines were ported directly.
 
 
 <!-- GETTING STARTED -->
