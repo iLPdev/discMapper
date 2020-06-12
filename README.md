@@ -78,21 +78,21 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
      An Updating section would be useful for most packages, if there are multiple versions which the user may interface with.
 -->
 
-To get a local copy up and running follow these simple steps:
+The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs. Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and droppping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
 
-1. Clone the discMapper
-```sh
-git clone https://github.com/iLPdev/discMapper.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
+To install discMapper, just follow these simple steps:
+
+1. Download the current production build of the discMapper package (available in this repo soon) to your PC.
+2. Open Mudlet on your operating system of choice.
+3. Open an existing Discworld MUD profile or create a new one.
+4. Locate the saved `discMapper.mpackage` file on your PC.
+5. Drag and drop the `discMapper.mpackage` file into your open Discworld MUD profile.
+6. Optionally, delete the `discMapper.mpackage` from your computer.
 
 ### Dependencies
 <a href="https://www.mudlet.org"><img src="https://www.mudlet.org/wp-content/uploads/2017/08/mudlet-wp-logo.png" alt="Mudlet" width="120" height="auto"></a>
 
-To install discMapper, you need the [Mudlet][mudlet-url] application for your operating system (Windows, MacOS, and Linux):
+To install discMapper, you need to install and run the [Mudlet][mudlet-url] application for your operating system (Windows, MacOS, and Linux):
 
 1. Visit [Mudlet's Download page](https://www.mudlet.org/download)
 2. Click the `Download Mudlet` button 
