@@ -57,10 +57,12 @@
 Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
 
 ### Features
-* GMCP Room Name Detection
-* GMCP Room Identifier hashing - No more duplicate rooms!
-* Auto Room Color based on Room Type - Defaults consistent with [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) scheme 
-* Auto Room Symbol based on Room Type - Choose and apply your preferred room symbols
+* Enables mapper access to GMCP Core Supports sent by Discworld MUD's [FluffOS](https://github.com/fluffos/fluffos) driver for: 
+  * Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
+  * Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
+  * Precision Room Name detection using GMCP Room Name data
+* Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme 
+* Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols.
 
 ### Built With
 * [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
