@@ -1,19 +1,15 @@
 # discMapper
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT BANNER -->
 <br />
 <p align="center">
-  <a href="https://github.com/iLPdev/discMapper">
+  <a href="src/images/discMapper_logo.png">
     <img src="src/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
   </a>
-  <p align="center">
-     Discworld MUD mapping script for Mudlet
-     <br />
-  </p>
 </p>
 
   
-<!-- PROJECT SHIELDS -->
+<!-- PROJECT BADGES -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -21,8 +17,24 @@
 [![GPL License][license-shield]][license-url]
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
 
-  
-<!-- TABLE OF CONTENTS -->
+
+<!-- SHORT DESCRIPTION -->
+<p align="center">
+   Discworld MUD mapping script for Mudlet
+   <br />
+</p>
+
+
+<!-- LONG DESCRIPTION
+      Cover the main reasons for building the repository.
+      "This should describe your module in broad terms, generally in just a few paragraphs; more detail of the module's routines or methods, lengthy code examples, or other in-depth material should be given in subsequent sections.
+-->
+
+
+<!-- TABLE OF CONTENTS
+      Must start with the next section; do not include the title or Table of Contents headings.
+      Must be at least one-depth: must capture all ## headings.
+-->
 ## Table of Contents
 
 * [Background](#background)
@@ -35,7 +47,7 @@
   * [Dependencies](#dependencies)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
-* [Contact](#contact)
+* [Maintainer](#maintainer)
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
   * [Ethics](#ethics)
@@ -125,8 +137,8 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 
 
 
-<!-- CONTACT -->
-## Contact
+<!-- MAINTAINER(S) -->
+## MAINTAINER
 This repository is maintained by [@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
 
 
@@ -166,8 +178,7 @@ Contributions are what make the open source community such an amazing space to b
 1. Open a Pull Request
 
 ### Ethics
-This project operates under the W3C's
-[Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) abd operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
 
 > W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
@@ -181,9 +192,7 @@ This project operates under the W3C's
 > practice. It also provides a benchmark for self evaluation and acts as a
 > vehicle for better identity of the organization.
 
-We hope that our community group act according to these guidelines, and that
-participants hold each other to these high standards. If you have any questions
-or are worried that the code isn't being followed, please contact the owner of the repository.
+<!-- We hope that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the owner of the repository. -->
 
 ### Contributors
 
@@ -196,8 +205,7 @@ or are worried that the code isn't being followed, please contact the owner of t
 Suggestions:
      Link to longer License file in local repository.
      -->
-Distributed under GPL v3.0-and-later by _iLP development_. See [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING) for more information.
-
+Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in  [COPYING]`(https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
