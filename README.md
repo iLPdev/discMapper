@@ -30,17 +30,16 @@
 
 
 
-<!-- LONG DESCRIPTION
-      Cover the main reasons for building the repository.
-      "This should describe your module in broad terms, generally in just a few paragraphs; more detail of the module's routines or methods, lengthy code examples, or other in-depth material should be given in subsequent sections.
--->
+<!-- LONG DESCRIPTION -->
+<p align="center">
+The discMapper project primarily exists to give Discworld MUD players access to the advanced 2D/3D mapping features of the Mudlet client.
+
+Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
+</p>
 
 
 
-<!-- TABLE OF CONTENTS
-      Must start with the next section; do not include the title or Table of Contents headings.
-      Must be at least one-depth: must capture all ## headings.
--->
+<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [Background](#background)
@@ -61,7 +60,6 @@
      Cover abstract dependencies.
      Cover intellectual provenance: A See Also section is also fitting.
 -->
-Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
 
 ### History
 We started this project on … for this particular use-case.
