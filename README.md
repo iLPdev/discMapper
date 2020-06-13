@@ -100,14 +100,14 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 ## Usage
 <!-- Code block illustrating common usage.
      If CLI compatible, code block indicating common usage.
-     If importable, code block indicating both import functionality and usage.
      Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
      Cover basic choices that may affect usage: for instance, if JavaScript, cover promises/callbacks, ES6 here.
      If relevant, point to a runnable file for the usage code.
 -->
+To get started, connect to Discworld MUD in Mudlet and then enter `map basics` at the prompt.
 
+A simple help system covering basic usage, most commands, and configuration options is available by issuing the `map help` command at the prompt.
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
-
 
 
 <!-- ROADMAP -->
