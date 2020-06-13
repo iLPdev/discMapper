@@ -26,6 +26,8 @@
 ## Table of Contents
 
 * [Background](#background)
+  * [History](#history)
+  * [Vision](#vision)
   * [Features](#features)
   * [Built With](#built-with)
   * [Versioning](#versioning)
@@ -36,6 +38,7 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
+  * [Ethics](#ethics)
   * [Contributors](#contributors)
 * [License](#license)
 
@@ -48,6 +51,17 @@
      Cover intellectual provenance: A See Also section is also fitting.
 -->
 Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
+
+### History
+We started this project on … for this particular use-case.
+
+We open-sourced it on … / since the beginning because …
+
+### Vision
+<!-- *Approx 10-15 lines* -->
+The aim of this project is …
+
+We’re solving … problem but you may also use this project to …
 
 ### Features
 * Enables mapper access to GMCP Core Supports sent by Discworld MUD's [FluffOS](https://github.com/fluffos/fluffos) driver for: 
@@ -151,6 +165,25 @@ Contributions are what make the open source community such an amazing space to b
 1. Push to the Branch (`git push origin feature/AmazingFeature`)
 1. Open a Pull Request
 
+### Ethics
+This project operates under the W3C's
+[Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+
+> W3C is a growing and global community where participants choose to work
+> together, and in that process experience differences in language, location,
+> nationality, and experience. In such a diverse environment, misunderstandings
+> and disagreements happen, which in most cases can be resolved informally. In
+> rare cases, however, behavior can intimidate, harass, or otherwise disrupt one
+> or more people in the community, which W3C will not tolerate.
+>
+> A Code of Ethics and Professional Conduct is useful to define accepted and
+> acceptable behaviors and to promote high standards of professional
+> practice. It also provides a benchmark for self evaluation and acts as a
+> vehicle for better identity of the organization.
+
+We hope that our community group act according to these guidelines, and that
+participants hold each other to these high standards. If you have any questions
+or are worried that the code isn't being followed, please contact the owner of the repository.
 
 ### Contributors
 
