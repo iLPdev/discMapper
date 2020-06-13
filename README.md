@@ -83,8 +83,13 @@ We’re solving … problem but you may also use this project to …
 * Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
-* [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) v2.0.16 (2018) by Jor'Mox - Forked from the 10/20/2019 version included in Mudlet 4.8.2
-* [Discworld Mapper](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) (2013) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
+* [Lua](https://www.lua.org) is the programming language
+* [Edbee Library](https://github.com/edbee/edbee-lib) provides the text editor component for Mudlet
+* [Mudlet](https://github.com/Mudlet/Mudlet) is a cross-platform, open source, and super fast MUD client
+* [Sublime Text](https://www.sublimetext.com) is the current maintainer's source code editor of choice.
+* [Sublime Merge](https://www.sublimemerge.com) is the current maintainer's cross-platform GUI git client.
+* [Git](https://git-scm.com) is the version-control system for tracking changes and project management.
+* [ImgBot](https://github.com/dabutvin/Imgbot) provides GitHub-integrated image optimization
 
 ### Versioning
 Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
@@ -151,8 +156,8 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 ## Acknowledgements
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
-* [Sublime Text](https://www.sublimetext.com)
-* [ImgBot](https://github.com/dabutvin/Imgbot) GitHub-integrated image optimization
+* [Simple Generic Mapping Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by Jor'Mox was forked from the [10/20/2019 v2.0.16](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) as included in Mudlet 4.8.2
+* [Discworld Mapper](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 * `README.md`:
   * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
   * [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
