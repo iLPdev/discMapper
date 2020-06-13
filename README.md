@@ -67,7 +67,7 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 
 ### Built With
 * [generic_mapper.xml](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) by Jor'Mox - Forked from 10/20/2019 version
-* [discworld mapper.xml](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
+* [discworld mapper.xml](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) (2013) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 
 <!-- GETTING STARTED -->
 ## Install
