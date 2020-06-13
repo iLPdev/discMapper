@@ -66,13 +66,11 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 * Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
-* [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (forked from 10/20/2019 version)
-* Discworld Mapper - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
-
+* [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) v2.0.16 (2018) by Jor'Mox - Forked from the 10/20/2019 version included in Mudlet 4.8.2
+* [Discworld Mapper](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) (2013) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 
 <!-- GETTING STARTED -->
 ## Install
-
 <!-- Code block illustrating how to install.
      Include any system-specific information needed for installation.
      An Updating section would be useful for most packages, if there are multiple versions which the user may interface with.
@@ -102,14 +100,14 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 ## Usage
 <!-- Code block illustrating common usage.
      If CLI compatible, code block indicating common usage.
-     If importable, code block indicating both import functionality and usage.
      Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
      Cover basic choices that may affect usage: for instance, if JavaScript, cover promises/callbacks, ES6 here.
      If relevant, point to a runnable file for the usage code.
 -->
+To get started, connect to Discworld MUD in Mudlet and then enter `map basics` at the prompt.
 
+A simple help system covering basic usage, most commands, and configuration options is available by issuing the `map help` command at the prompt.
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
-
 
 
 <!-- ROADMAP -->
