@@ -150,29 +150,24 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 
 <!-- CONTRIBUTING -->
 ## Contributing
-<!-- Requirements:
-     State where users can ask questions.
-     State whether PRs are accepted.
-     List any requirements for contributing; for instance, having a sign-off on commits.
-Suggestions:
-     Link to a CONTRIBUTING file -- if there is one.
-     Be as friendly as possible.
-     Link to a Code of Conduct. A CoC is often in the Contributing section or document, or set elsewhere for an entire organization, so it may not be necessary to include the entire file in each repository. However, it is highly recommended to always link to the code, wherever it lives.
--->
+Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person.
+
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
-Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+There is not yet an clear workflow for this project. We'll likely begin with the [simplified Github workflow](http://scottchacon.com/2011/08/31/github-flow.html) to accept changes. Basically, you’ll need to:
 
-1. Fork the Project
-1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-1. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-1. Push to the Branch (`git push origin feature/AmazingFeature`)
-1. Open a Pull Request
+1. Create an Issue (bug report / feature request)
+1. Fork the Repository 
+1. Create your Branch (optionally reference issue in branch name; `git checkout -b feature/AmazingFeature`)
+1. Code Code Code
+1. Commit your Changes (incrementally with detailed commit messages; `git commit -m 'Add some AmazingFeature'`)
+1. Push to your Branch (`git push origin feature/AmazingFeature`)
+1. Submit a Pull Request
 
 ### Ethics
 This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
 
-> W3C is a growing and global community where participants choose to work
+<!-- > W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
 > nationality, and experience. In such a diverse environment, misunderstandings
 > and disagreements happen, which in most cases can be resolved informally. In
@@ -183,8 +178,7 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 > acceptable behaviors and to promote high standards of professional
 > practice. It also provides a benchmark for self evaluation and acts as a
 > vehicle for better identity of the organization.
-
-<!-- We hope that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the owner of the repository. -->
+We hope that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the owner of the repository. -->
 
 ### Contributors
 
