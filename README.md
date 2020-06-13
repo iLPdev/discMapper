@@ -1,5 +1,7 @@
 # discMapper
 
+
+
 <!-- PROJECT BANNER -->
 <br />
 <p align="center">
@@ -7,6 +9,7 @@
     <img src="src/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
   </a>
 </p>
+
 
   
 <!-- PROJECT BADGES -->
@@ -18,6 +21,7 @@
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
 
 
+
 <!-- SHORT DESCRIPTION -->
 <p align="center">
    Discworld MUD mapping script for Mudlet
@@ -25,10 +29,12 @@
 </p>
 
 
+
 <!-- LONG DESCRIPTION
       Cover the main reasons for building the repository.
       "This should describe your module in broad terms, generally in just a few paragraphs; more detail of the module's routines or methods, lengthy code examples, or other in-depth material should be given in subsequent sections.
 -->
+
 
 
 <!-- TABLE OF CONTENTS
@@ -45,6 +51,7 @@
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
 * [License](#license)
+
 
 
 <!-- ABOUT THE PROJECT -->
@@ -82,6 +89,8 @@ We’re solving … problem but you may also use this project to …
 ### Versioning
 Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
 
+
+
 <!-- GETTING STARTED -->
 ## Install
 <!-- Code block illustrating how to install.
@@ -109,6 +118,8 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 1. Click the `Download Mudlet` button 
 1. Double-click the downloaded file to install Mudlet
 
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 <!-- Code block illustrating common usage.
@@ -121,6 +132,7 @@ To get started, connect to Discworld MUD in Mudlet and then enter `map basics` a
 
 A simple help system covering basic usage, most commands, and configuration options is available by issuing the `map help` command at the prompt.
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
+
 
 
 <!-- ROADMAP -->
@@ -165,7 +177,7 @@ There is not yet an clear workflow for this project. We'll likely begin with the
 1. Submit a Pull Request
 
 ### Ethics
-This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc).
 
 <!-- > W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
@@ -182,9 +194,12 @@ We hope that our community group acts according to these guidelines, and that pa
 
 ### Contributors
 
+
+
 <!-- LICENSE -- Must be last section. -->
 ## License
 Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
