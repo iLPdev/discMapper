@@ -38,20 +38,12 @@
 ## Table of Contents
 
 * [Background](#background)
-  * [History](#history)
-  * [Vision](#vision)
-  * [Features](#features)
-  * [Built With](#built-with)
-  * [Versioning](#versioning)
 * [Install](#install)
-  * [Dependencies](#dependencies)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Maintainer](#maintainer)
 * [Acknowledgements](#acknowledgements)
 * [Contributing](#contributing)
-  * [Ethics](#ethics)
-  * [Contributors](#contributors)
 * [License](#license)
 
 
