@@ -9,15 +9,6 @@
   <p align="center">
      Discworld MUD mapping script for Mudlet
      <br />
-    <!-- <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo">View Demo</a> 
-    · 
-    <a href="https://github.com/github_username/repo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
-    -->
   </p>
 </p>
 
@@ -37,6 +28,7 @@
 * [Background](#background)
   * [Features](#features)
   * [Built With](#built-with)
+  * [Versioning](#versioning)
 * [Install](#install)
   * [Dependencies](#dependencies)
 * [Usage](#usage)
@@ -68,6 +60,9 @@ Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/d
 ### Built With
 * [generic_mapper](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) v2.0.16 (2018) by Jor'Mox - Forked from the 10/20/2019 version included in Mudlet 4.8.2
 * [Discworld Mapper](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) (2013) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
+
+### Versioning
+Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
 
 <!-- GETTING STARTED -->
 ## Install
