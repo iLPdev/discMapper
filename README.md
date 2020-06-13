@@ -138,8 +138,8 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 
 
 <!-- MAINTAINER(S) -->
-## MAINTAINER
-This repository is maintained by [@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
+## Maintainer
+[@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
 
 
 
@@ -178,7 +178,7 @@ Contributions are what make the open source community such an amazing space to b
 1. Open a Pull Request
 
 ### Ethics
-This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) abd operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
 
 > W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
