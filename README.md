@@ -196,16 +196,9 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 
 ### Contributors
 
-<!-- LICENSE -->
+<!-- LICENSE -- Must be last section. -->
 ## License
-<!-- Requirements:
-     State license full name or identifier, as listed on the SPDX license list. For unlicensed repositories, add UNLICENSED. For more details, add SEE LICENSE IN <filename> and link to the license file. (These requirements were adapted from npm).
-     State license owner.
-     Must be last section.
-Suggestions:
-     Link to longer License file in local repository.
-     -->
-Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in  [COPYING]`(https://github.com/iLPdev/discMapper/blob/master/COPYING).
+Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
