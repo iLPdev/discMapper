@@ -32,9 +32,9 @@
 
 <!-- LONG DESCRIPTION -->
 <p align="center">
-The discMapper project primarily exists to give Discworld MUD players access to the advanced 2D/3D mapping features of the Mudlet client.
-
-Project Link: [https://github.com/iLPdev/discMapper](https://github.com/iLPdev/discMapper)
+The discMapper project gives Discworld MUD players access to the advanced mapping features of the Mudlet client.
+</br></br>
+Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
 </p>
 
 
