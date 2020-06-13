@@ -94,7 +94,7 @@ We’re solving … problem but you may also use this project to …
 ### Versioning
 Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
 
-
+**[^Top](#table-of-contents)**
 
 <!-- GETTING STARTED -->
 ## Install
