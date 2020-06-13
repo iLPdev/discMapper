@@ -123,7 +123,7 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 1. Click the `Download Mudlet` button 
 1. Double-click the downloaded file to install Mudlet
 
-
+**[^Top](#table-of-contents)**
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -138,19 +138,19 @@ To get started, connect to Discworld MUD in Mudlet and then enter `map basics` a
 A simple help system covering basic usage, most commands, and configuration options is available by issuing the `map help` command at the prompt.
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-
+**[^Top](#table-of-contents)**
 
 <!-- ROADMAP -->
 ## Roadmap
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of proposed features (and known issues).
 
-
+**[^Top](#table-of-contents)**
 
 <!-- MAINTAINER(S) -->
 ## Maintainer
 [@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
 
-
+**[^Top](#table-of-contents)**
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -163,7 +163,7 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
   * [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
   * [Shields.io](https://shields.io/) for serving badges
 
-
+**[^Top](#table-of-contents)**
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -199,13 +199,13 @@ We hope that our community group acts according to these guidelines, and that pa
 
 ### Contributors
 
-
+**[^Top](#table-of-contents)**
 
 <!-- LICENSE -- Must be last section. -->
 ## License
 Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
-
+**[^Top](#table-of-contents)**
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
