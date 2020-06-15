@@ -193,7 +193,8 @@ There is not yet an clear workflow for this project. We'll likely begin with the
 1. Submit a Pull Request
 
 ### Ethics
-This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc).
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc).
 
 <!-- > W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
