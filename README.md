@@ -121,6 +121,13 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 1. Click the `Download Mudlet` button 
 1. Double-click the downloaded file to install Mudlet
 
+### Getting the Source
+The discMapper project is [hosted on GitHub](https://github.com/iLPdev/discMapper). You can clone the project directly with this command:
+
+```
+git clone git@github.com:iLPdev/discMapper.git
+```
+
 **[^Top](#table-of-contents)**
 
 <!-- USAGE EXAMPLES -->
