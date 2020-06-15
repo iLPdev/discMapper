@@ -31,7 +31,7 @@
 
 
 <!-- LONG DESCRIPTION -->
-This fledgling project is under initial development by a beginner. As such, the script is non-functional at this time and in need of continued development. The discMapper project gives Discworld MUD players improved access to the advanced mapping features of the Mudlet client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
+The discMapper project gives Discworld MUD players improved access to the advanced mapping features of the Mudlet client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
 Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
 
@@ -94,6 +94,9 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 
 ### Versioning
 Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
+
+### Project Status
+This fledgling project is under initial development. As such, the script is non-functional at this time and in need of continued development. 
 
 **[^Top](#table-of-contents)**
 
