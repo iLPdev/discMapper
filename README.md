@@ -31,8 +31,7 @@
 <!-- LONG DESCRIPTION -->
 The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet client](https://www.mudlet.org). By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
-<p style="text-align: center;"]Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
-</p>
+Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -191,9 +190,10 @@ There is not yet an clear workflow for this project. We'll likely begin with the
 
 ### Ethics
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
-This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc).
 
-<!-- > W3C is a growing and global community where participants choose to work
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+
+> W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
 > nationality, and experience. In such a diverse environment, misunderstandings
 > and disagreements happen, which in most cases can be resolved informally. In
@@ -204,7 +204,8 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 > acceptable behaviors and to promote high standards of professional
 > practice. It also provides a benchmark for self evaluation and acts as a
 > vehicle for better identity of the organization.
-We hope that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the owner of the repository. -->
+
+The expectation is that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the [maintainer](#maintainer) of this repository.
 
 ### Contributors
 
