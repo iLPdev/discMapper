@@ -1,7 +1,5 @@
 # discMapper
 
-
-
 <!-- PROJECT BANNER -->
 <br />
 <p align="center">
@@ -31,10 +29,9 @@
 
 
 <!-- LONG DESCRIPTION -->
-This fledgling project is under initial development by a beginner. As such, the script is non-functional at this time and in need of continued development. The discMapper project gives Discworld MUD players improved access to the advanced mapping features of the Mudlet client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
+The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
 Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -54,29 +51,26 @@ Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">
 <!-- ABOUT THE PROJECT -->
 ## Background
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)
-     Cover motivation.
-     Cover abstract dependencies.
-     Cover intellectual provenance: A See Also section is also fitting.
 -->
 
 ### History
-The discMapper project was unofficially started sometime during the early weeks of April 2020. The Coronavirus Pandemic and Stay-at-Home orders prompted [@Stack](https://github.com/iLPdev) to make an unexpected return to MUDs after more than two decades. A robust and stable LPmud derivative under continuous development since 1991, Discworld MUD seemed like a promising quarantine-life distraction from our collective global trauma. Various MUD clients were tested. Among them, Mudlet appeared the most desirable. Unfortunately, of the regular 80-100 online Discworld players, almost none appeared to be using Mudlet due to a severe lack of game-specific scripts relative to an old, alternative MUD client. A college try was made with the amazing scripts available for the alternative client, but it was too late... Mudlet's clean, modern appeal and advanced features had already won out -- if only there were Mudlet scripts for Discworld MUD. 
+The discMapper project was unofficially started sometime during the early weeks of April 2020. The Coronavirus Pandemic and Stay-at-Home orders prompted [@Stack](https://github.com/iLPdev) to make an unexpected return to MUDs after more than two decades. A robust and stable LPmud derivative under continuous development since 1991, [Discworld MUD](http://discworld.starturtle.net/lpc) seemed like a promising quarantine-life distraction from our collective global trauma. Various MUD clients were tested. Among them, [Mudlet](https://www.mudlet.org) appeared the most desirable. Unfortunately, of the regular 80-100 online Discworld players, almost none appeared to be using Mudlet due to a severe lack of game-specific scripts relative to an old, alternative MUD client. A college try was made with the amazing scripts available for the alternative client, but it was too late... Mudlet's clean, modern appeal and advanced features had already won out -- if only there were Mudlet scripts for Discworld MUD. 
 
-Inspired and seeking assistance in learning, the Mudlet Discord server was found to be a friendly, engaging community of creative and dedicatedly caring coders. discMapper was open-sourced upon conception. After several weeks of struggling to achieve reliable mapping with text-based detection routines, a basic GMCP room detection approach was developed as possible solution. Considerable progress was made in learning and incoporating game-specific GMCP support into an existing generic mapping script> However, the logic in more fully adapting it to Discworld MUD's custom driver and unique mudlib proved too difficult for a neophyte Mudlet coder.    
+Inspired and seeking assistance in learning, the [Mudlet Discord chat server](https://discord.gg/S9zVg7H) was found to be a friendly, engaging community of creative and dedicatedly caring coders. After several weeks of struggling to achieve reliable mapping with text-based detection routines, a basic GMCP room detection approach was developed as possible solution. Considerable progress was made in learning and incoporating game-specific GMCP support into an existing generic mapping script> However, the logic in more fully adapting it to Discworld MUD's custom driver and unique mudlib proved too difficult for a neophyte Mudlet coder.    
 
-On May 24, 2020, @Vadi was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custon mapping script for Discworld MUD, we spent a brief period exploring extension of the IRE MMP mapping script, but soon realized the lack of GMCP exit data supplied by FluffOS was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues. 
+On May 24, 2020, @Vadi was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custon mapping script for Discworld MUD, we spent a brief period exploring extension of the [IRE  mapping script](https://github.com/IRE-Mudlet-Mapping/ire-mapping-script), but affirmed the lack of GMCP exit data supplied by [FluffOS]((https://github.com/fluffos/fluffos)) was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues. 
 
 Unfortunately, it was soon realized that cleanly installing this initial version of the discMapper to a new Mudlet profile with no prior mapping settings caused the script to break entirely. Many confused hours were spent chasing a quasi-solutions and residue problems until it became painfully clear that a more rigorously tracked and structured approach would be required: Enter this project's GitHub repository.
 
-Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see Acknowledgments). 
+Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). discMapper was open-sourced upon conception. 
 
-Obviously, this repo started with a README-first approach toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language. 
+Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language. 
 
 ### Vision
-As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. The primary initial objective is to develop and test a Minimum Usable Mapper (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time. 
+As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time. 
 
 ### Features
-* Enables mapper access to GMCP Core Supports sent by Discworld MUD's [FluffOS](https://github.com/fluffos/fluffos) driver for: 
+* Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: 
   * Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
   * Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   * Precision Room Name detection using GMCP Room Name data
@@ -94,6 +88,11 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 
 ### Versioning
 Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
+
+### Project Status
+<!-- Show the build status if you have a CI server:
+      Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
+This fledgling project is under initial development. As such, the script is non-functional at this time and in need of continued development. 
 
 **[^Top](#table-of-contents)**
 
@@ -190,9 +189,11 @@ There is not yet an clear workflow for this project. We'll likely begin with the
 1. Submit a Pull Request
 
 ### Ethics
-This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc).
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-<!-- > W3C is a growing and global community where participants choose to work
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
+
+> W3C is a growing and global community where participants choose to work
 > together, and in that process experience differences in language, location,
 > nationality, and experience. In such a diverse environment, misunderstandings
 > and disagreements happen, which in most cases can be resolved informally. In
@@ -203,7 +204,8 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 > acceptable behaviors and to promote high standards of professional
 > practice. It also provides a benchmark for self evaluation and acts as a
 > vehicle for better identity of the organization.
-We hope that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the owner of the repository. -->
+
+The expectation is that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the [maintainer](#maintainer) of this repository.
 
 ### Contributors
 
