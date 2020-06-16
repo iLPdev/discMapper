@@ -213,7 +213,7 @@ The expectation is that our community group acts according to these guidelines, 
 
 <!-- LICENSE -- Must be last section. -->
 ## License
-Distributed under GPL v3.0-and-later © _iLP development_. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
+<a title="Zscout370, Sertion, e.a. / Public domain" href="https://commons.wikimedia.org/wiki/File:Copyleft.svg"><img width="12" alt="Copyleft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png"></a> _iLP development_. Distributed under GPL v3.0-and-later. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 **[^Top](#table-of-contents)**
 
