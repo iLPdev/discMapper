@@ -29,7 +29,7 @@
 
 
 <!-- LONG DESCRIPTION -->
-The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet client](https://www.mudlet.org). By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
+The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
 Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
 
@@ -64,7 +64,7 @@ Unfortunately, it was soon realized that cleanly installing this initial version
 
 Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). discMapper was open-sourced upon conception. 
 
-Obviously, this repo started with a [README-first](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) approach toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language. 
+Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language. 
 
 ### Vision
 As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time. 
