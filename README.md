@@ -1,7 +1,5 @@
 # discMapper
 
-
-
 <!-- PROJECT BANNER -->
 <br />
 <p align="center">
@@ -61,7 +59,7 @@ The discMapper project was unofficially started sometime during the early weeks 
 
 Inspired and seeking assistance in learning, the [Mudlet Discord chat server](https://discord.gg/S9zVg7H) was found to be a friendly, engaging community of creative and dedicatedly caring coders. After several weeks of struggling to achieve reliable mapping with text-based detection routines, a basic GMCP room detection approach was developed as possible solution. Considerable progress was made in learning and incoporating game-specific GMCP support into an existing generic mapping script> However, the logic in more fully adapting it to Discworld MUD's custom driver and unique mudlib proved too difficult for a neophyte Mudlet coder.    
 
-On May 24, 2020, @Vadi was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custon mapping script for Discworld MUD, we spent a brief period exploring extension of the IRE MMP mapping script, but soon realized the lack of GMCP exit data supplied by [FluffOS]((https://github.com/fluffos/fluffos)) was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues. 
+On May 24, 2020, @Vadi was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custon mapping script for Discworld MUD, we spent a brief period exploring extension of the [IRE  mapping script](https://github.com/IRE-Mudlet-Mapping/ire-mapping-script), but affirmed the lack of GMCP exit data supplied by [FluffOS]((https://github.com/fluffos/fluffos)) was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues. 
 
 Unfortunately, it was soon realized that cleanly installing this initial version of the discMapper to a new Mudlet profile with no prior mapping settings caused the script to break entirely. Many confused hours were spent chasing a quasi-solutions and residue problems until it became painfully clear that a more rigorously tracked and structured approach would be required: Enter this project's GitHub repository.
 
@@ -73,7 +71,7 @@ Obviously, this repo started with a [README-first](https://tom.preston-werner.co
 As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time. 
 
 ### Features
-* Enables mapper access to GMCP Core Supports sent by Discworld MUD's FluffOS driver for: 
+* Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: 
   * Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
   * Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   * Precision Room Name detection using GMCP Room Name data
