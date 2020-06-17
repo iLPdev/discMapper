@@ -1362,6 +1362,10 @@ for k,v in pairs(exitmap) do
     short[v] = k
 end
 
+function map.get_short_exit(exit)
+  return short[exit]
+end
+
 local stubmap = {
     north = 1,      northeast = 2,      northwest = 3,      east = 4,
     west = 5,       south = 6,          southeast = 7,      southwest = 8,
@@ -1753,6 +1757,7 @@ local function create_room(name, exits, dir, coords)
     -- links with other rooms as appropriate
     -- links to adjacent rooms in direction of exits if in simple mode
     if map.mapping then
+        name = map.sanitizeRoomName(name)
         map.echo("New Room: " .. name,false,false,(dir or find_portal or force_portal) and true or false)
         local newID = createRoomID()
         addRoom(newID)
@@ -1857,52 +1862,98 @@ local function find_link(name, exits, dir, max_distance)
 end
 
 local function move_map()
-    -- tries to move the map to the next room
-    local move = table.remove(move_queue,1)
-    if move or random_move then
-        local exits = (map.currentRoom and getRoomExits(map.currentRoom)) or {}
-        -- check handling of custom exits here
-        if map.currentRoom then
-            for i = 13, #stubmap do
-                exits[stubmap[i]] = tonumber(getRoomUserData(map.currentRoom,"exit " .. stubmap[i]))
-            end
-        end
-        local special = (map.currentRoom and getSpecialExitsSwap(map.currentRoom)) or {}
-        if move and not exits[move] and not special[move] then
-            for k,v in pairs(special) do
-                if string.starts(k,move) then
-                    move = k
-                    break
+    if map.custom_locator then
+       local roomid = map.custom_locator()
+       local move = table.remove(move_queue,1)
+       if map.mapping and roomid == -1 then
+           local dx,dy,dz = getRoomCoordinates(map.currentRoom)
+           if not dx or not move then return end
+           
+           if string.find(move,"east") then
+               dx = dx + 1
+           elseif string.find(move,"west") then
+               dx = dx - 1
+           end
+           if string.find(move,"north") then
+               dy = dy + 1
+           elseif string.find(move,"south") then
+               dy = dy - 1
+           end
+           if string.find(move,"up") then
+               dz = dz + 1
+           elseif string.find(move,"down") then
+               dz = dz - 1
+           end           
+                      
+           local newID = createRoomID()
+           setRoomIDbyHash(newID, gmcp.room.info.identifier)
+           addRoom(newID)
+           setRoomCoordinates(newID, dx, dy, dz)
+           
+           setRoomName(newID, gmcp.room.info.name)
+           
+           for _, stub in ipairs(map.stubs) do
+             setExitStub(newID, stub, true)
+           end
+           
+           setExit(map.currentRoom, newID, move)
+           setExit(newID, map.currentRoom, reverse_dirs[move])
+           
+           map.echo(string.format("Created new room '%s' (%s,%s,%s)", gmcp.room.info.name, dx, dy, dz), true)
+           
+           set_room(newID)
+       else
+           centerview(roomid)
+           set_room(roomid)
+       end
+    else
+        -- tries to move the map to the next room
+        local move = table.remove(move_queue,1)
+        if move or random_move then
+            local exits = (map.currentRoom and getRoomExits(map.currentRoom)) or {}
+            -- check handling of custom exits here
+            if map.currentRoom then
+                for i = 13, #stubmap do
+                    exits[stubmap[i]] = tonumber(getRoomUserData(map.currentRoom,"exit " .. stubmap[i]))
                 end
             end
-        end
-        if find_portal then
-            map.find_me(map.currentName,map.currentExits,move)
-            find_portal = false
-        elseif force_portal then
-            find_portal = false
-            map.echo("Creating portal destination")
-            create_room(map.currentName, map.currentExits, nil, {getRoomCoordinates(map.currentRoom)})
-            force_portal = false
-        elseif move == "recall" and map.save.recall[map.character] then
-            set_room(map.save.recall[map.character])
-        elseif move == "look" and map.currentRoom and not check_room(map.currentRoom, map.currentName, map.currentExits) then
-            -- this check isn't working as intended, find out why
-            map.find_me(map.currentName,map.currentExits)
-        else
-            if exits[move] and (vision_fail or check_room(exits[move], map.currentName, map.currentExits)) then
-                set_room(exits[move])
-            elseif special[move] and (vision_fail or check_room(special[move], map.currentName, map.currentExits)) then
-                set_room(special[move])
-            elseif not vision_fail then
-                if map.mapping and move then
-                    find_link(map.currentName, map.currentExits, move, map.configs.max_search_distance)
-                else
-                    map.find_me(map.currentName,map.currentExits, move)
+            local special = (map.currentRoom and getSpecialExitsSwap(map.currentRoom)) or {}
+            if move and not exits[move] and not special[move] then
+                for k,v in pairs(special) do
+                    if string.starts(k,move) then
+                        move = k
+                        break
+                    end
                 end
             end
+            if find_portal then
+                map.find_me(map.currentName,map.currentExits,move)
+                find_portal = false
+            elseif force_portal then
+                find_portal = false
+                map.echo("Creating portal destination")
+                create_room(map.currentName, map.currentExits, nil, {getRoomCoordinates(map.currentRoom)})
+                force_portal = false
+            elseif move == "recall" and map.save.recall[map.character] then
+                set_room(map.save.recall[map.character])
+            elseif move == "look" and map.currentRoom and not check_room(map.currentRoom, map.currentName, map.currentExits) then
+                -- this check isn't working as intended, find out why
+                map.find_me(map.currentName,map.currentExits)
+            else
+                if exits[move] and (vision_fail or check_room(exits[move], map.currentName, map.currentExits)) then
+                    set_room(exits[move])
+                elseif special[move] and (vision_fail or check_room(special[move], map.currentName, map.currentExits)) then
+                    set_room(special[move])
+                elseif not vision_fail then
+                    if map.mapping and move then
+                        find_link(map.currentName, map.currentExits, move, map.configs.max_search_distance)
+                    else
+                        map.find_me(map.currentName,map.currentExits, move)
+                    end
+                end
+            end
+            vision_fail = false
         end
-        vision_fail = false
     end
 end
 
@@ -2722,6 +2773,7 @@ end
 
 local function handle_exits(exits)
     local room = map.prompt.room or name_search()
+    room = map.sanitizeRoomName(room)
     exits = map.prompt.exits or exits
     exits = string.lower(exits)
     exits = string.gsub(exits,"%a+", exitmap)
@@ -2897,6 +2949,20 @@ function map.showMap(shown)
     end
 end
 
+-- some games embed an ASCII map on the same line, which messes up the room room name
+-- extract the longest continuous piece of text from the line to be the room name
+function map.sanitizeRoomName(roomtitle)
+  assert(type(roomtitle) == "string", "map.sanitizeRoomName: bad argument #1 expected room title, got "..type(roomtitle).."!")
+  if not roomtitle:match("  ") then return roomtitle end
+  
+  local parts = roomtitle:split("  ")
+  table.sort(parts, function(a,b) return #a &lt; #b end)
+  local longestpart = parts[#parts]
+  
+  local trimmed = utf8.match(longestpart, "[%w ]+"):trim()
+  return trimmed
+end
+
 function map.eventHandler(event, ...)
     if event == "onNewRoom" then
         handle_exits(arg[1])
@@ -2949,6 +3015,7 @@ function map.eventHandler(event, ...)
         config()
     elseif event == "mapOpenEvent" then
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
+            map.find_prompt()
             send("look", true)
             tempTimer(3, function() map.show_help("quick_start"); help_shown = true end)
         end
