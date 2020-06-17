@@ -3,8 +3,8 @@
 <!-- PROJECT BANNER -->
 <br />
 <p align="center">
-  <a href="src/images/discMapper_logo.png">
-    <img src="src/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
+  <a href=".github/discMapper_logo.png">
+    <img src=".github/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
   </a>
 </p>
 
