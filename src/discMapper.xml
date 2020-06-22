@@ -42,7 +42,7 @@
 				</regexCodePropertyList>
 			</Trigger>
 			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-				<name>Detect room exists</name>
+				<name>Exit Detection</name>
 				<script>local realexits = {}
 for raw_exit in string.gmatch(matches[2], "%a+") do
   local exit = mmp.anytoshort(raw_exit)
