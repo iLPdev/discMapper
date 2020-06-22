@@ -11,8 +11,8 @@ You may install it to each desired Mudlet profile as follows:
     - From Mudlet's main menu, `Toolbox` --> `Package manager`, select package, click `Uninstall`)
 1. Install and sync the discMapper module file
     - Select `Toolbox` --> `Module manager` --> Click `Install`
-    - Navigate to `/discMapper/src` wihthn your locally cloned branch of choice
-    - Select the discMapper XML file and click `Open`
+    - Navigate to `/discMapper/src` within your locally cloned branch of choice
+    - Select the `discMapper.xml` file and click `Open`
     - Check 'sync' for the discMapper Module, and close the Module Manager
 1. Verify the discMapper triggers, aliases, and scripts are now available in Mudlet's editor
 
