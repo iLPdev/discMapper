@@ -185,10 +185,7 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 - [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community.
 - [Generic Map Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by [@JorMox](https://github.com/JorMox) was forked from the 10/20/2019 v2.0.16 as included in Mudlet 4.8.2
 - [Simple Discworld Mapping Script for Mudlet V3](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
-- `README.md`:
-  - [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
-  - [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
-  - [Shields.io](https://shields.io/) for serving badges
+- `README.md`: - [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration - [Standard Readme](https://github.com/RichardLitt/standard-readme) spec - [Shields.io](https://shields.io/) for serving badges
 
 **[^Top](#table-of-contents)**
 
