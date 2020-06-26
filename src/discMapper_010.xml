@@ -3164,7 +3164,7 @@ registerAnonymousEventHandler("onPrompt", "map.eventHandler")
 		</Script>
 	</ScriptPackage>
 	<KeyPackage />
-	<HelpPackage>
-		<helpURL></helpURL>
-	</HelpPackage>
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
 </MudletPackage>
