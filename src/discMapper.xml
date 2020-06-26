@@ -45,7 +45,7 @@
 				<name>Exit Detection</name>
 				<script>local realexits = {}
 for raw_exit in string.gmatch(matches[2], "%a+") do
-  local exit = map.get_short_exit(raw_exit)
+  local exit = mmp.anytoshort(raw_exit)
   if exit then
     realexits[#realexits + 1] = exit
   end
