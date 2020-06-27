@@ -61,7 +61,7 @@ Unfortunately, it was soon realized that cleanly installing this initial version
 
 Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). discMapper was open-sourced upon conception.
 
-Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language.
+Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development processes, and the Lua language.
 
 ### Vision
 
