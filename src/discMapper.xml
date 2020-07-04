@@ -1953,51 +1953,51 @@ local function find_link(name, exits, dir, max_distance)
 end
 
 local function move_map()
-    if map.custom_locator then
-       local roomid = map.custom_locator()
-       local move = table.remove(move_queue,1)
-       if map.mapping and roomid == -1 then
-           local dx,dy,dz = getRoomCoordinates(map.currentRoom)
-           if not dx or not move then return end
-           
-           if string.find(move,"east") then
-               dx = dx + 1
-           elseif string.find(move,"west") then
-               dx = dx - 1
-           end
-           if string.find(move,"north") then
-               dy = dy + 1
-           elseif string.find(move,"south") then
-               dy = dy - 1
-           end
-           if string.find(move,"up") then
-               dz = dz + 1
-           elseif string.find(move,"down") then
-               dz = dz - 1
-           end           
-                      
-           local newID = createRoomID()
-           setRoomIDbyHash(newID, gmcp.room.info.identifier)
-           addRoom(newID)
-           setRoomCoordinates(newID, dx, dy, dz)
-           
-           setRoomName(newID, gmcp.room.info.name)
-           
-           for _, stub in ipairs(map.stubs) do
-             setExitStub(newID, stub, true)
-           end
-           
-           setExit(map.currentRoom, newID, move)
-           setExit(newID, map.currentRoom, reverse_dirs[move])
-           
-           map.echo(string.format("Created new room '%s' (%s,%s,%s)", gmcp.room.info.name, dx, dy, dz), true)
-           
-           set_room(newID)
-       else
-           centerview(roomid)
-           set_room(roomid)
-       end
-    else
+    -- if map.custom_locator then
+       -- local roomID = map.custom_locator()
+       -- local move = table.remove(move_queue,1)
+       -- if map.mapping and roomid == -1 then
+           -- local dx,dy,dz = getRoomCoordinates(map.currentRoom)
+           -- if not dx or not move then return end
+           -- 
+           -- if string.find(move,"east") then
+               -- dx = dx + 1
+           -- elseif string.find(move,"west") then
+               -- dx = dx - 1
+           -- end
+           -- if string.find(move,"north") then
+               -- dy = dy + 1
+           -- elseif string.find(move,"south") then
+               -- dy = dy - 1
+           -- end
+           -- if string.find(move,"up") then
+               -- dz = dz + 1
+           -- elseif string.find(move,"down") then
+               -- dz = dz - 1
+           -- end           
+                      -- 
+           -- local newID = createRoomID()
+           -- setRoomIDbyHash(newID, gmcp.room.info.identifier)
+           -- addRoom(newID)
+           -- setRoomCoordinates(newID, dx, dy, dz)
+           -- 
+           -- setRoomName(newID, gmcp.room.info.name)
+           -- 
+           -- for _, stub in ipairs(map.stubs) do
+             -- setExitStub(newID, stub, true)
+           -- end
+           -- 
+           -- setExit(map.currentRoom, newID, move)
+           -- setExit(newID, map.currentRoom, reverse_dirs[move])
+           -- 
+           -- map.echo(string.format("Created new room '%s' (%s,%s,%s)", gmcp.room.info.name, dx, dy, dz), true)
+           -- 
+           -- set_room(newID)
+       -- else
+           -- centerview(roomid)
+           -- set_room(roomid)
+       -- end
+    -- else
         -- tries to move the map to the next room
         local move = table.remove(move_queue,1)
         if move or random_move then
@@ -2044,7 +2044,7 @@ local function move_map()
                 end
             end
             vision_fail = false
-        end
+        -- end -- custom_locator ends
     end
 end
 
