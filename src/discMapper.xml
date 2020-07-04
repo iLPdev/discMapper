@@ -1452,9 +1452,10 @@ for k,v in pairs(exitmap) do
     short[v] = k
 end
 
-function map.get_short_exit(exit)
-  return short[exit]
-end
+-- Added for use in custom_locator function
+-- function map.get_short_exit(exit)
+  -- return short[exit]
+-- end
 
 local stubmap = {
     north = 1,      northeast = 2,      northwest = 3,      east = 4,
