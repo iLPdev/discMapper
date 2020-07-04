@@ -746,7 +746,6 @@ mudlet.mapper_script = true
 map = map or {}
 
 map.help = {[[
-    &lt;cyan&gt;Generic Map Script&lt;reset&gt;
 
       &lt;DimGrey&gt;  ___        &lt;green&gt;_ _          __  __                                &lt;DimGrey&gt;___ 
       &lt;DimGrey&gt; |  _|      &lt;green&gt;| (_)        |  \/  |                              &lt;DimGrey&gt;|_  |
