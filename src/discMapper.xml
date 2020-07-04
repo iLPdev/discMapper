@@ -1851,6 +1851,7 @@ local function create_room(name, exits, dir, coords)
         name = map.sanitizeRoomName(name)
         map.echo("New Room: " .. name,false,false,(dir or find_portal or force_portal) and true or false)
         local newID = createRoomID()
+        setRoomIDbyHash(newID, gmcp.room.info.identifier) -- sets identifier associated with new room
         addRoom(newID)
         setRoomArea(newID, map.currentArea)
         setRoomName(newID, name)
