@@ -2877,42 +2877,41 @@ local function grab_line()
 end
 
 local function name_search()
-    local line_count = #lines + 1
-    local room_name, cur_line, last_line
-    local prompt_pattern = map.save.prompt_pattern[map.character]
-    if not prompt_pattern then return end
-    while not room_name do
-        line_count = line_count - 1
-        if not lines[line_count] then break end
-        cur_line = lines[line_count]
-        for k,v in ipairs(map.save.ignore_patterns) do
-            cur_line = string.trim(string.gsub(cur_line,v,""))
-        end
-        if string.find(cur_line,prompt_pattern) then
-            cur_line = string.trim(string.gsub(cur_line,prompt_pattern,""))
-            if cur_line ~= "" then
-                room_name = cur_line
-            else
-                room_name = last_line
-            end
-        elseif line_count == 1 then
-            cur_line = string.trim(cur_line)
-            if cur_line ~= "" then
-                room_name = cur_line
-            else
-                room_name = last_line
-            end
-        elseif not string.match(cur_line,"^%s*$") then
-            last_line = cur_line
-        end
-    end
-    lines = {}
-    room_name = room_name:sub(1,100)
-    return room_name
+    -- local line_count = #lines + 1
+    -- local room_name, cur_line, last_line
+    -- local prompt_pattern = map.save.prompt_pattern[map.character]
+    -- if not prompt_pattern then return end
+    -- while not room_name do
+        -- line_count = line_count - 1
+        -- if not lines[line_count] then break end
+        -- cur_line = lines[line_count]
+        -- for k,v in ipairs(map.save.ignore_patterns) do
+            -- cur_line = string.trim(string.gsub(cur_line,v,""))
+        -- end
+        -- if string.find(cur_line,prompt_pattern) then
+            -- cur_line = string.trim(string.gsub(cur_line,prompt_pattern,""))
+            -- if cur_line ~= "" then
+                -- room_name = cur_line
+            -- else
+                -- room_name = last_line
+            -- end
+        -- elseif line_count == 1 then
+            -- cur_line = string.trim(cur_line)
+            -- if cur_line ~= "" then
+                -- room_name = cur_line
+            -- else
+                -- room_name = last_line
+            -- end
+        -- elseif not string.match(cur_line,"^%s*$") then
+            -- last_line = cur_line
+        -- end
+    -- end
+    -- lines = {}
+    -- room_name = room_name:sub(1,100)
+    -- return room_name
 end
 
 local function handle_exits(exits)
-    local room = map.prompt.room or name_search()
     local room = map.prompt.room or gmcp.room.info.name
     room = map.sanitizeRoomName(room)
     exits = map.prompt.exits or exits
