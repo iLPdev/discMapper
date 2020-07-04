@@ -2440,7 +2440,7 @@ function map.start_mapping(area_name)
         if map.currentRoom and getRoomName(map.currentRoom) == map.currentName then
             map.set_area(area_name)
         else
-            create_room(map.currentName, map.currentExits, nil, {0,0,0})
+            create_room(map.currentName, map.currentExits, nil, {0,0,0}) -- create the first room
         end
     elseif map.currentRoom and map.currentArea ~= getRoomArea(map.currentRoom) then
         map.set_area(area_name)
