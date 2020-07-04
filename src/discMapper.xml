@@ -1801,7 +1801,7 @@ end
 local function check_room(roomID, name, exits)
     -- check to see if gmcp.room.info.identifier and exits match expecations
     if not roomID then
-        error("Check Room Error: No ID",2)
+        error("Check Room Error: No Room ID",2)
     end
     if roomID ~= getRoomIDbyHash(gmcp.room.info.identifier) then return false end
     local t_exits = table.union(getRoomExits(roomID),getRoomStubs(roomID))
