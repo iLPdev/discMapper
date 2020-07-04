@@ -2909,6 +2909,7 @@ local function name_search()
     -- lines = {}
     -- room_name = room_name:sub(1,100)
     -- return room_name
+    map.echo("Notify Stack that name_search function called for " .. room, true)
 end
 
 local function handle_exits(exits)
