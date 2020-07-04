@@ -2913,6 +2913,7 @@ end
 
 local function handle_exits(exits)
     local room = map.prompt.room or name_search()
+    local room = map.prompt.room or gmcp.room.info.name
     room = map.sanitizeRoomName(room)
     exits = map.prompt.exits or exits
     exits = string.lower(exits)
