@@ -1847,7 +1847,7 @@ local function create_room(name, exits, dir, coords)
     -- makes a new room with captured name and exits
     -- links with other rooms as appropriate
     -- links to adjacent rooms in direction of exits if in simple mode
-    if map.mapping then
+    if map.mapping and getRoomIDbyHash(gmcp.room.info.identifier) == -1 then
         name = map.sanitizeRoomName(name)
         map.echo("New Room: " .. name,false,false,(dir or find_portal or force_portal) and true or false)
         local newID = createRoomID()
