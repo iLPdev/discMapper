@@ -748,15 +748,21 @@ map = map or {}
 map.help = {[[
     &lt;cyan&gt;Generic Map Script&lt;reset&gt;
 
-    &lt;reset&gt;This package allows for semi-automatic mapping of Discworld MUD. The script
-    uses the Generic MUD Communication Protocol (GMCP) data sent by the game's
-    server to correcly identify rooms, stop creation of duplicate rooms, and
-    accurately track your character's location on Mudlet's mapper as you 
-    traverse the disc. Additional convenience features are included as
-    developed.
-    
-    An overview of included commands is provided below. Additional information
-    on each command is available by entering "map help &lt;command&gt;".
+    This script allows for semi-automatic mapping using the included triggers.
+    While different games can have dramatically different ways of displaying
+    information, some effort has been put into giving the script a wide range of
+    potential patterns to look for, so that it can work with minimal effort in
+    many cases. The script locates the room name by searching up from the
+    detected exits line until a prompt is found or it runs out of text to
+    search, clearing saved text each time a prompt is detected or a movement
+    command is sent, with the room name being set to the last line of text
+    found. An accurate prompt pattern is necessary for this to work well, and
+    sometimes other text can end up being shown between the prompt and the room
+    name, or on the same line as the room name, which can be handled by
+    providing appropriate patterns telling the script to ignore that text. Below
+    is an overview of the included commands and important events that this
+    script uses to work. Additional information on each command or event is
+    available in individual help files.
 
     &lt;cyan&gt;Fundamental Commands:&lt;reset&gt;
         These are commands used to get the mapper functional on a basic level
