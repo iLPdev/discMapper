@@ -764,8 +764,8 @@ map.help = {[[
     An overview of included commands is provided below. Additional information
     on each command is available by entering 'map help &lt;command name&gt;'.
 
-    &lt;green&gt;Fundamental Commands:
         &lt;DimGrey&gt;These are commands used to get the mapper functional on a basic level
+    &lt;white&gt;Fundamental Commands:&lt;reset&gt;
 
         &lt;link: show&gt;map show&lt;/link&gt;&lt;DimGrey&gt; - Displays or hides a map window
         &lt;link: quick start&gt;map basics&lt;/link&gt;&lt;DimGrey&gt; - Shows a quick-start guide with some basic information to
@@ -798,8 +798,8 @@ map.help = {[[
             &lt;link: translate&gt;&lt;translated short direction&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets the provided translations for
             &lt;DimGrey&gt;the given english direction word.
 
-    &lt;green&gt;Mapping Commands:
         &lt;DimGrey&gt;These are commands used in the process of actually creating a map
+    &lt;white&gt;Mapping Commands:&lt;reset&gt;
 
         &lt;link: start mapping&gt;start mapping &lt;optional area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Starts adding content to the
             &lt;DimGrey&gt;map, using either the area of the room the user is currently in,
@@ -826,7 +826,7 @@ map.help = {[[
             &lt;DimGrey&gt;rooms in the area
         &lt;link: rooms&gt;map rooms &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Shows a list of rooms in the named area
 
-    &lt;green&gt;Sharing and Backup Commands:&lt;DimGrey&gt;
+    &lt;white&gt;Sharing and Backup Commands:&lt;reset&gt;
 
         &lt;link: save&gt;map save&lt;/link&gt;&lt;DimGrey&gt; - Creates a backup of the map
         &lt;link: load&gt;map load &lt;remote address&gt;&lt;/link&gt;&lt;DimGrey&gt; - Loads a map backup, or a map file from a
@@ -835,8 +835,8 @@ map.help = {[[
             &lt;DimGrey&gt;be shared
         &lt;link: import&gt;map import &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Loads an area from a file
 
-    &lt;green&gt;Mapping Events:
         &lt;DimGrey&gt;These events are used by triggers to direct the script's behavior
+    &lt;white&gt;Mapping Events:&lt;reset&gt;
 
         &lt;link: onNewRoom&gt;onNewRoom&lt;/link&gt;&lt;DimGrey&gt; - Signals that a room has been detected, optional exits
             &lt;DimGrey&gt;argument
@@ -848,9 +848,9 @@ map.help = {[[
         &lt;link: onVisionFail&gt;onVisionFail&lt;/link&gt;&lt;DimGrey&gt; - Signals that the character moved but some or all of
             &lt;DimGrey&gt;the room information was not able to be gathered
 
-    &lt;green&gt;Key Variables:&lt;DimGrey&gt;
         &lt;DimGrey&gt;These variables are used by the script to keep track of important
             &lt;DimGrey&gt;information
+    &lt;white&gt;Key Variables:&lt;reset&gt;
 
         &lt;green&gt;map.prompt.room&lt;DimGrey&gt; - Can be set to specify the room name
         &lt;green&gt;map.prompt.exits&lt;DimGrey&gt; - Can be set to specify the room exits
