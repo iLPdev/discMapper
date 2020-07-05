@@ -852,24 +852,24 @@ map.help = {[[
         &lt;DimGrey&gt;These variables are used by the script to keep track of important
             &lt;DimGrey&gt;information
 
-        &lt;yellow&gt;map.prompt.room&lt;DimGrey&gt; - Can be set to specify the room name
-        &lt;yellow&gt;map.prompt.exits&lt;DimGrey&gt; - Can be set to specify the room exits
-        &lt;yellow&gt;map.character&lt;DimGrey&gt; - Contains the current character name
-        &lt;yellow&gt;map.save.recall&lt;DimGrey&gt; - Contains a table of recall roomIDs for all
+        &lt;Green&gt;map.prompt.room&lt;DimGrey&gt; - Can be set to specify the room name
+        &lt;Green&gt;map.prompt.exits&lt;DimGrey&gt; - Can be set to specify the room exits
+        &lt;Green&gt;map.character&lt;DimGrey&gt; - Contains the current character name
+        &lt;Green&gt;map.save.recall&lt;DimGrey&gt; - Contains a table of recall roomIDs for all
             &lt;DimGrey&gt;characters
-        &lt;yellow&gt;map.save.prompt_pattern&lt;DimGrey&gt; - Contains a table of prompt patterns for all
+        &lt;Green&gt;map.save.prompt_pattern&lt;DimGrey&gt; - Contains a table of prompt patterns for all
             &lt;DimGrey&gt;characters
-        &lt;yellow&gt;map.save.ignore_patterns&lt;DimGrey&gt; - Contains a table of patterns of text the
+        &lt;Green&gt;map.save.ignore_patterns&lt;DimGrey&gt; - Contains a table of patterns of text the
             &lt;DimGrey&gt;script ignores
-        &lt;yellow&gt;map.configs&lt;DimGrey&gt; - Contains a number of different options that can be set
+        &lt;Green&gt;map.configs&lt;DimGrey&gt; - Contains a number of different options that can be set
             &lt;DimGrey&gt;to modify script behavior
-        &lt;yellow&gt;map.currentRoom&lt;DimGrey&gt; - Contains the roomID of the room your character is
+        &lt;Green&gt;map.currentRoom&lt;DimGrey&gt; - Contains the roomID of the room your character is
             &lt;DimGrey&gt;in, according to the script
-        &lt;yellow&gt;map.currentName&lt;DimGrey&gt; - Contains the name of the room your character is in,
+        &lt;Green&gt;map.currentName&lt;DimGrey&gt; - Contains the name of the room your character is in,
             &lt;DimGrey&gt;according to the script
-        &lt;yellow&gt;map.currentExits&lt;DimGrey&gt; - Contains a table of the exits of the room your
+        &lt;Green&gt;map.currentExits&lt;DimGrey&gt; - Contains a table of the exits of the room your
             &lt;DimGrey&gt;character is in, according to the script
-        &lt;yellow&gt;map.currentArea&lt;DimGrey&gt; - Contains the areaID of the area your character is
+        &lt;Green&gt;map.currentArea&lt;DimGrey&gt; - Contains the areaID of the area your character is
             &lt;DimGrey&gt;in, according to the script
 ]]}
 map.help.save = [[
