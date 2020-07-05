@@ -764,113 +764,113 @@ map.help = {[[
     An overview of included commands is provided below. Additional information
     on each command is available by entering 'map help &lt;command name&gt;'.
 
-    &lt;green&gt;Fundamental Commands:&lt;DimGrey&gt;
-        These are commands used to get the mapper functional on a basic level
+    &lt;green&gt;Fundamental Commands:
+        &lt;DimGrey&gt;These are commands used to get the mapper functional on a basic level
 
         &lt;link: show&gt;map show&lt;/link&gt;&lt;DimGrey&gt; - Displays or hides a map window
         &lt;link: quick start&gt;map basics&lt;/link&gt;&lt;DimGrey&gt; - Shows a quick-start guide with some basic information to
-            help get the script working
+            &lt;DimGrey&gt;help get the script working
         &lt;link: 1&gt;map help &lt;optional command name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Shows either this help file or the
-            help file for the command given
+            &lt;DimGrey&gt;help file for the command given
         &lt;link: find prompt&gt;find prompt&lt;/link&gt;&lt;DimGrey&gt; - Instructs the script to look for a prompt that matches
-            a known pattern
+            &lt;DimGrey&gt;a known pattern
         &lt;link: prompt&gt;map prompt&lt;/link&gt;&lt;DimGrey&gt; - Provides a specific pattern to the script that matches
-            your prompt, uses Lua string-library patterns
+            &lt;DimGrey&gt;your prompt, uses Lua string-library patterns
         &lt;link: ignore&gt;map ignore&lt;/link&gt;&lt;DimGrey&gt; - Provides a specific pattern for the script to ignore,
-            uses Lua string-library patterns
+            &lt;DimGrey&gt;uses Lua string-library patterns
         &lt;link: debug&gt;map debug&lt;/link&gt;&lt;DimGrey&gt; - Toggles on debug mode, in which extra messages are shown
-            with the intent of assisting in troubleshooting getting the
-            script setup
+            &lt;DimGrey&gt;with the intent of assisting in troubleshooting getting the
+            &lt;DimGrey&gt;script setup
         &lt;link: me&gt;map me&lt;/link&gt;&lt;DimGrey&gt; - Locates the user on the map, if possible
         &lt;link: path&gt;map path &lt;room name&gt; &lt;; optional area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Finds a walking path to
-            the named room, in the named area if specified
+            &lt;DimGrey&gt;the named room, in the named area if specified
         &lt;link: character&gt;map character &lt;name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets a given name as the current character for
-            the purposes of the script, used for different prompt patterns
-            and recall locations
+            &lt;DimGrey&gt;the purposes of the script, used for different prompt patterns
+            &lt;DimGrey&gt;and recall locations
         &lt;link: recall&gt;map recall&lt;/link&gt;&lt;DimGrey&gt; - Sets the current room as the recall location of the
-            current character
+            &lt;DimGrey&gt;current character
         &lt;link: config&gt;map config &lt;configuration&gt; &lt;optional value&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets or toggles the
-            given configuration either turning it on or off, if no value is
-            given, or sets it to the given value
+            &lt;DimGrey&gt;given configuration either turning it on or off, if no value is
+            &lt;DimGrey&gt;given, or sets it to the given value
         &lt;link: window&gt;map window &lt;configuration&gt; &lt;value&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets the given configuration for
-            the map window to the given value
+            &lt;DimGrey&gt;the map window to the given value
         &lt;link: translate&gt;map translate &lt;english direction&gt; &lt;translated long direction&gt;&lt;/link&gt;
             &lt;link: translate&gt;&lt;translated short direction&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets the provided translations for
-            the given english direction word.
+            &lt;DimGrey&gt;the given english direction word.
 
-    &lt;green&gt;Mapping Commands:&lt;DimGrey&gt;
-        These are commands used in the process of actually creating a map
+    &lt;green&gt;Mapping Commands:
+        &lt;DimGrey&gt;These are commands used in the process of actually creating a map
 
         &lt;link: start mapping&gt;start mapping &lt;optional area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Starts adding content to the
-            map, using either the area of the room the user is currently in,
-            or the area name provided
+            &lt;DimGrey&gt;map, using either the area of the room the user is currently in,
+            &lt;DimGrey&gt;or the area name provided
         &lt;link: stop mapping&gt;stop mapping&lt;/link&gt;&lt;DimGrey&gt; - Stops adding content to the map
         &lt;link: set area&gt;set area &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Moves the current room to the named area
         &lt;link: mode&gt;map mode &lt;simple, normal, or complex&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets the mapping mode
         &lt;link: add door&gt;add door &lt;direction&gt; &lt;optional door status&gt; &lt;optional one way&gt;&lt;/link&gt;&lt;DimGrey&gt; -
-            Creates a door in the given direction, with the given status
-            (default closed), in both directions, unless a one-direction door
-            is specified
+            &lt;DimGrey&gt;Creates a door in the given direction, with the given status
+            &lt;DimGrey&gt;(default closed), in both directions, unless a one-direction door
+            &lt;DimGrey&gt;is specified
         &lt;link: add portal&gt;add portal &lt;entry command&gt;&lt;/link&gt;&lt;DimGrey&gt; - Creates a portal in the current room,
-            using the given command for entry
+            &lt;DimGrey&gt;using the given command for entry
         &lt;link: shift&gt;shift &lt;direction&gt;&lt;/link&gt;&lt;DimGrey&gt; - Moves the current room on the map in the given
-            direction
+            &lt;DimGrey&gt;direction
         &lt;link: merge rooms&gt;merge rooms&lt;/link&gt;&lt;DimGrey&gt; - Combines overlapping rooms that have the same name into
-            a single room
+            &lt;DimGrey&gt;a single room
         &lt;link: clear moves&gt;clear moves&lt;/link&gt;&lt;DimGrey&gt; - Clears the list of movement commands maintained by the
-            script
+            &lt;DimGrey&gt;script
         &lt;link: set exit&gt;set exit &lt;direction&gt; &lt;roomID&gt;&lt;/link&gt;&lt;DimGrey&gt; - Creates a one-way exit in the given
-            direction to the room with the specified roomID, can also be used
-            with portals
+            &lt;DimGrey&gt;direction to the room with the specified roomID, can also be used
+            &lt;DimGrey&gt;with portals
         &lt;link: areas&gt;map areas&lt;/link&gt;&lt;DimGrey&gt; - Shows a list of all area, with links to show a list of
-            rooms in the area
+            &lt;DimGrey&gt;rooms in the area
         &lt;link: rooms&gt;map rooms &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Shows a list of rooms in the named area
 
     &lt;green&gt;Sharing and Backup Commands:&lt;DimGrey&gt;
 
         &lt;link: save&gt;map save&lt;/link&gt;&lt;DimGrey&gt; - Creates a backup of the map
         &lt;link: load&gt;map load &lt;remote address&gt;&lt;/link&gt;&lt;DimGrey&gt; - Loads a map backup, or a map file from a
-            remote address
+            &lt;DimGrey&gt;remote address
         &lt;link: export&gt;map export &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Creates a file from the named area that can
-            be shared
+            &lt;DimGrey&gt;be shared
         &lt;link: import&gt;map import &lt;area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Loads an area from a file
 
-    &lt;green&gt;Mapping Events:&lt;DimGrey&gt;
-        These events are used by triggers to direct the script's behavior
+    &lt;green&gt;Mapping Events:
+        &lt;DimGrey&gt;These events are used by triggers to direct the script's behavior
 
         &lt;link: onNewRoom&gt;onNewRoom&lt;/link&gt;&lt;DimGrey&gt; - Signals that a room has been detected, optional exits
-            argument
+            &lt;DimGrey&gt;argument
         &lt;link: onMoveFail&gt;onMoveFail&lt;/link&gt;&lt;DimGrey&gt; - Signals that an attempted move failed
         &lt;link: onForcedMove&gt;onForcedMove&lt;/link&gt;&lt;DimGrey&gt; - Signals that the character moved without a command
-            being entered, required direction argument
+            &lt;DimGrey&gt;being entered, required direction argument
         &lt;link: onRandomMove&gt;onRandomMove&lt;/link&gt;&lt;DimGrey&gt; - Signals that the character moved in an unknown
-            direction without a command being entered
+            &lt;DimGrey&gt;direction without a command being entered
         &lt;link: onVisionFail&gt;onVisionFail&lt;/link&gt;&lt;DimGrey&gt; - Signals that the character moved but some or all of
-            the room information was not able to be gathered
+            &lt;DimGrey&gt;the room information was not able to be gathered
 
     &lt;green&gt;Key Variables:&lt;DimGrey&gt;
-        These variables are used by the script to keep track of important
-            information
+        &lt;DimGrey&gt;These variables are used by the script to keep track of important
+            &lt;DimGrey&gt;information
 
         &lt;yellow&gt;map.prompt.room&lt;DimGrey&gt; - Can be set to specify the room name
         &lt;yellow&gt;map.prompt.exits&lt;DimGrey&gt; - Can be set to specify the room exits
         &lt;yellow&gt;map.character&lt;DimGrey&gt; - Contains the current character name
         &lt;yellow&gt;map.save.recall&lt;DimGrey&gt; - Contains a table of recall roomIDs for all
-            characters
+            &lt;DimGrey&gt;characters
         &lt;yellow&gt;map.save.prompt_pattern&lt;DimGrey&gt; - Contains a table of prompt patterns for all
-            characters
+            &lt;DimGrey&gt;characters
         &lt;yellow&gt;map.save.ignore_patterns&lt;DimGrey&gt; - Contains a table of patterns of text the
-            script ignores
+            &lt;DimGrey&gt;script ignores
         &lt;yellow&gt;map.configs&lt;DimGrey&gt; - Contains a number of different options that can be set
-            to modify script behavior
+            &lt;DimGrey&gt;to modify script behavior
         &lt;yellow&gt;map.currentRoom&lt;DimGrey&gt; - Contains the roomID of the room your character is
-            in, according to the script
+            &lt;DimGrey&gt;in, according to the script
         &lt;yellow&gt;map.currentName&lt;DimGrey&gt; - Contains the name of the room your character is in,
-            according to the script
+            &lt;DimGrey&gt;according to the script
         &lt;yellow&gt;map.currentExits&lt;DimGrey&gt; - Contains a table of the exits of the room your
-            character is in, according to the script
+            &lt;DimGrey&gt;character is in, according to the script
         &lt;yellow&gt;map.currentArea&lt;DimGrey&gt; - Contains the areaID of the area your character is
-            in, according to the script
+            &lt;DimGrey&gt;in, according to the script
 ]]}
 map.help.save = [[
     &lt;green&gt;Map Save&lt;reset&gt;
