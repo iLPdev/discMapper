@@ -1516,7 +1516,7 @@ function map.show_help(cmd)
             local _, _, after = w:match("(.*)&lt;u?r?l?link: [^&gt;]+&gt;(.*)&lt;/u?r?l?link&gt;(.*)")
 
             cecho(before)
-            fg("yellow")
+            fg("green")
             setUnderline(true)
             if linktext == "urllink" then
                 echoLink(link, [[openWebPage("]]..target..[[")]], "Open Mudlet Discord", true)
