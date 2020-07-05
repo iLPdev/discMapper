@@ -762,7 +762,7 @@ map.help = {[[
     disc. Additional convenience features are included as developed.
     
     An overview of included commands is provided below. Additional information
-    on each command is available by entering 'map help &lt;command name&gt;'.
+    on each command is available by entering '&lt;green&gt;map help &lt;command name&gt;&lt;reset&gt;'.
 
     &lt;white&gt;Fundamental Commands:&lt;reset&gt;
         These are commands used to get the mapper functional on a basic level
