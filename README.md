@@ -10,6 +10,7 @@
 
 <!-- PROJECT BADGES -->
 
+[![Build Status](https://img.shields.io/travis/iLPdev/discMapper/develop?style=flat-square)](https://travis-ci.org/iLPdev/discMapper)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
