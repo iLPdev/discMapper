@@ -782,7 +782,7 @@ map.help = {[[
             &lt;DimGrey&gt;with the intent of assisting in troubleshooting getting the
             &lt;DimGrey&gt;script setup
         &lt;link: me&gt;map me&lt;/link&gt;&lt;DimGrey&gt; - Locates the user on the map, if possible
-        &lt;link: path&gt;map path &lt;room name&gt; &lt;; optional area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Finds a walking path to
+        &lt;link: path&gt;map path &lt;room name&gt; &lt;optional area name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Finds a walking path to
             &lt;DimGrey&gt;the named room, in the named area if specified
         &lt;link: character&gt;map character &lt;name&gt;&lt;/link&gt;&lt;DimGrey&gt; - Sets a given name as the current character for
             &lt;DimGrey&gt;the purposes of the script, used for different prompt patterns
