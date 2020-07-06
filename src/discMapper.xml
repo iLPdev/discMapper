@@ -1478,9 +1478,9 @@ local reverse_dirs = {
 }
 
 local wait_echo = {}
-local err_tag = "&lt;255,0,0&gt;(&lt;178,34,34&gt;error&lt;255,0,0&gt;): &lt;255,255,255&gt;"
 local mapper_tag = "&lt;105,105,105&gt;[&lt;0,255,0&gt;  dM  &lt;105,105,105&gt;] "
 local debug_tag = "&lt;105,105,105&gt;(&lt;255,255,255&gt;debug&lt;105,105,105&gt;): "
+local err_tag = "&lt;105,105,105&gt;(&lt;178,34,34&gt;error&lt;105,105,105&gt;): "
 
 
 local function parse_help_text(text)
