@@ -873,8 +873,8 @@ map.help = {[[
             &lt;DimGrey&gt;in, according to the script
 ]]}
 map.help.save = [[
-        syntax: &lt;yellow&gt;map save&lt;reset&gt;
     &lt;white&gt;Map Save&lt;reset&gt;
+        syntax: &lt;green&gt;map save&lt;reset&gt;
 
         This command creates a copy of the current map and stores it in the
         profile folder as map.dat. This can be useful for creating a backup
@@ -882,8 +882,8 @@ map.help.save = [[
         entire map at once.
 ]]
 map.help.load = [[
-        syntax: &lt;yellow&gt;map load &lt;optional download address&gt;&lt;reset&gt;
     &lt;white&gt;Map Load&lt;reset&gt;
+        syntax: &lt;green&gt;map load &lt;optional download address&gt;&lt;reset&gt;
 
         This command replaces the current map with the map stored as map.dat in
         the profile folder. Alternatively, if a download address is provided, a
@@ -892,16 +892,16 @@ map.help.load = [[
         to download map.dat. If a filename is given it MUST end with .dat.
 ]]
 map.help.show = [[
-        syntax: &lt;yellow&gt;map show&lt;reset&gt;
     &lt;white&gt;Map Show&lt;reset&gt;
+        syntax: &lt;green&gt;map show&lt;reset&gt;
 
         This command shows a map window, as specified by the window configs set
         via the &lt;link: window&gt;map window command&lt;/link&gt;. It isn't necessary to use this method to
         show a map window to use this script, any map window will work.
 ]]
 map.help.export = [[
-        syntax: &lt;yellow&gt;map export &lt;area name&gt;&lt;reset&gt;
     &lt;white&gt;Map Export&lt;reset&gt;
+        syntax: &lt;green&gt;map export &lt;area name&gt;&lt;reset&gt;
 
         This command creates a file containing all the informatino about the
         named area and stores it in the profile folder, with a file name based
@@ -911,8 +911,8 @@ map.help.export = [[
         file extension.
 ]]
 map.help.import = [[
-        syntax: &lt;yellow&gt;map import &lt;area name&gt;&lt;reset&gt;
     &lt;white&gt;Map Import&lt;reset&gt;
+        syntax: &lt;green&gt;map import &lt;area name&gt;&lt;reset&gt;
 
         This command imports a file from the profile folder with a name matching
         the name of the file, and uses it to create an area on the map. The area
@@ -921,8 +921,8 @@ map.help.import = [[
         file, and is not set by the area name used in this command.
 ]]
 map.help.start_mapping = [[
-        syntax: &lt;yellow&gt;start mapping &lt;optional area name&gt;&lt;reset&gt;
     &lt;white&gt;Start Mapping&lt;reset&gt;
+        syntax: &lt;green&gt;start mapping &lt;optional area name&gt;&lt;reset&gt;
 
         This command instructs the script to add new content to the map when it
         is seen. When first used, an area name is mandatory, so that an area is
@@ -933,16 +933,16 @@ map.help.start_mapping = [[
         area the character is currently located in.
 ]]
 map.help.stop_mapping = [[
-        syntax: &lt;yellow&gt;stop mapping&lt;reset&gt;
     &lt;white&gt;Stop Mapping&lt;reset&gt;
+        syntax: &lt;green&gt;stop mapping&lt;reset&gt;
 
         This command instructs the script to stop adding new content until
         mapping is resumed at a later time. The map will continue to perform
         other functions.
 ]]
 map.help.find_prompt = [[
-        syntax: &lt;yellow&gt;find prompt&lt;reset&gt;
     &lt;white&gt;Find Prompt&lt;reset&gt;
+        syntax: &lt;green&gt;find prompt&lt;reset&gt;
 
         This command instructs the script to begin searching newly arriving text
         for something that matches one of its known prompt patterns. If one is
@@ -953,8 +953,8 @@ map.help.find_prompt = [[
         necessary to use the map prompt command to manually set a pattern.
 ]]
 map.help.prompt = [[
-        syntax: &lt;yellow&gt;map prompt &lt;prompt pattern&gt;&lt;reset&gt;
     &lt;white&gt;Map Prompt&lt;reset&gt;
+        syntax: &lt;green&gt;map prompt &lt;prompt pattern&gt;&lt;reset&gt;
 
         This command manually sets a prompt pattern for the script to use.
         Because of the way this script works, the prompt pattern should match
@@ -965,8 +965,8 @@ map.help.prompt = [[
         Discord channel.
 ]]
 map.help.debug = [[
-        syntax: &lt;yellow&gt;map debug&lt;reset&gt;
     &lt;white&gt;Map Debug&lt;reset&gt;
+        syntax: &lt;green&gt;map debug&lt;reset&gt;
 
         This command toggles the map script's debug mode on or off when it is
         used. Debug mode provides some extra messages to help with setting up
@@ -975,8 +975,8 @@ map.help.debug = [[
         make the process faster and easier.
 ]]
 map.help.ignore = [[
-        syntax: &lt;yellow&gt;map ignore &lt;ignore pattern&gt;&lt;reset&gt;
     &lt;white&gt;Map Ignore&lt;reset&gt;
+        syntax: &lt;green&gt;map ignore &lt;ignore pattern&gt;&lt;reset&gt;
 
         This command adds the given pattern to a list the script maintains to
         help it locate the room name. Any text that might appear after a command
@@ -988,31 +988,31 @@ map.help.ignore = [[
         pattern will be removed from the list.
 ]]
 map.help.areas = [[
-        syntax: &lt;yellow&gt;map areas&lt;reset&gt;
     &lt;white&gt;Map Areas&lt;reset&gt;
+        syntax: &lt;green&gt;map areas&lt;reset&gt;
 
         This command displays a linked list of all areas in the map. When
         clicked, the rooms in the selected area will be displayed, as if the
         'map rooms' command had been used with that area as an argument.
 ]]
 map.help.rooms = [[
-        syntax: &lt;yellow&gt;map rooms &lt;area name&gt;&lt;reset&gt;
     &lt;white&gt;Map Rooms&lt;reset&gt;
+        syntax: &lt;green&gt;map rooms &lt;area name&gt;&lt;reset&gt;
 
         This command shows a list of all rooms in the area, with the roomID and
         the room name, as well as a count of how many rooms are in the area
         total. Note that the area name argument is not case sensitive.
 ]]
 map.help.set_area = [[
-        syntax: &lt;yellow&gt;set area &lt;area name&gt;&lt;reset&gt;
     &lt;white&gt;Set Area&lt;reset&gt;
+        syntax: &lt;green&gt;set area &lt;area name&gt;&lt;reset&gt;
 
         This command move the current room into the named area, creating the
         area if needed.
 ]]
 map.help.mode = [[
-        syntax: &lt;yellow&gt;map mode &lt;simple, normal, or complex&gt;&lt;reset&gt;
     &lt;white&gt;Map Mode&lt;reset&gt;
+        syntax: &lt;green&gt;map mode &lt;simple, normal, or complex&gt;&lt;reset&gt;
 
         This command changes the current mapping mode, which determines what
         happens when new rooms are added to the map.
@@ -1028,8 +1028,8 @@ map.help.mode = [[
         connected automatically when it is created.
 ]]
 map.help.add_door = [[
-        syntax: &lt;yellow&gt;add door &lt;direction&gt; &lt;optional none, open, closed, or locked&gt;
     &lt;white&gt;Add Door&lt;reset&gt;
+        syntax: &lt;green&gt;add door &lt;direction&gt; &lt;optional none, open, closed, or locked&gt;
         &lt;optional yes or no&gt;&lt;reset&gt;
 
         This command places a door on the exit in the given direction, or
@@ -1038,8 +1038,8 @@ map.help.add_door = [[
         argument determines if the door is a one-way door, default "no".
 ]]
 map.help.add_portal = [[
-        syntax: &lt;yellow&gt;add portal &lt;optional -f&gt; &lt;entry command&gt;&lt;reset&gt;
     &lt;white&gt;Add Portal&lt;reset&gt;
+        syntax: &lt;green&gt;add portal &lt;optional -f&gt; &lt;entry command&gt;&lt;reset&gt;
 
         This command creates a special exit in the current room that is entered
         by using the given entry command. The given entry command is then sent,
@@ -1050,23 +1050,23 @@ map.help.add_portal = [[
         matches the room seen when arriving at the destination.
 ]]
 map.help.shift = [[
-        syntax: &lt;yellow&gt;shift &lt;direction&gt;&lt;reset&gt;
     &lt;white&gt;Shift&lt;reset&gt;
+        syntax: &lt;green&gt;shift &lt;direction&gt;&lt;reset&gt;
 
         This command moves the current room one step in the direction given, on
         the map.
 ]]
 map.help.merge_rooms = [[
-        syntax: &lt;yellow&gt;merge rooms&lt;reset&gt;
     &lt;white&gt;Merge Rooms&lt;reset&gt;
+        syntax: &lt;green&gt;merge rooms&lt;reset&gt;
 
         This command combines all rooms that share the same coordinates and the
         same room name into a single room, with all of the exits preserved and
         combined.
 ]]
 map.help.clear_moves = [[
-        syntax: &lt;yellow&gt;clear moves&lt;reset&gt;
     &lt;white&gt;Clear Moves&lt;reset&gt;
+        syntax: &lt;green&gt;clear moves&lt;reset&gt;
 
         This command clears the script's queue of movement commands, and is
         intended to be used after you attempt to move while mapping but the
@@ -1074,8 +1074,8 @@ map.help.clear_moves = [[
         trigger that raises the onMoveFail event.
 ]]
 map.help.set_exit = [[
-        syntax: &lt;yellow&gt;set exit &lt;direction&gt; &lt;destination roomID&gt;&lt;reset&gt;
     &lt;white&gt;Set Exit&lt;reset&gt;
+        syntax: &lt;green&gt;set exit &lt;direction&gt; &lt;destination roomID&gt;&lt;reset&gt;
 
         This command sets the exit in the current room in the given direction to
         connect to the target room, as specified by the roomID. This is a
@@ -1139,8 +1139,8 @@ map.help.onprompt = [[
         modify the triggers they created for it.
 ]]
 map.help.me = [[
-        syntax: &lt;yellow&gt;map me&lt;reset&gt;
     &lt;white&gt;Map Me&lt;reset&gt;
+        syntax: &lt;green&gt;map me&lt;reset&gt;
 
         This command forces the script to look at the currently captured room
         name and exits, and search for a potentially matching room, moving the
@@ -1149,8 +1149,8 @@ map.help.me = [[
         don't match expectations.
 ]]
 map.help.path = [[
-        syntax: &lt;yellow&gt;map path &lt;room name&gt; &lt;; optional area name&gt;&lt;reset&gt;
     &lt;white&gt;Map Path&lt;reset&gt;
+        syntax: &lt;green&gt;map path &lt;room name&gt; &lt;; optional area name&gt;&lt;reset&gt;
 
         This command tries to find a walking path from the current room to the
         named room. If an area name is given, only rooms within that area that
@@ -1162,8 +1162,8 @@ map.help.path = [[
         Example: &lt;green&gt;map path main street ; newbie town&lt;reset&gt;
 ]]
 map.help.character = [[
-        syntax: &lt;yellow&gt;map character &lt;name&gt;&lt;reset&gt;
     &lt;white&gt;Map Character&lt;reset&gt;
+        syntax: &lt;green&gt;map character &lt;name&gt;&lt;reset&gt;
 
         This command tells the script what character is currently being used.
         Setting a character is optional, but recall locations and prompt
@@ -1174,8 +1174,8 @@ map.help.character = [[
         if needed each time the profile is opened.
 ]]
 map.help.recall = [[
-        syntax: &lt;yellow&gt;map recall&lt;reset&gt;
     &lt;white&gt;Map Recall&lt;reset&gt;
+        syntax: &lt;green&gt;map recall&lt;reset&gt;
 
         This command tells the script that the current room is the recall point
         for the current character, as stored in map.character. This information
@@ -1183,8 +1183,8 @@ map.help.recall = [[
         sessions.
 ]]
 map.help.config = [[
-        syntax: &lt;yellow&gt;map config &lt;setting&gt; &lt;optional value&gt;&lt;reset&gt;
     &lt;white&gt;Map Config&lt;reset&gt;
+        syntax: &lt;green&gt;map config &lt;setting&gt; &lt;optional value&gt;&lt;reset&gt;
 
         This command changes any of the available configurations listed below.
         If no value is given, and the setting is either 'on' or 'off', then the
