@@ -1296,31 +1296,30 @@ map.help.translate = [[
         northwest, northeast, southwest, southeast, up, down, in, and out.
 ]]
 map.help.quick_start = [[
-    &lt;link: quick_start&gt;map basics&lt;/link&gt; (quick start guide)
-    ----------------------------------------
 
-    Mudlet Mapper works in tandem with a script, and this generic mapper script needs
-    to know 2 things to work:
-      - &lt;dim_grey&gt;room name&lt;reset&gt; $ROOM_NAME_STATUS ($ROOM_NAME)
-      - &lt;dim_grey&gt;exits&lt;reset&gt;     $ROOM_EXITS_STATUS ($ROOM_EXITS)
+    &lt;white&gt;Quick Start Guide: &lt;link: quick_start&gt;map basics&lt;/link&gt;&lt;reset&gt;
+    &lt;DimGrey&gt;-----------------------------
+        &lt;DimGrey&gt;Like a pair of eyeglasses, discMapper allows Mudlet to see Discworld
+        &lt;DimGrey&gt;more clearly. The script focuses information from the server in a way
+        &lt;DimGrey&gt;that Mudlet can understand. discMapper's lens sees your location as:
+        
+             $ROOM_NAME_STATUS &lt;DimGrey&gt;Room Name: &lt;reset&gt;$ROOM_NAME
+             $ROOM_EXITS_STATUS &lt;DimGrey&gt;Exits: &lt;reset&gt;$ROOM_EXITS
 
-    1. &lt;link: start mapping&gt;start mapping &lt;optional area name&gt;&lt;/link&gt;
-       If both room name and exits are good, you can start mapping! Give it the
-       area name you're currently in, usually optional but required for the first one.
-    2. &lt;link: find prompt&gt;find prompt&lt;/link&gt;
-       Room name or exits aren't recognised? Try this command then. It will make
-       the script start looking for a prompt using several standard prompt
-       patterns. If a prompt is found, you will be notified, if not, you will
-       need to set a prompt pattern yourself using &lt;link: prompt&gt;map prompt&lt;/link&gt;.
-       Reach out to the &lt;urllink: https://discord.gg/kuYvMQ9&gt;Mudlet community&lt;/urllink&gt; for help, we'd be happy to help
-       you figure it out!
-    3. &lt;link: debug&gt;map debug&lt;/link&gt;
-       This toggles debug mode. When on, messages will be displayed showing what
-       information is captured and a few additional error messages that can help
-       with getting the script fully compatible with your game.
-    4. &lt;link: 1&gt;map help&lt;/link&gt;
-       This will bring up a more detailed help file, starting with the available
-       help topics.
+    1.  &lt;link: start mapping&gt;start mapping &lt;area name&gt;&lt;/link&gt; &lt;DimGrey&gt;- To begin mapping, supply the name of your
+        &lt;DimGrey&gt;current zone to the 'start mapping' command (e.g., start mapping Ankh-
+        &lt;DimGrey&gt;Morpork).
+       
+    2.  &lt;link: find prompt&gt;find prompt&lt;/link&gt; &lt;DimGrey&gt;- If discMapper failed to recognize exits above, it may be
+        &lt;DimGrey&gt;because your custom prompt was not autodetected. Use the 'find prompt'
+        &lt;DimGrey&gt;command to search for it. If your prompt is still not found, use the 
+        &lt;link: prompt&gt;map prompt&lt;/link&gt; &lt;DimGrey&gt;command to set your custom pattern manually. If you get
+        &lt;DimGrey&gt;stuck, reach out to the Mudlet Community on our &lt;urllink: https://discord.gg/kuYvMQ9&gt;Mudlet Discord Server&lt;/urllink&gt;&lt;DimGrey&gt;.
+       
+    3.  &lt;link: debug&gt;map debug&lt;/link&gt; &lt;DimGrey&gt;- Toggle debug mode on and off. When enabled, additional
+        &lt;DimGrey&gt;script information will be displayed to assist with troubleshooting.
+
+    4.  &lt;link: 1&gt;map help&lt;/link&gt; &lt;DimGrey&gt;- Access the discMapper help system.
 ]]
 
 map.character = map.character or ""
