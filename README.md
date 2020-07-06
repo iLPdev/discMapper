@@ -10,6 +10,7 @@
 
 <!-- PROJECT BADGES -->
 
+![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat-square)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -92,7 +93,7 @@ Version numbering will approximate the [Semantic Versioning](http://semver.org) 
 <!-- Show the build status if you have a CI server:
       Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
 
-[![Status Enfer][status-enfer]][andivionian-status-classifier]
+[![Status Ventis][status-ventis]][andivionian-status-classifier]
 
 This fledgling project is under initial development. As such, the script is non-functional at this time and in need of continued development.
 
@@ -259,7 +260,7 @@ The expectation is that our community group acts according to these guidelines, 
 [license-url]: https://github.com/iLPdev/discMapper/blob/master/LICENSE.txt
 [standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square
 [standard-readme-url]: https://github.com/RichardLitt/standard-readme
-[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-enfer-
-[status-enfer]: https://img.shields.io/badge/status-enfer-orange.svg
+[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-ventis-
+[status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
