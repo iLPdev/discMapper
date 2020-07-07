@@ -92,12 +92,15 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 ### Project Status
 
-<!-- Show the build status if you have a CI server:
-      Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
+<!-- Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
 
-[![Status Ventis][status-ventis]][andivionian-status-classifier]
+[![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
-This fledgling project is under initial development. As such, the script is non-functional at this time and in need of continued development.
+discMapper is under active development. The application can be used, but may be unstable. 
+
+#### v0.2.0-beta
+
+The core mapping features and help system have been implemented in [v0.2.0-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.2.0-beta), but are in need of beta testing prior to the v1.0.0 release.
 
 **[^Top](#table-of-contents)**
 
