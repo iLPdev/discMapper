@@ -70,7 +70,11 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 
 ### Features
 
-- Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation! - Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map! - Precision Room Name detection using GMCP Room Name data
+- Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: 
+  - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation! 
+  - Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map! 
+  - Precision Room Name detection using GMCP Room Name data
+- Speedwalking and pathfinding - Efficiently get where you're going!
 - Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
 - Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
