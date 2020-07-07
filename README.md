@@ -198,8 +198,10 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 <!-- CONTRIBUTING -->
 
 ## Contributing
+Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person. 
 
-Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person.
+### Contributions Welcome
+All contributions (no matter if small) are always welcome. To see how you can help and where to start [see Contributing file](CONTRIBUTING.md).
 
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
