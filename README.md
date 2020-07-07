@@ -114,12 +114,13 @@ The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could 
 
 To install discMapper, just follow these simple steps:
 
-1. Download the latest release of the discMapper package (available in this repo soon) to your PC.
+1. Locate the [latest release](https://github.com/iLPdev/discMapper/releases/latest) of the discMapper.
+1. Download the XML file listed under Assets.
 1. Open Mudlet on your operating system of choice.
 1. Open an existing Discworld MUD profile or create a new one.
-1. Locate the saved `discMapper.zip` file on your PC.
-1. Drag and drop the `discMapper.zip` file into your open Discworld MUD profile.
-1. Optionally, delete the `discMapper.zip` from your computer.
+1. Locate the saved XML file on your PC.
+1. Drag and drop the XML file into your open Discworld MUD profile.
+1. Optionally, delete the XML from your computer.
 
 ### Dependencies
 
