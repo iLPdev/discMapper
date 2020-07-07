@@ -88,7 +88,7 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 
 ### Versioning
 
-Version numbering will approximate the [Semantic Versioning](http://semver.org) approach.
+Version numbering approximates the [Semantic Versioning](http://semver.org) approach.
 
 ### Project Status
 
