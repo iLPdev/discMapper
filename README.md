@@ -83,8 +83,6 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 - [Lua](https://www.lua.org) is the programming language
 - [Edbee Library](https://github.com/edbee/edbee-lib) provides the text editor component for Mudlet
 - [Mudlet](https://github.com/Mudlet/Mudlet) is a cross-platform, open source, and super fast MUD client
-- [Sublime Text](https://www.sublimetext.com) is the current maintainer's source code editor of choice
-- [Sublime Merge](https://www.sublimemerge.com) is the current maintainer's cross-platform GUI git client
 - [Git](https://git-scm.com) is the version-control system for tracking changes and project management
 - [ImgBot](https://github.com/dabutvin/Imgbot) provides GitHub-integrated image optimization
 
