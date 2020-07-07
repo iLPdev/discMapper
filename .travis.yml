@@ -1,0 +1,4 @@
+# totally useless - just learning
+language: minimal
+os: linux
+dist: xenial

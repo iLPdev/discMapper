@@ -66,3 +66,17 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/
+.vscode/*
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode

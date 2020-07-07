@@ -10,6 +10,7 @@
 
 <!-- PROJECT BADGES -->
 
+![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat-square)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -61,7 +62,7 @@ Unfortunately, it was soon realized that cleanly installing this initial version
 
 Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). discMapper was open-sourced upon conception.
 
-Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development prcesses, and the Lua language.
+Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development processes, and the Lua language.
 
 ### Vision
 
@@ -91,6 +92,8 @@ Version numbering will approximate the [Semantic Versioning](http://semver.org) 
 
 <!-- Show the build status if you have a CI server:
       Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
+
+[![Status Ventis][status-ventis]][andivionian-status-classifier]
 
 This fledgling project is under initial development. As such, the script is non-functional at this time and in need of continued development.
 
@@ -257,5 +260,7 @@ The expectation is that our community group acts according to these guidelines, 
 [license-url]: https://github.com/iLPdev/discMapper/blob/master/LICENSE.txt
 [standard-readme-shield]: https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square
 [standard-readme-url]: https://github.com/RichardLitt/standard-readme
+[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-ventis-
+[status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
