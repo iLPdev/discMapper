@@ -1,35 +1,38 @@
 # discMapper
 
 <!-- PROJECT BANNER -->
-<br />
-<p align="center">
-  <a href=".github/images/discMapper_logo.png">
-    <img src=".github/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
-  </a>
-</p>
+<div>
+    <br />
+    <p align="center">
+        <a href=".github/images/discMapper_logo.png">
+          <img src=".github/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
+        </a>
+    </p>  
+</div>
 
 <!-- PROJECT BADGES -->
-
-![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat-square) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END --> [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
-[![standard-readme compliant][standard-readme-shield]][standard-readme-url]
+<div>
+    <p align="center">
+        ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat-square) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END --> [![Forks][forks-shield]][forks-url]
+        [![Stargazers][stars-shield]][stars-url]
+        [![Issues][issues-shield]][issues-url]
+        [![GPL License][license-shield]][license-url]
+        [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
+    </p>
+</div>
 
 <!-- SHORT DESCRIPTION -->
 <p align="center">
-  Discworld MUD mapping script for Mudlet
-  <br />
+    Discworld MUD mapping script for Mudlet
+    <br />
 </p>
 
 <!-- LONG DESCRIPTION -->
-
 The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
 Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
 
 <!-- TABLE OF CONTENTS -->
-
 ## Table of Contents
 
 - [Background](#background)
@@ -42,11 +45,9 @@ Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">
 - [License](#license)
 
 <!-- ABOUT THE PROJECT -->
-
 ## Background
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)
--->
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 ### History
 
@@ -108,8 +109,7 @@ The core mapping features and help system have been implemented in [v0.2.0-beta]
 
 <!-- Code block illustrating how to install.
      Include any system-specific information needed for installation.
-     An Updating section would be useful for most packages, if there are multiple versions which the user may interface with.
--->
+     An Updating section would be useful for most packages, if there are multiple versions which the user may interface with. -->
 
 The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs. Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and droppping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
 
@@ -142,15 +142,13 @@ You can also clone the entire project directly with this command: `git clone git
 **[^Top](#table-of-contents)**
 
 <!-- USAGE EXAMPLES -->
-
 ## Usage
 
 <!-- Code block illustrating common usage.
      If CLI compatible, code block indicating common usage.
      Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
      Cover basic choices that may affect usage: for instance, if JavaScript, cover promises/callbacks, ES6 here.
-     If relevant, point to a runnable file for the usage code.
--->
+     If relevant, point to a runnable file for the usage code. -->
 
 To get started, connect to Discworld MUD in Mudlet and then enter `map basics` at the prompt.
 
@@ -161,7 +159,6 @@ A simple help system covering basic usage, most commands, and configuration opti
 **[^Top](#table-of-contents)**
 
 <!-- ROADMAP -->
-
 ## Roadmap
 
 The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time.
@@ -171,7 +168,6 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 **[^Top](#table-of-contents)**
 
 <!-- MAINTAINER(S) -->
-
 ## Maintainer
 
 [@Stack](https://github.com/iLPdev) - Stop by and say hello on the [Mudlet Discord Server](https://discordapp.com/invite/kuYvMQ9)!
@@ -179,7 +175,6 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 **[^Top](#table-of-contents)**
 
 <!-- ACKNOWLEDGEMENTS -->
-
 ## Acknowledgements
 
 <!-- State anyone or anything that significantly helped with the development of your project.
@@ -200,7 +195,6 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 **[^Top](#table-of-contents)**
 
 <!-- CONTRIBUTING -->
-
 ## Contributing
 Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person. All contributions--no matter how small---are always welcome. Adding an independent [CONTRIBUTING.md](https://github.com/iLPdev/discMapper/issues/8) remains on a to-do on my list.
 
@@ -219,7 +213,6 @@ Basically, to contribute to this project, you're invited to:
 1. Submit a Pull Request
 
 ### Ethics
-
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
@@ -239,7 +232,6 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 The expectation is that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the [maintainer](#maintainer) of this repository.
 
 ## Contributors
-
 Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -267,7 +259,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
 [contributors-shield]: https://img.shields.io/github/contributors/iLPdev/discMapper.svg?style=flat-square
 [contributors-url]: https://github.com/iLPdev/discMapper/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/iLPdev/discMapper.svg?style=flat-square
