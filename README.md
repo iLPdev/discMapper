@@ -1,4 +1,7 @@
 # discMapper
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- PROJECT BANNER -->
 <br />
@@ -269,3 +272,22 @@ The expectation is that our community group acts according to these guidelines, 
 [status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/from"><img src="https://avatars1.githubusercontent.com/u/3470168?v=4" width="100px;" alt=""/><br /><sub><b>from</b></sub></a><br /><a href="https://github.com/iLPdev/discMapper/commits?author=from" title="Code">💻</a> <a href="#design-from" title="Design">🎨</a> <a href="https://github.com/iLPdev/discMapper/commits?author=from" title="Documentation">📖</a> <a href="#infra-from" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-from" title="Maintenance">🚧</a> <a href="#projectManagement-from" title="Project Management">📆</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
