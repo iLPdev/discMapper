@@ -1,7 +1,4 @@
 # discMapper
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- PROJECT BANNER -->
 <br />
@@ -20,6 +17,9 @@
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- SHORT DESCRIPTION -->
 <p align="center">
@@ -241,12 +241,28 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 
 The expectation is that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the [maintainer](#maintainer) of this repository.
 
-### Contributors
+## Contributors
+
+Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://ilpdev.com"><img src="https://avatars1.githubusercontent.com/u/1428343?v=4" width="50px;" alt=""/><br /><sub><b>Stack</b></sub></a><br /><a href="https://github.com/iLPdev/discMapper/commits?author=iLPdev" title="Code">💻</a> <a href="#design-iLPdev" title="Design">🎨</a> <a href="https://github.com/iLPdev/discMapper/commits?author=iLPdev" title="Documentation">📖</a> <a href="#infra-iLPdev" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-iLPdev" title="Maintenance">🚧</a> <a href="#projectManagement-iLPdev" title="Project Management">📆</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 **[^Top](#table-of-contents)**
 
 <!-- LICENSE -- Must be last section. -->
-
 ## License
 
 <a title="Zscout370, Sertion, e.a. / Public domain" href="https://commons.wikimedia.org/wiki/File:Copyleft.svg"><img width="12" alt="Copyleft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png"></a> _iLP development_. Distributed under GPL v3.0-and-later. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
@@ -272,22 +288,3 @@ The expectation is that our community group acts according to these guidelines, 
 [status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="http://ilpdev.com"><img src="https://avatars1.githubusercontent.com/u/1428343?v=4" width="100px;" alt=""/><br /><sub><b>Stack</b></sub></a><br /><a href="https://github.com/iLPdev/discMapper/commits?author=iLPdev" title="Code">💻</a> <a href="#design-iLPdev" title="Design">🎨</a> <a href="https://github.com/iLPdev/discMapper/commits?author=iLPdev" title="Documentation">📖</a> <a href="#infra-iLPdev" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-iLPdev" title="Maintenance">🚧</a> <a href="#projectManagement-iLPdev" title="Project Management">📆</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
