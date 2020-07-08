@@ -16,6 +16,7 @@
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
 [![standard-readme compliant][standard-readme-shield]][standard-readme-url]
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Mudlet/mudlet?style=flat-square&label=client&sort=semver)
 
 <!-- SHORT DESCRIPTION -->
 <p align="center">
