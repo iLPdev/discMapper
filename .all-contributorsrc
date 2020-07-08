@@ -1,0 +1,29 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "iLPdev",
+      "name": "Stack",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1428343?v=4",
+      "profile": "http://ilpdev.com",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "infra",
+        "maintenance",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "discMapper",
+  "projectOwner": "iLPdev",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
