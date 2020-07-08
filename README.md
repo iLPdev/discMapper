@@ -202,14 +202,13 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 <!-- CONTRIBUTING -->
 
 ## Contributing
-Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person. 
-
-### Contributions Welcome
-All contributions (no matter if small) are always welcome. To see how you can help and where to start [see Contributing file](CONTRIBUTING.md).
+Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person. All contributions--no matter how small---are always welcome. Adding an independent [CONTRIBUTING.md](https://github.com/iLPdev/discMapper/issues/8) remains on a to-do on my list.
 
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
-There is not yet an clear workflow for this project. We'll likely begin with the [simplified Github workflow](http://scottchacon.com/2011/08/31/github-flow.html) to accept changes. Basically, you’ll need to:
+There is not an explicit workflow requirement for this project, yet. I'm currently exprimenting with the [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) approach and [Conventional Commits](https://www.conventionalcommits.org/), but you don't need to. 
+
+Basically, to contribute to this project, you're invited to:
 
 1. Create an Issue (bug report / feature request)
 1. Fork the Repository
