@@ -501,7 +501,7 @@ map.echo("Map debug set to: " .. (map.configs.debug and "on" or "off"))</script>
 					<name>Map Config Alias</name>
 					<script>-- adjust pattern to allow no argument, if no argument show general help about configs
 if not matches[2] then
-	cecho(map.help.configs)
+	cecho(map.help.config)
 else
   local startStr, endStr = string.match(matches[2],"(.*) ([%w%.]+)")
   local vals = {'on', 'off', 'true', 'false'}
@@ -734,7 +734,7 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-			<script>-- discMapper v0.2.0-beta
+			<script>-- discMapper v0.2.1-beta
 -- forked from Jor'Mox's Generic Map Script 11/07/2018 version dated 10/20/2019 in Mudlet/src
 local version = "2.0.16" -- Generic Map Script version
 
