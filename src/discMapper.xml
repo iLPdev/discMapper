@@ -734,7 +734,7 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-			<script>-- discMapper v0.2.0-beta
+			<script>-- discMapper v0.2.1-beta
 -- forked from Jor'Mox's Generic Map Script 11/07/2018 version dated 10/20/2019 in Mudlet/src
 local version = "2.0.16" -- Generic Map Script version
 
