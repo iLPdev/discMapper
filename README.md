@@ -5,7 +5,7 @@
     <br />
     <p align="center">
         <a href=".github/images/discMapper_logo.png">
-          <img src=".github/images/discMapper_logo.png" alt="discMapper Logo" width="640" height="auto">
+          <img src=".github/images/discMapper_logo.png" alt="discMapper Logo" width="auto" height="auto">
         </a>
     </p>  
 </div>
