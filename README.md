@@ -92,9 +92,9 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 discMapper is under active development. The application can be used, but may be unstable. 
 
-#### v0.2.0-beta
+#### v0.2.1-beta
 
-The core mapping features and help system have been implemented in [v0.2.0-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.2.0-beta), but are in need of beta testing prior to the v1.0.0 release.
+The core mapping features and help system have been implemented, and [v0.2.1-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.2.1-beta), but are in need of beta testing prior to the v1.0.0 release.
 
 **[^Top](#table-of-contents)**
 
