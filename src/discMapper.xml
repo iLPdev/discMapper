@@ -2997,7 +2997,7 @@ local function update_version()
     disableAlias("Map Update Alias")
     uninstallPackage("discMapper")
     installPackage(path)
-    map.echo("Generic Mapping Script updated successfully.")
+    map.echo("discMapper updated successfully.")
 end
 
 function map.updateVersion()
