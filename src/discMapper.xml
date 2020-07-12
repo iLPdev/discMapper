@@ -3001,7 +3001,7 @@ local function update_version()
 end
 
 function map.updateVersion()
-    local path, file = profilePath .. "/map downloads", "/generic_mapper.xml"
+    local path, file = profilePath .. "/map downloads", "/discMapper.xml"
     downloading = true
     downloadFile(path .. file, map.configs.download_path .. file)
 end
