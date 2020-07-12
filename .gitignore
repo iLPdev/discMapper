@@ -74,6 +74,7 @@ $RECYCLE.BIN/
 .vscode/
 .vscode/*
 *.code-workspace
+.prettierrc
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files

@@ -734,9 +734,8 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-			<script>-- discMapper v0.2.1-beta
--- forked from Jor'Mox's Generic Map Script 11/07/2018 version dated 10/20/2019 in Mudlet/src
-local version = "2.0.16" -- Generic Map Script version
+			<script>-- discMapper
+local version = "0.2.1-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -1231,8 +1230,8 @@ map.help.config = [[
             "simple", "normal", or "complex".
 
         &lt;green&gt;download_path&lt;reset&gt; - This is the path that updates are downloaded from.
-            This may be any web address where the versions.lua and
-            generic_mapper.xml files can be downloaded from.
+            This may be any web address from which the versions.lua and
+            discMapper.xml files can be downloaded.
 
         &lt;green&gt;prompt_test_patterns&lt;reset&gt; - This is a table of default patterns checked
             when using the "find prompt" command. The patterns in this table
@@ -3100,7 +3099,7 @@ function map.eventHandler(event, ...)
             map.echo("Map File Loaded.")
         elseif string.ends(file,"/versions.lua") then
             check_version()
-        elseif string.ends(file,"/generic_mapper.xml") then
+        elseif string.ends(file,"/discMapper.xml") then
             update_version()
         end
     elseif event == "sysLoadEvent" or event == "sysInstall" then
