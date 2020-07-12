@@ -2995,7 +2995,7 @@ local function update_version()
     downloading = false
     local path = profilePath .. "/map downloads/discMapper.xml"
     disableAlias("Map Update Alias")
-    uninstallPackage("generic_mapper")
+    uninstallPackage("discMapper")
     installPackage(path)
     map.echo("Generic Mapping Script updated successfully.")
 end
