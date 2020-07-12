@@ -1231,8 +1231,8 @@ map.help.config = [[
             "simple", "normal", or "complex".
 
         &lt;green&gt;download_path&lt;reset&gt; - This is the path that updates are downloaded from.
-            This may be any web address where the versions.lua and
-            generic_mapper.xml files can be downloaded from.
+            This may be any web address from which the versions.lua and
+            discMapper.xml files can be downloaded.
 
         &lt;green&gt;prompt_test_patterns&lt;reset&gt; - This is a table of default patterns checked
             when using the "find prompt" command. The patterns in this table
