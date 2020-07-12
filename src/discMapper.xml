@@ -2993,7 +2993,7 @@ end
 
 local function update_version()
     downloading = false
-    local path = profilePath .. "/map downloads/generic_mapper.xml"
+    local path = profilePath .. "/map downloads/discMapper.xml"
     disableAlias("Map Update Alias")
     uninstallPackage("generic_mapper")
     installPackage(path)
