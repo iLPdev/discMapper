@@ -3100,7 +3100,7 @@ function map.eventHandler(event, ...)
             map.echo("Map File Loaded.")
         elseif string.ends(file,"/versions.lua") then
             check_version()
-        elseif string.ends(file,"/generic_mapper.xml") then
+        elseif string.ends(file,"/discMapper.xml") then
             update_version()
         end
     elseif event == "sysLoadEvent" or event == "sysInstall" then
