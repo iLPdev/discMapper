@@ -1367,7 +1367,7 @@ map.defaults = {
         northwest = 'northwest', up = 'up', down = 'down',
     },
     debug = false,
-    download_path = "https://raw.githubusercontent.com/Mudlet/Mudlet/development/src/mudlet-lua/lua/generic-mapper",
+    download_path = "https://github.com/iLPdev/discMapper/raw/main/src/discMapper.xml",
 }
 
 local move_queue, lines = {}, {}
