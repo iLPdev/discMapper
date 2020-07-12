@@ -54,9 +54,16 @@ On May 24, 2020, [@vadi2](https://github.com/vadi2) was gracious enough to volun
 
 Unfortunately, it was soon realized that cleanly installing this initial version of the discMapper to a new Mudlet profile with no prior mapping settings caused the script to break entirely. Many confused hours were spent chasing a quasi-solutions and residue problems until it became painfully clear that a more rigorously tracked and structured approach would be required: Enter this project's GitHub repository.
 
-Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). discMapper was open-sourced upon conception.
+Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). 
 
-Obviously, this repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) toward trying to conceptualize how best to go about this project. Also, in the course of producing a beta release, work is being conducted to climb the learning curve of Git, GitHub, software development processes, and the Lua language.
+The repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) to conceptualize how best to go about this project. discMapper was open-sourced upon conception.
+
+#### Milestones
+
+- v0.1.0-alpha - Initial
+- v0.1.2-alpha - Core mapping features restored
+- v0.2.1-beta - Help system and configuration functional
+- [v0.3.0-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.3.0-beta) - Automated updates implemented
 
 ### Vision
 
@@ -69,8 +76,6 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
   - Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map! 
   - Precision Room Name detection using GMCP Room Name data
 - Speedwalking and pathfinding - Efficiently get where you're going!
-- Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
-- Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
 
@@ -92,9 +97,7 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 discMapper is under active development. The application can be used, but may be unstable. 
 
-#### v0.2.1-beta
-
-The core mapping features and help system have been implemented, and [v0.2.1-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.2.1-beta), but are in need of beta testing prior to the v1.0.0 release.
+We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
 
 **[^Top](#table-of-contents)**
 
@@ -158,7 +161,11 @@ A simple help system covering basic usage, most commands, and configuration opti
 
 The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time.
 
-See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of proposed features (and known issues).
+Planned new features include:
+- Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
+- Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
+
+See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of proposed features (and known issues).
 
 **[^Top](#table-of-contents)**
 
@@ -175,16 +182,16 @@ See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
 
-- [@vadi2](https://github.com/vadi2) for inital logic development, `custom_locator` code, seemingly unending patience with me, tireless support, general commraderie, and what seems to be steadfastly optimistic and effective leadership
-- [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names on Discworld MUD, being genuinely happy to help others, general commraderie when I've been down, a familiar scarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for Greyhounds
+- [@vadi2](https://github.com/vadi2) for inital logic development, seemingly unending patience with me, tireless support, general commraderie, and what seems to be steadfastly optimistic and effective leadership
+- [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names, being genuinely happy to help others, general commraderie when I've been down, a familiar scarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for complexities in life
 - [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wilshire! ;-P
-- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support.
-- [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community.
+- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support
+- [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community
 - [Generic Map Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by [@JorMox](https://github.com/JorMox) was forked from the 10/20/2019 v2.0.16 as included in Mudlet 4.8.2
 - [Simple Discworld Mapping Script for Mudlet V3](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 - `README.md`:
   - [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
-  - [Standard Readme](https://github.com/RichardLitt/standard-readme) spec
+  - [Standard Readme](https://github.com/RichardLitt/standard-readme) specifcation
   - [Shields.io](https://shields.io/) for serving badges
 
 **[^Top](#table-of-contents)**
