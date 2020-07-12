@@ -1367,7 +1367,7 @@ map.defaults = {
         northwest = 'northwest', up = 'up', down = 'down',
     },
     debug = false,
-    download_path = "https://raw.githubusercontent.com/Mudlet/Mudlet/development/src/mudlet-lua/lua/generic-mapper",
+    download_path = "https://github.com/iLPdev/discMapper/raw/main/src/discMapper.xml",
 }
 
 local move_queue, lines = {}, {}
@@ -1400,10 +1400,10 @@ local function config()
         stubmap[count] = v[1]
         stubmap[v[1]] = count
     end
-    -- update to the current download path
-    if map.configs.download_path == "https://raw.githubusercontent.com/JorMox/Mudlet/development/src/mudlet-lua/lua/generic-mapper" then
-        map.configs.download_path = "https://raw.githubusercontent.com/Mudlet/Mudlet/development/src/mudlet-lua/lua/generic-mapper"
-    end
+    -- -- update to the current download path
+    -- if map.configs.download_path == "https://raw.githubusercontent.com/JorMox/Mudlet/development/src/mudlet-lua/lua/generic-mapper" or then
+        -- map.configs.download_path = "https://raw.githubusercontent.com/Mudlet/Mudlet/development/src/mudlet-lua/lua/generic-mapper"
+    -- end
 
     -- setup metatable to store sensitive values
     local protected = {"mapping", "currentRoom", "currentName", "currentExits", "currentArea",
@@ -2993,15 +2993,15 @@ end
 
 local function update_version()
     downloading = false
-    local path = profilePath .. "/map downloads/generic_mapper.xml"
+    local path = profilePath .. "/map downloads/discMapper.xml"
     disableAlias("Map Update Alias")
-    uninstallPackage("generic_mapper")
+    uninstallPackage("discMapper")
     installPackage(path)
-    map.echo("Generic Mapping Script updated successfully.")
+    map.echo("discMapper updated successfully.")
 end
 
 function map.updateVersion()
-    local path, file = profilePath .. "/map downloads", "/generic_mapper.xml"
+    local path, file = profilePath .. "/map downloads", "/discMapper.xml"
     downloading = true
     downloadFile(path .. file, map.configs.download_path .. file)
 end
