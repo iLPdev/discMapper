@@ -735,7 +735,7 @@ end</script>
 			<name>discMapper</name>
 			<packageName></packageName>
 			<script>-- discMapper
-local version = "0.3.0-beta"
+local version = "0.3.1-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
