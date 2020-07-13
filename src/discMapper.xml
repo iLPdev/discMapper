@@ -735,7 +735,7 @@ end</script>
 			<name>discMapper</name>
 			<packageName></packageName>
 			<script>-- discMapper
-local version = "0.3.0-beta"
+local version = "0.3.1-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -752,7 +752,7 @@ map.help = {[[
     &lt;DimGrey&gt;| |        &lt;green&gt;| (_| | \__ \ (__| |  | | (_| | |_) | |_) |  __/ |           &lt;DimGrey&gt;| |
     &lt;DimGrey&gt;| |_        &lt;green&gt;\__,_|_|___/\___|_|  |_|\__,_| .__/| .__/ \___|_|          &lt;DimGrey&gt;_| |
     &lt;DimGrey&gt;|___|                                    &lt;green&gt;| |   | |                    &lt;DimGrey&gt;|___|
-                        &lt;white&gt;Map Help             &lt;green&gt;|_|   |_|  &lt;DimGrey&gt;v0.1.4-alpha            
+                        &lt;white&gt;Map Help             &lt;green&gt;|_|   |_|  &lt;DimGrey&gt;v$VERSION            
 
     This package allows for semi-automatic mapping of Discworld MUD. The script
     uses the Generic MUD Communication Protocol (GMCP) data sent by the game's
@@ -1488,6 +1488,8 @@ local function parse_help_text(text)
 
   text = text:gsub("%$ROOM_EXITS_STATUS", (not map.currentExits or table.is_empty(map.currentExits)) and '❌' or '✔️')
   text = text:gsub("%$ROOM_EXITS", map.currentExits and table.concat(map.currentExits, ' ') or '')
+
+  text = text:gsub("%$VERSION", version)
 
   return text
 end
