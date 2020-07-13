@@ -2971,7 +2971,7 @@ local function check_version()
     local pos = table.index_of(versions, map.version) or 0
     if pos ~= #versions then
         enableAlias("Map Update Alias")
-        map.echo(string.format("The Generic Mapping Script is currently &lt;red&gt;%d&lt;reset&gt; versions behind.",#versions - pos))
+        map.echo(string.format("discMapper is currently &lt;red&gt;%d&lt;reset&gt; versions behind.",#versions - pos))
         map.echo("To update now, please type: &lt;green&gt;map update&lt;reset&gt;")
     end
     map.update_timer = tempTimer(3600, [[map.checkVersion()]])
