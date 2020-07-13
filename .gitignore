@@ -1,6 +1,45 @@
+# discMapper .gitignore
+# Thanks to https://www.toptal.com/developers/gitignore/api/ for template maintenance
 
-# Created by https://www.toptal.com/developers/gitignore/api/sublimetext
-# Edit at https://www.toptal.com/developers/gitignore?templates=sublimetext
+### VisualStudioCode ###
+.vscode/
+.vscode/*
+*.code-workspace
+.prettierrc
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/windows
 
 ### SublimeText ###
 # Cache files for Sublime Text
@@ -35,49 +74,3 @@ bh_unicode_properties.cache
 GitHub.sublime-settings
 
 # End of https://www.toptal.com/developers/gitignore/api/sublimetext
-
-# Created by https://www.toptal.com/developers/gitignore/api/windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows
-
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# End of https://www.toptal.com/developers/gitignore/api/windows
-
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
-
-### VisualStudioCode ###
-.vscode/
-.vscode/*
-*.code-workspace
-.prettierrc
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
