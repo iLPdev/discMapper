@@ -61,9 +61,9 @@ The repo started with a [README-first approach](https://tom.preston-werner.com/2
 #### Milestones
 
 - v0.1.0-alpha - Initial
-- v0.1.2-alpha - Core mapping features restored
+- v0.1.2-alpha - Core mapping features with GMCP support
 - v0.2.1-beta - Help system and configuration functional
-- [v0.3.0-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.3.0-beta) - Automated updates implemented
+- v0.3.0-beta - Automated updates implemented
 
 ### Vision
 
@@ -95,9 +95,9 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
-discMapper is under active development. The application can be used, but may be unstable. 
-
-We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
+- **Current Project State**: discMapper is under active development. The application can be used, but may be unstable. 
+- **Current Release**: [v0.3.1-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.3.1-beta) provides hotfix for automated update feature.
+- **What's Next:** We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
 **[^Top](#table-of-contents)**
 
