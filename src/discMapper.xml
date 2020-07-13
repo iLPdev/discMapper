@@ -1376,7 +1376,7 @@ local mt = getmetatable(map) or {}
 local function config()
     local defaults = map.defaults
     local configs = map.configs or {}
-    local path = profilePath.."/map downloads"
+    local path = profilePath.."/discMapper"
     if not io.exists(path) then lfs.mkdir(path) end
     -- load stored configs from file if it exists
     if io.exists(path.."/configs.lua") then
@@ -1606,7 +1606,7 @@ function map.setConfigs(key, val, sub_key)
             return
         end
     end
-    table.save(profilePath.."/map downloads/configs.lua",map.configs)
+    table.save(profilePath.."/discMapper/configs.lua",map.configs)
     config()
 end
 
@@ -2148,7 +2148,7 @@ local function find_area(name)
 end
 
 function map.load_map(address)
-    local path = profilePath .. "/map downloads/map.dat"
+    local path = profilePath .. "/discMapper/map.dat"
     if not address then
         loadMap(path)
         map.echo("Map reloaded from local copy.")
@@ -2336,7 +2336,7 @@ end
 function map.set_recall()
     -- assigned the current room to be recall for the current character
     map.save.recall[map.character] = map.currentRoom
-    table.save(profilePath .. "/map downloads/map_save.dat",map.save)
+    table.save(profilePath .. "/discMapper/map_save.dat",map.save)
     map.echo("Recall room set to: " .. getRoomName(map.currentRoom) .. ".")
 end
 
@@ -2788,7 +2788,7 @@ function map.make_prompt_pattern(str)
     if not str:starts("^") then str = "^"..str end
     map.save.prompt_pattern[map.character] = str
     find_prompt = false
-    table.save(profilePath .. "/map downloads/map_save.dat",map.save)
+    table.save(profilePath .. "/discMapper/map_save.dat",map.save)
     map.echo("Prompt pattern set: " .. str)
 end
 
@@ -2801,7 +2801,7 @@ function map.make_ignore_pattern(str)
         table.remove(map.save.ignore_patterns, table.index_of(map.save.ignore_patterns, str))
         map.echo("Ignore pattern removed: " .. str)
     end
-    table.save(profilePath .. "/map downloads/map_save.dat",map.save)
+    table.save(profilePath .. "/discMapper/map_save.dat",map.save)
 end
 
 local function grab_line()
@@ -2817,7 +2817,7 @@ local function grab_line()
         for k,v in ipairs(map.configs.prompt_test_patterns) do
             if string.match(line,v) then
                 map.save.prompt_pattern[map.character] = v
-                table.save(profilePath .. "/map downloads/map_save.dat",map.save)
+                table.save(profilePath .. "/discMapper/map_save.dat",map.save)
                 find_prompt = false
                 map.echo("Prompt found")
                 break
@@ -2965,7 +2965,7 @@ end
 
 local function check_version()
     downloading = false
-    local path = profilePath .. "/map downloads/versions.lua"
+    local path = profilePath .. "/discMapper/versions.lua"
     local versions = {}
     table.load(path, versions)
     local pos = table.index_of(versions, map.version) or 0
@@ -2983,7 +2983,7 @@ function map.checkVersion()
         map.update_timer = nil
     end
     if not map.update_waiting and map.configs.download_path ~= "" then
-        local path, file = profilePath .. "/map downloads", "/versions.lua"
+        local path, file = profilePath .. "/discMapper", "/versions.lua"
         downloading = true
         downloadFile(path .. file, map.configs.download_path .. file)
         map.update_waiting = true
@@ -2992,7 +2992,7 @@ end
 
 local function update_version()
     downloading = false
-    local path = profilePath .. "/map downloads/discMapper.xml"
+    local path = profilePath .. "/discMapper/discMapper.xml"
     disableAlias("Map Update Alias")
     uninstallPackage("discMapper")
     installPackage(path)
@@ -3000,7 +3000,7 @@ local function update_version()
 end
 
 function map.updateVersion()
-    local path, file = profilePath .. "/map downloads", "/discMapper.xml"
+    local path, file = profilePath .. "/discMapper", "/discMapper.xml"
     downloading = true
     downloadFile(path .. file, map.configs.download_path .. file)
 end
