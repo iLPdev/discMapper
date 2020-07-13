@@ -95,8 +95,10 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
-- **Current Project State**: discMapper is under active development. The application can be used, but may be unstable. 
+- **Current Project State**: discMapper is under active development. The application can be used, but may be unstable.
+
 - **Current Release**: [v0.3.1-beta](https://github.com/iLPdev/discMapper/releases/tag/v0.3.1-beta) provides hotfix for automated update feature.
+
 - **What's Next:** We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
 **[^Top](#table-of-contents)**
