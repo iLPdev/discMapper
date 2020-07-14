@@ -1,6 +1,7 @@
 # totally useless - just learning
-language: minimal
+language: c
 os: linux
-
+script:
+  - lua -lluacov awesome-tests.lua
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -v
