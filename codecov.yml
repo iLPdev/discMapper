@@ -1,2 +1,4 @@
 codecov:
   token: 99ebfae4-7027-4930-b5d8-44b436ec34a1
+codecov:
+  branch: develop
