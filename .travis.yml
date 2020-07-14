@@ -1,4 +1,5 @@
 # totally useless - just learning
 language: minimal
 os: linux
-dist: bionic
+
+bash <(curl -s https://codecov.io/bash)
