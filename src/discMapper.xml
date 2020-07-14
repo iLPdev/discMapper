@@ -735,7 +735,7 @@ end</script>
 			<name>discMapper</name>
 			<packageName></packageName>
 			<script>-- discMapper
-local version = "0.3.0-beta"
+local version = "0.3.1-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -2994,11 +2994,7 @@ end
 
 local function update_version()
     downloading = false
-<<<<<<< HEAD
-    local path = profilePath .. "/map downloads/discMapper.xml"
-=======
     local path = profilePath .. "/discMapper/discMapper.xml"
->>>>>>> release/0.3.1-beta
     disableAlias("Map Update Alias")
     uninstallPackage("discMapper")
     installPackage(path)
@@ -3006,7 +3002,7 @@ local function update_version()
 end
 
 function map.updateVersion()
-    local path, file = profilePath .. "/map downloads", "/discMapper.xml"
+    local path, file = profilePath .. "/discMapper", "/discMapper.xml"
     downloading = true
     downloadFile(path .. file, map.configs.download_path .. file)
 end
