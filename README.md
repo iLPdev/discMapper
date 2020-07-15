@@ -96,7 +96,7 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
 - **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
-- **Current Release**: v0.3.1-beta hotfix for local storage pathing, but `check_version' is still borked
+- **Current Release**: v0.3.2-beta patch sees an accurate `check_version' and functioning automated update process
 
 **[^Top](#table-of-contents)**
 
