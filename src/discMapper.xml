@@ -1373,6 +1373,11 @@ local move_queue, lines = {}, {}
 local find_portal, vision_fail, room_detected, random_move, force_portal, find_prompt, downloading, walking, help_shown
 local mt = getmetatable(map) or {}
 
+local function uninstallGMS(_, name)
+    uninstallPackage("generic_mapper")
+    map.echo("Uninstalled generic_mapper Package.")
+end
+
 local function config()
     local defaults = map.defaults
     local configs = map.configs or {}
@@ -3108,6 +3113,7 @@ function map.eventHandler(event, ...)
         config()
     elseif event == "mapOpenEvent" then
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
+            uninstallGMS()
             map.find_prompt()
             send("look", true)
             tempTimer(3, function() map.show_help("quick_start"); help_shown = true end)
