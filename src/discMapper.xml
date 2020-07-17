@@ -1373,7 +1373,8 @@ local move_queue, lines = {}, {}
 local find_portal, vision_fail, room_detected, random_move, force_portal, find_prompt, downloading, walking, help_shown
 local mt = getmetatable(map) or {}
 
-local function uninstallGMS(_, name)
+function uninstallGMS(_, name)
+    if name ~= "discMapper" then return end
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper Package.")
 end
