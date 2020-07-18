@@ -1636,7 +1636,7 @@ local function print_echoes(what, debug, err)
     decho(mapper_tag)
     if debug then decho(debug_tag) end
     if err then decho(err_tag) end
-    cecho(what)
+    cecho("&lt;DimGrey&gt;"..what)
     echo("\n")
 end
 
