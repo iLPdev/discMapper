@@ -1379,7 +1379,7 @@ function uninstallGMS(_, name)
     enableGMCP()
 end
 
-local function enableGMCP()
+function enableGMCP()
     sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
     map.echo("GMCP Core Supports Activated&lt;reset&gt;\n\n")
 end
