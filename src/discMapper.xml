@@ -1377,6 +1377,7 @@ function uninstallGMS(_, name)
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper Package.")
     enableGMCP()
+    send("look", true)
 end
 
 function enableGMCP()
