@@ -43,8 +43,7 @@
 			</Trigger>
 			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>GMCP Core Support</name>
-				<script>sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-cecho("\n&lt;DimGrey&gt;[&lt;green&gt;  dM  &lt;DimGrey&gt;] - GMCP Core Supports Activated&lt;reset&gt;\n\n")</script>
+				<script>enableGMCP()</script>
 				<triggerType>0</triggerType>
 				<conditonLineDelta>0</conditonLineDelta>
 				<mStayOpen>0</mStayOpen>
@@ -1377,6 +1376,12 @@ function uninstallGMS(_, name)
     if name ~= "discMapper" then return end
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper Package.")
+    enableGMCP()
+end
+
+local function enableGMCP()
+    sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
+    map.echo("GMCP Core Supports Activated&lt;reset&gt;\n\n")
 end
 
 local function config()
