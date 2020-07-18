@@ -1673,6 +1673,9 @@ local function set_room(roomID)
     raiseEvent("onMoveMap", map.currentRoom)
 end
 
+function mapMenu()
+  	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
+end
 local function add_door(roomID, dir, status)
     -- create or remove a door in the designated direction
     -- consider options for adding pickable and passable information
@@ -3113,6 +3116,7 @@ function map.eventHandler(event, ...)
     elseif event == "sysLoadEvent" or event == "sysInstall" then
         config()
     elseif event == "mapOpenEvent" then
+        mapMenu()
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
             map.find_prompt()
             send("look", true)
