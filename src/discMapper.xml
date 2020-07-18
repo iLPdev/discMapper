@@ -1675,7 +1675,22 @@ end
 
 function mapMenu()
   	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
+    addMapMenu("Style Room")
+        addMapEvent("Street", "styleRooms", "Style Room", "Street")
+        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
+        addMapEvent("General Store", "styleRooms", "Style Room", "General Store")
+        addMapEvent("Services", "styleRooms", "Style Room", "Services")
+        addMapEvent("Bank", "styleRooms", "Style Room", "Bank")
+        addMapEvent("House", "styleRooms", "Style Room", "House")
+        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
+        addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
+        addMapEvent("Player House", "styleRooms", "Style Room", "Player House")
+        addMapEvent("Player Shop", "styleRooms", "Style Room", "Player Shop")
+        addMapEvent("Food", "styleRooms", "Style Room", "Food")
+        addMapEvent("T-Shop", "styleRooms", "Style Room", "T-Shop")
+        addMapEvent("Park", "styleRooms", "Style Room", "Park")
 end
+
 local function add_door(roomID, dir, status)
     -- create or remove a door in the designated direction
     -- consider options for adding pickable and passable information
