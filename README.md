@@ -64,6 +64,7 @@ The repo started with a [README-first approach](https://tom.preston-werner.com/2
 - v0.1.2-alpha - Core mapping features with GMCP support
 - v0.2.1-beta - Help system and configuration functional
 - v0.3.0-beta - Automated updates implemented
+- v0.4.0-beta - Room Styling implemented
 
 ### Vision
 
@@ -72,10 +73,11 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 ### Features
 
 - Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: 
-  - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation! 
-  - Precision Character Tracking using GMCP Identifier data - No more misidentified player locations on map! 
-  - Precision Room Name detection using GMCP Room Name data
+- Precision Room Indexing using GMCP Identifier data - No more duplicate room creation! 
+    - Character Tracking using GMCP Identifier data - No more misidentified player locations on map! 
+    - Room Name detection using GMCP Room Name data
 - Speedwalking and pathfinding - Efficiently get where you're going!
+- Quickly style room colors and symbols based on the type of room (e.g., shop, player house, food, etc.)
 
 ### Built With
 
@@ -96,7 +98,8 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
 - **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
-- **Current Release**: v0.3.2-beta patch sees an accurate `check_version' and functioning automated update process
+
+- **Current Release**: v0.4.0-beta release sees numerous bugfixes for the automated update process, improved installation process, and the introduction of the room styling feature set.
 
 **[^Top](#table-of-contents)**
 
