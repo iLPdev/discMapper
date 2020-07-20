@@ -240,7 +240,9 @@ The expectation is that our community group acts according to these guidelines, 
 
 ## Contributors
 
- Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+We following the [all-contributors][ac-url] specification: Contributions of any kind are welcome!
+
+Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -282,6 +284,4 @@ information, seelicense in [`COPYING`](https://github.com/iLPdev/discMapper/blob
 [status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
-[copyleft-symbol]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png
-[copyleft-url]: https://commons.wikimedia.org/wiki/File:Copyleft.svg
 [ac-url]: https://github.com/all-contributors/all-contributors
