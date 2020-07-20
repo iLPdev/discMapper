@@ -75,8 +75,8 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 - Auto GMCP handshake on connection to Discworld MUD
 - Use FluffOS driver [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) for:
   - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
-    - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
-    - Room Name detection using GMCP Room Name data
+  - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
+  - Room Name detection using GMCP Room Name data
 - Speedwalking and pathfinding - Efficiently get where you're going!
 - Quick style rooms based on the type of room (e.g., shop, player house, food, etc.)
   - Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
