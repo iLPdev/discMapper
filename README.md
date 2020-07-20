@@ -75,9 +75,11 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 - Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for:
 - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
   - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
-    - Room Name detection using GMCP Room Name data
+  - Room Name detection using GMCP Room Name data
 - Speedwalking and pathfinding - Efficiently get where you're going!
-- Quickly style room colors and symbols based on the type of room (e.g., shop, player house, food, etc.)
+- Quickly style rooms based on the type of room (e.g., shop, player house, food, etc.)
+  - Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
+  - Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 ### Built With
 
@@ -92,7 +94,6 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 Version numbering approximates the [Semantic Versioning](http://semver.org) approach.
 
 ### Project Status
-
 <!-- Describe the current release and any notes about the current state of the project. Examples: currently compiles on your host machine, but is not cross-compiling for ARM, APIs are not set, feature not implemented, etc. -->
 
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
@@ -104,12 +105,10 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 **[^Top](#table-of-contents)**
 
 <!-- GETTING STARTED -->
-
 ## Install
 
 <!-- Code block illustrating how to install.
-     Include any system-specific information needed for installation.
-     An Updating section would be useful for most packages, if there are multiple versions which the user may interface with. -->
+     Include any system-specific information needed for installation. -->
 
 The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs. Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and droppping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
 
@@ -164,9 +163,6 @@ A simple help system covering basic usage, most commands, and configuration opti
 The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time.
 
 Planned new features include:
-
-- Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
-- Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
 See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of proposed features (and known issues).
 
