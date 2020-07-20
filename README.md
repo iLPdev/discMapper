@@ -25,7 +25,7 @@
 <!-- LONG DESCRIPTION -->
 The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
-Project Link: <a href="https://github.com/iLPdev/discMapper" alt="Project Link">https://github.com/iLPdev/discMapper</a>
+Project Link: [https://github.com/iLPdev/discMapper]
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -54,7 +54,7 @@ On May 24, 2020, [@vadi2](https://github.com/vadi2) was gracious enough to volun
 
 Unfortunately, it was soon realized that cleanly installing this initial version of the discMapper to a new Mudlet profile with no prior mapping settings caused the script to break entirely. Many confused hours were spent chasing a quasi-solutions and residue problems until it became painfully clear that a more rigorously tracked and structured approach would be required: Enter this project's GitHub repository.
 
-Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)). 
+Having a wealth of various IT-related and HTML/CSS development experience but virtually no experience in modern software development, frustration has (mostly) been overcome by an eagerness to learn and true enjoyment of the process -- especially the Mudlet community (see [Acknowledgments](#acknowledgements)).
 
 The repo started with a [README-first approach](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) to conceptualize how best to go about this project. discMapper was open-sourced upon conception.
 
@@ -68,13 +68,13 @@ The repo started with a [README-first approach](https://tom.preston-werner.com/2
 
 ### Vision
 
-As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. Ultimately, my hope is that discMapper might become a part of a larger Mudlet package for Discworld MUD, including guild-specific UI feature setss. 
+As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. Ultimately, my hope is that discMapper might become a part of a larger Mudlet package for Discworld MUD, including guild-specific UI feature setss.
 
 ### Features
 
-- Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for: 
-- Precision Room Indexing using GMCP Identifier data - No more duplicate room creation! 
-    - Character Tracking using GMCP Identifier data - No more misidentified player locations on map! 
+- Enables mapper access to [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) sent by Discworld MUD's FluffOS driver for:
+- Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
+  - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
     - Room Name detection using GMCP Room Name data
 - Speedwalking and pathfinding - Efficiently get where you're going!
 - Quickly style room colors and symbols based on the type of room (e.g., shop, player house, food, etc.)
@@ -135,7 +135,7 @@ To install discMapper, you need to install and run the [Mudlet][mudlet-url] appl
 
 ### Getting the Source
 
-The discMapper project is [hosted on GitHub](https://github.com/iLPdev/discMapper). All versions of the repository are available as [releases](https://github.com/iLPdev/discMapper/releases). 
+The discMapper project is [hosted on GitHub](https://github.com/iLPdev/discMapper). All versions of the repository are available as [releases](https://github.com/iLPdev/discMapper/releases).
 
 You can also clone the entire project directly with this command: `git clone git@github.com:iLPdev/discMapper.git`
 
@@ -164,6 +164,7 @@ A simple help system covering basic usage, most commands, and configuration opti
 The primary initial objective is to develop and test a [Minimum Usable Mapper](https://github.com/iLPdev/discMapper/projects/1) (MUM) that returns the functionality we had previously achieved but maintained across Mudlet profiles and time.
 
 Planned new features include:
+
 - Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
 - Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 
@@ -200,11 +201,12 @@ See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a li
 
 <!-- CONTRIBUTING -->
 ## Contributing
+
 Contributions are what make the open source community such an amazing space to be learn, inspire, and create. Any contributions you make are **greatly appreciated** -- that’s the main reason discMapper is open-sourced! There are so many ways to contribute, even if you’re not a technical person. All contributions--no matter how small---are always welcome. Adding an independent [CONTRIBUTING.md](https://github.com/iLPdev/discMapper/issues/8) remains on a to-do on my list.
 
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
-There is not an explicit workflow requirement for this project, yet. I'm currently exprimenting with the [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) approach and [Conventional Commits](https://www.conventionalcommits.org/), but you don't need to. 
+There is not an explicit workflow requirement for this project, yet. I'm currently exprimenting with the [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) approach and [Conventional Commits](https://www.conventionalcommits.org/), but you don't need to.
 
 Basically, to contribute to this project, you're invited to:
 
@@ -217,6 +219,7 @@ Basically, to contribute to this project, you're invited to:
 1. Submit a Pull Request
 
 ### Ethics
+
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) and operates under the W3C's [Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc):
@@ -236,6 +239,7 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 The expectation is that our community group acts according to these guidelines, and that participants hold each other to these high standards. If you have any questions or are worried that the code isn't being followed, please contact the [maintainer](#maintainer) of this repository.
 
 ## Contributors
+
 Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -256,6 +260,9 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 <!-- LICENSE -- Must be last section. -->
 ## License
+
+[![copyleft][copyleft-symbol]][copyleft-url] _iLP development_. Distributed under GPL v3.0-and-later.
+For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 <a title="Zscout370, Sertion, e.a. / Public domain" href="https://commons.wikimedia.org/wiki/File:Copyleft.svg"><img width="12" alt="Copyleft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png"></a> _iLP development_. Distributed under GPL v3.0-and-later. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
@@ -279,3 +286,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
+[copyleft-symbol]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png
+[copyleft-url]: https://commons.wikimedia.org/wiki/File:Copyleft.svg
