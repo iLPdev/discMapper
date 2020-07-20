@@ -240,7 +240,7 @@ The expectation is that our community group acts according to these guidelines, 
 
 ## Contributors
 
-Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+ Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -254,17 +254,13 @@ Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/e
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
 **[^Top](#table-of-contents)**
 
 <!-- LICENSE -- Must be last section. -->
 ## License
 
-[![copyleft][copyleft-symbol]][copyleft-url] _iLP development_. Distributed under GPL v3.0-and-later.
-For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
-
-<a title="Zscout370, Sertion, e.a. / Public domain" href="https://commons.wikimedia.org/wiki/File:Copyleft.svg"><img width="12" alt="Copyleft" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png"></a> _iLP development_. Distributed under GPL v3.0-and-later. For more information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
+Copyleft (2020) _iLP development_. Distributed under GPL v3.0-and-later. For more
+information, seelicense in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 **[^Top](#table-of-contents)**
 
@@ -288,3 +284,4 @@ For more information, see license in [`COPYING`](https://github.com/iLPdev/discM
 [mudlet-url]: https://www.mudlet.org
 [copyleft-symbol]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Copyleft.svg/240px-Copyleft.svg.png
 [copyleft-url]: https://commons.wikimedia.org/wiki/File:Copyleft.svg
+[ac-url]: https://github.com/all-contributors/all-contributors
