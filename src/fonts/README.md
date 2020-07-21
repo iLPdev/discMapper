@@ -32,7 +32,7 @@ With 3,000+ icons, finding glyphs within the font is a challenge. Glyphs are sor
 
 Therefore, to make locating glyphs easier, Todd added "index" glyphs that show the letters of the alphabet so that you can know where you are in the font (alphabetically) while you're looking or browsing for that perfect map symbol.
 
-To find a specific glyph, search for the icon you want to use on [game-icons.net](game-icons.net), note its name, and then search visually through [`discMapper/src/fonts/index.html`](https://github.com/iLPdev/discMapper/src/fonts/index.html) to get alphabetically close to the name of the icon you're after. The copy and paste it.
+To find a specific glyph, search for the icon you want to use on [game-icons.net](game-icons.net), note its name, and then search visually through the `/src/fonts/index.html` file provided to get alphabetically close to the name of the icon you're after. Then, copy and paste it.
 
 ## Compatibility
 
