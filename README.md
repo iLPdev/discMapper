@@ -127,11 +127,8 @@ To install discMapper, just follow these simple steps:
 
 <a href="https://www.mudlet.org"><img src="https://www.mudlet.org/wp-content/uploads/2017/08/mudlet-wp-logo.png" alt="Mudlet" width="120" height="auto"></a>
 
-To install discMapper, you need to install and run the [Mudlet][mudlet-url] application for your operating system (Windows, MacOS, and Linux):
-
-1. Visit [Mudlet's Download page](https://www.mudlet.org/download)
-1. Click the `Download Mudlet` button
-1. Double-click the downloaded file to install Mudlet
+- [Game-icons.net Font](https://github.com/toddfast/game-icons-net-font) v20200315 by Todd Fast provides 3,000+ map room symbols
+- [Mudlet][mudlet-url] MUD Client application must obviously be installed on your operating system (Windows, MacOS, and Linux)
 
 ### Getting the Source
 
