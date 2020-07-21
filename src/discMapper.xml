@@ -733,8 +733,9 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-			<script>-- discMapper
-local version = "0.3.2-beta"
+            <script>-- discMapper
+            
+local version = "0.4.0-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -1375,14 +1376,14 @@ local mt = getmetatable(map) or {}
 function uninstallGMS(_, name)
     if name ~= "discMapper" then return end
     uninstallPackage("generic_mapper")
-    map.echo("Uninstalled generic_mapper Package.")
+    map.echo("Uninstalled generic_mapper package")
     enableGMCP()
     send("look", true)
 end
 
 function enableGMCP()
     sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-    map.echo("GMCP Core Supports Activated&lt;reset&gt;\n\n")
+    map.echo("GMCP Core Supports activated")
 end
 
 local function config()
@@ -1489,7 +1490,7 @@ local reverse_dirs = {
 }
 
 local wait_echo = {}
-local mapper_tag = "&lt;105,105,105&gt;[&lt;0,255,0&gt;  dM  &lt;105,105,105&gt;] "
+local mapper_tag = "&lt;105,105,105&gt;[&lt;0,255,0&gt;  dM  &lt;105,105,105&gt;]  - "
 local debug_tag = "&lt;105,105,105&gt;(&lt;255,255,255&gt;debug&lt;105,105,105&gt;): "
 local err_tag = "&lt;105,105,105&gt;(&lt;178,34,34&gt;error&lt;105,105,105&gt;): "
 
@@ -1717,7 +1718,7 @@ end
 -- Add the colors used in Kefka's maps that are not already present in Mudlet's
 -- reserved defaults
 function setCustomRoomColors() 
-  map.echo("Custom Room Colors Initialized\n")
+  map.echo("Custom room colors initialized")
 	setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
 	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
 	setCustomEnvColor(291, 132,66,0,255)     -- House 
