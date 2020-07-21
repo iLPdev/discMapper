@@ -43,8 +43,7 @@
 			</Trigger>
 			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>GMCP Core Support</name>
-				<script>sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-cecho("\n&lt;DimGrey&gt;[&lt;green&gt;  dM  &lt;DimGrey&gt;] - GMCP Core Supports Activated&lt;reset&gt;\n\n")</script>
+				<script>enableGMCP()</script>
 				<triggerType>0</triggerType>
 				<conditonLineDelta>0</conditonLineDelta>
 				<mStayOpen>0</mStayOpen>
@@ -734,8 +733,9 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-			<script>-- discMapper
-local version = "0.3.2-beta"
+            <script>-- discMapper
+            
+local version = "0.4.0-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -1373,6 +1373,19 @@ local move_queue, lines = {}, {}
 local find_portal, vision_fail, room_detected, random_move, force_portal, find_prompt, downloading, walking, help_shown
 local mt = getmetatable(map) or {}
 
+function uninstallGMS(_, name)
+    if name ~= "discMapper" then return end
+    uninstallPackage("generic_mapper")
+    map.echo("Uninstalled generic_mapper package")
+    enableGMCP()
+    send("look", true)
+end
+
+function enableGMCP()
+    sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
+    map.echo("GMCP Core Supports activated")
+end
+
 local function config()
     local defaults = map.defaults
     local configs = map.configs or {}
@@ -1477,7 +1490,7 @@ local reverse_dirs = {
 }
 
 local wait_echo = {}
-local mapper_tag = "&lt;105,105,105&gt;[&lt;0,255,0&gt;  dM  &lt;105,105,105&gt;] "
+local mapper_tag = "&lt;105,105,105&gt;[&lt;0,255,0&gt;  dM  &lt;105,105,105&gt;]  - "
 local debug_tag = "&lt;105,105,105&gt;(&lt;255,255,255&gt;debug&lt;105,105,105&gt;): "
 local err_tag = "&lt;105,105,105&gt;(&lt;178,34,34&gt;error&lt;105,105,105&gt;): "
 
@@ -1624,7 +1637,7 @@ local function print_echoes(what, debug, err)
     decho(mapper_tag)
     if debug then decho(debug_tag) end
     if err then decho(err_tag) end
-    cecho(what)
+    cecho("&lt;DimGrey&gt;"..what)
     echo("\n")
 end
 
@@ -1666,6 +1679,91 @@ local function set_room(roomID)
     centerview(map.currentRoom)
     raiseEvent("onMoveMap", map.currentRoom)
 end
+
+function mapMenu()
+  	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
+    addMapMenu("Style Room")
+        addMapEvent("Street", "styleRooms", "Style Room", "Street")
+        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
+        addMapEvent("General Store", "styleRooms", "Style Room", "General Store")
+        addMapEvent("Services", "styleRooms", "Style Room", "Services")
+        addMapEvent("Bank", "styleRooms", "Style Room", "Bank")
+        addMapEvent("House", "styleRooms", "Style Room", "House")
+        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
+        addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
+        addMapEvent("Player House", "styleRooms", "Style Room", "Player House")
+        addMapEvent("Player Shop", "styleRooms", "Style Room", "Player Shop")
+        addMapEvent("Food", "styleRooms", "Style Room", "Food")
+        addMapEvent("T-Shop", "styleRooms", "Style Room", "T-Shop")
+        addMapEvent("Park", "styleRooms", "Style Room", "Park")
+end
+
+-- Room styling is based on the 2014-09-19 version of Fenton's Discworld Mapper
+-- for faster styling of selected rooms. styleRooms is passed the name of the
+-- mapEvent that called it, as well as the room IDs of the selected rooms. If
+-- you're adding another room style to the dropdown menu, you'll need to add an
+-- entry onto the styleEnv and styleChar tables. If the style name you've
+-- chosen contains spaces or symbols, you'll need to surround it with brackets
+-- and single quotes.
+
+function styleRooms (...)
+  for i, v in ipairs(arg) do            --loop through all of the arguments passed to the function
+    if i &gt; 2 then                       --skip the first two, as those are not room ID's
+      setRoomEnv(v, styleEnv[arg[2]])   --set the color of the room to that specified in the styleEnv table
+      setRoomChar(v, styleChar[arg[2]]) --set the character of the room to that specified in the styleChar table
+    end
+  end
+end
+
+-- Add the colors used in Kefka's maps that are not already present in Mudlet's
+-- reserved defaults
+function setCustomRoomColors() 
+  map.echo("Custom room colors initialized")
+	setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
+	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
+	setCustomEnvColor(291, 132,66,0,255)     -- House 
+	setCustomEnvColor(292, 132,132,198,255)  -- Custom  
+	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
+	setCustomEnvColor(294, 255,0,0,255)      -- Food
+ 	setCustomEnvColor(295, 64,64,64,255)     -- Street
+end
+
+-- Table of colors assigned by room type. The numbers refer to color table in
+-- the "color" menu when you right-click on the map.
+styleEnv =
+  {
+    ['General Store'] = 289,
+    Shop = 266,
+    Services = 290,
+    Bank = 290,
+    House = 291,
+    Custom = 292,
+    Temple = 293,
+    Street = 295,
+    ['Player House'] = 269,
+    ['Player Shop'] = 269,
+    Food = 294,
+    ['T-Shop'] = 264,
+    Park = 258,
+  }
+  
+-- a table of characters assigned to rooms.
+styleChar =
+  {
+    ['General Store'] = "",
+    Shop = "",
+    Services = "",
+    Bank = "$",
+    House = "",
+    Custom = "",
+    Temple = "",
+    Street = "",
+    ['Player House'] = "",
+    ['Player Shop'] = "",
+    Food = "",
+    ['T-Shop'] = "T",
+    Park = "",
+  }
 
 local function add_door(roomID, dir, status)
     -- create or remove a door in the designated direction
@@ -3107,7 +3205,9 @@ function map.eventHandler(event, ...)
     elseif event == "sysLoadEvent" or event == "sysInstall" then
         config()
     elseif event == "mapOpenEvent" then
+        mapMenu()
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
+            setCustomRoomColors()
             map.find_prompt()
             send("look", true)
             tempTimer(3, function() map.show_help("quick_start"); help_shown = true end)
@@ -3122,6 +3222,7 @@ end
 registerAnonymousEventHandler("sysDownloadDone", "map.eventHandler")
 registerAnonymousEventHandler("sysLoadEvent", "map.eventHandler")
 registerAnonymousEventHandler("sysConnectionEvent", "map.eventHandler")
+registerAnonymousEventHandler("sysInstall", "uninstallGMS")
 registerAnonymousEventHandler("sysInstall", "map.eventHandler")
 registerAnonymousEventHandler("sysDataSendRequest", "map.eventHandler")
 registerAnonymousEventHandler("onMoveFail", "map.eventHandler")
