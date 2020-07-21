@@ -73,14 +73,15 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
 ### Features
 
 - Auto GMCP handshake on connection to Discworld MUD
-- Use FluffOS driver [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) for:
+- [GMCP Core Supports](http://discworld.starturtle.net/lpc/playing/documentation.c?path=/concepts/gmcp) for Discworld MUD's server:
   - Precision Room Indexing using GMCP Identifier data - No more duplicate room creation!
   - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   - Room Name detection using GMCP Room Name data
-- Speedwalking and pathfinding - Efficiently get where you're going!
 - Quick style rooms based on the type of room (e.g., shop, player house, food, etc.)
-  - Autoset Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
-  - Autoset Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
+  - Set Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
+  - Set Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
+- Self-updating package - Set it and forget it!
+- Speedwalking and pathfinding - Efficiently get where you're going - and fast!
 
 ### Built With
 
@@ -113,15 +114,15 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs. Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and droppping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
 
-To install discMapper, just follow these simple steps:
+To install discMapper, just follow these steps:
 
-1. Locate the [latest release](https://github.com/iLPdev/discMapper/releases/latest) of the discMapper.
-1. Download the XML file listed under Assets.
+1. Locate the [latest release](https://github.com/iLPdev/discMapper/releases/latest) of discMapper.
+1. Download the .mpackage file listed under Assets.
 1. Open Mudlet on your operating system of choice.
 1. Open an existing Discworld MUD profile or create a new one.
-1. Locate the saved XML file on your PC.
-1. Drag and drop the XML file into your open Discworld MUD profile.
-1. Optionally, delete the XML from your computer.
+1. Locate the saved file on your PC.
+1. Drag and drop the file into your open Discworld MUD profile.
+1. Optionally, delete the .mpackage file from your computer.
 
 ### Dependencies
 
