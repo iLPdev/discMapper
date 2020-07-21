@@ -1376,14 +1376,14 @@ local mt = getmetatable(map) or {}
 function uninstallGMS(_, name)
     if name ~= "discMapper" then return end
     uninstallPackage("generic_mapper")
-    map.echo("Uninstalled generic_mapper Package.")
+    map.echo("Uninstalled generic_mapper package")
     enableGMCP()
     send("look", true)
 end
 
 function enableGMCP()
     sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-    map.echo("GMCP Core Supports Activated&lt;reset&gt;\n\n")
+    map.echo("GMCP Core Supports activated")
 end
 
 local function config()
@@ -1718,7 +1718,7 @@ end
 -- Add the colors used in Kefka's maps that are not already present in Mudlet's
 -- reserved defaults
 function setCustomRoomColors() 
-  map.echo("Custom Room Colors Initialized\n")
+  map.echo("Custom room colors initialized")
 	setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
 	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
 	setCustomEnvColor(291, 132,66,0,255)     -- House 
