@@ -8,7 +8,23 @@ The font version distributed in discMapper is `20200315a`. You can find the late
 
 discMapper will automatically install the font to your system along with the script. Once installed, you can use this font just like any other font in Mudlet.
 
-Within an application, you'll need to use the feature that allows you to insert symbols or glyphs, or you can use your operating system's font browser to browse glyphs and copy/paste them into the application.
+To add a symbol to rooms on a map in Mudlet:
+
+  1. Locate your desired glyph on the font's provided index.html file (as described below)
+  1. Highlight and copy (ctrl-c) the glyph to your computer's clipboard
+  1. Select the room(s) you wish to add the symbol on your Mudlet map
+  1. Right-click on the selected room and select `Symbol` from the resulting context menu
+  1. Paste (ctrl-v) the symbol into the popup dialog to add or overwrite the room's symbol
+  1. Click `OK`
+
+If this process seems arduous, discMapper offers a quick styling feature based on room types. See `map help style' in the script's help system for details on quick styling rooms.
+
+To change the default symbol for each room type:
+
+ 1. Open `discMapper.xml` in Mudlet's editor
+ 1. Search for `a table of characters assigned to rooms`
+ 1. Locate the room type and corresponding symbol to replace.
+ 1. Cope/paste the desired symbol from the font's index.html
 
 ## Locating Glyphs
 
@@ -16,7 +32,7 @@ With 3,000+ icons, finding glyphs within the font is a challenge. Glyphs are sor
 
 Therefore, to make locating glyphs easier, Todd added "index" glyphs that show the letters of the alphabet so that you can know where you are in the font (alphabetically) while you're looking or browsing for that perfect map symbol.
 
-To find a specific glyph, search for the icon you want to use on [game-icons.net](game-icons.net), note its name, and then search visually through the font using the glyph index to get alphabetically close to the name of the glpyh you're after.
+To find a specific glyph, search for the icon you want to use on [game-icons.net](game-icons.net), note its name, and then search visually through [`discMapper/src/fonts/index.html`](https://github.com/iLPdev/discMapper/src/fonts/index.html) to get alphabetically close to the name of the icon you're after. The copy and paste it.
 
 ## Compatibility
 
