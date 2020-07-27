@@ -182,8 +182,8 @@ See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a li
 
 - [@vadi2](https://github.com/vadi2) for inital logic development, seemingly unending patience with me, tireless support, general commraderie, and what seems to be steadfastly optimistic and effective leadership
 - [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names, being genuinely happy to help others, general commraderie when I've been down, a familiar scarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for complexities in life
-- [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wilshire! ;-P
-- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support
+- [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wiltshire! ;-P
+- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support and commraderie
 - [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community
 - [Generic Map Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by [@JorMox](https://github.com/JorMox) was forked from the 10/20/2019 v2.0.16 as included in Mudlet 4.8.2
 - [Simple Discworld Mapping Script for Mudlet V3](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
