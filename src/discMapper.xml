@@ -1686,14 +1686,17 @@ function mapMenu()
         addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
         addMapEvent("Food", "styleRooms", "Style Room", "Food")
         addMapEvent("Park", "styleRooms", "Style Room", "Park")
-        addMapEvent("House", "styleRooms", "Style Room", "House")
+        addMapMenu("Houses", "Style Room")
+            addMapEvent("House", "styleRooms", "House", "House")
             addMapEvent("Player House", "styleRooms", "House", "Player House")
-        addMapEvent("Services", "styleRooms", "Style Room", "Services")
+        addMapMenu("Services", "Style Room")
+        addMapEvent("Service", "styleRooms", "Services", "Service")
             addMapEvent("Bank", "styleRooms", "Services", "Bank")
-        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
-            addMapEvent("General Store", "styleRooms", "Shop", "General Store")
-            addMapEvent("Player Shop", "styleRooms", "Shop", "Player Shop")
-            addMapEvent("T-Shop", "styleRooms", "Shop", "T-Shop")
+        addMapMenu("Shops", "Style Room")
+        addMapEvent("Shop", "styleRooms", "Shops", "Shop")
+            addMapEvent("General Store", "styleRooms", "Shops", "General Store")
+            addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
+            addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
 end
@@ -1721,7 +1724,7 @@ function setCustomRoomColors()
   map.echo("Custom room colors initialized")
 	setCustomEnvColor(292, 132,132,198,255)  -- Custom  
 	setCustomEnvColor(294, 255,0,0,255)      -- Food
-    setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
+  setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
 	setCustomEnvColor(291, 132,66,0,255)     -- House 
 	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
  	setCustomEnvColor(295, 64,64,64,255)     -- Street
