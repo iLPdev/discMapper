@@ -733,7 +733,7 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-            <script>-- discMapper
+			<script>-- discMapper
             
 local version = "0.4.0-beta"
 
@@ -1683,19 +1683,19 @@ end
 function mapMenu()
   	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
     addMapMenu("Style Room")
-        addMapEvent("Street", "styleRooms", "Style Room", "Street")
-        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
-        addMapEvent("General Store", "styleRooms", "Style Room", "General Store")
-        addMapEvent("Services", "styleRooms", "Style Room", "Services")
-        addMapEvent("Bank", "styleRooms", "Style Room", "Bank")
-        addMapEvent("House", "styleRooms", "Style Room", "House")
-        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
         addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
-        addMapEvent("Player House", "styleRooms", "Style Room", "Player House")
-        addMapEvent("Player Shop", "styleRooms", "Style Room", "Player Shop")
         addMapEvent("Food", "styleRooms", "Style Room", "Food")
-        addMapEvent("T-Shop", "styleRooms", "Style Room", "T-Shop")
         addMapEvent("Park", "styleRooms", "Style Room", "Park")
+        addMapEvent("House", "styleRooms", "Style Room", "House")
+            addMapEvent("Player House", "styleRooms", "House", "Player House")
+        addMapEvent("Services", "styleRooms", "Style Room", "Services")
+            addMapEvent("Bank", "styleRooms", "Services", "Bank")
+        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
+            addMapEvent("General Store", "styleRooms", "Shop", "General Store")
+            addMapEvent("Player Shop", "styleRooms", "Shop", "Player Shop")
+            addMapEvent("T-Shop", "styleRooms", "Shop", "T-Shop")
+        addMapEvent("Street", "styleRooms", "Style Room", "Street")
+        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
 end
 
 -- Room styling is based on the 2014-09-19 version of Fenton's Discworld Mapper
@@ -1719,50 +1719,50 @@ end
 -- reserved defaults
 function setCustomRoomColors() 
   map.echo("Custom room colors initialized")
-	setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
-	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
-	setCustomEnvColor(291, 132,66,0,255)     -- House 
 	setCustomEnvColor(292, 132,132,198,255)  -- Custom  
-	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
 	setCustomEnvColor(294, 255,0,0,255)      -- Food
+	setCustomEnvColor(291, 132,66,0,255)     -- House 
+	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
+  setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
  	setCustomEnvColor(295, 64,64,64,255)     -- Street
+	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
 end
 
 -- Table of colors assigned by room type. The numbers refer to color table in
 -- the "color" menu when you right-click on the map.
 styleEnv =
   {
-    ['General Store'] = 289,
-    Shop = 266,
-    Services = 290,
-    Bank = 290,
-    House = 291,
     Custom = 292,
-    Temple = 293,
-    Street = 295,
-    ['Player House'] = 269,
-    ['Player Shop'] = 269,
     Food = 294,
-    ['T-Shop'] = 264,
+    House = 291,
+        ['Player House'] = 269,
     Park = 258,
+    Shop = 266,
+        ['General Store'] = 289,
+        ['Player Shop'] = 269,
+        ['T-Shop'] = 264,
+    Services = 290,
+        Bank = 290,
+    Street = 295,
+    Temple = 293,
   }
   
 -- a table of characters assigned to rooms.
 styleChar =
   {
-    ['General Store'] = "",
-    Shop = "",
-    Services = "",
-    Bank = "$",
-    House = "",
     Custom = "",
-    Temple = "",
-    Street = "",
-    ['Player House'] = "",
-    ['Player Shop'] = "",
     Food = "",
-    ['T-Shop'] = "T",
+    House = "",
+        ['Player House'] = "",
     Park = "",
+    Services = "",
+        Bank = "$",
+    Shop = "",
+        ['General Store'] = "",
+        ['Player Shop'] = "",
+        ['T-Shop'] = "T",
+    Street = "",
+    Temple = "",
   }
 
 local function add_door(roomID, dir, status)
