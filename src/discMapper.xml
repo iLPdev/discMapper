@@ -1721,9 +1721,9 @@ function setCustomRoomColors()
   map.echo("Custom room colors initialized")
 	setCustomEnvColor(292, 132,132,198,255)  -- Custom  
 	setCustomEnvColor(294, 255,0,0,255)      -- Food
+    setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
 	setCustomEnvColor(291, 132,66,0,255)     -- House 
 	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
-  setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
  	setCustomEnvColor(295, 64,64,64,255)     -- Street
 	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
 end
@@ -1737,12 +1737,12 @@ styleEnv =
     House = 291,
         ['Player House'] = 269,
     Park = 258,
+    Services = 290,
+        Bank = 290,
     Shop = 266,
         ['General Store'] = 289,
         ['Player Shop'] = 269,
         ['T-Shop'] = 264,
-    Services = 290,
-        Bank = 290,
     Street = 295,
     Temple = 293,
   }
