@@ -1747,7 +1747,7 @@ styleEnv =
         ['Player Shop'] = 269,
         ['T-Shop'] = 264,
     Street = 295,
-    Temple = 293,
+    Temple = 293
   }
   
 -- a table of characters assigned to rooms.
@@ -1765,7 +1765,7 @@ styleChar =
         ['Player Shop'] = "",
         ['T-Shop'] = "T",
     Street = "",
-    Temple = "",
+    Temple = ""
   }
 
 local function add_door(roomID, dir, status)
