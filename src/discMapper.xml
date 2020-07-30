@@ -1680,6 +1680,14 @@ local function set_room(roomID)
     raiseEvent("onMoveMap", map.currentRoom)
 end
 
+-- Room styling is based on the 2014-09-19 version of Fenton's Discworld Mapper
+-- for faster styling of selected rooms. styleRooms is passed the name of the
+-- mapEvent that called it, as well as the room IDs of the selected rooms. If
+-- you're adding another room style to the dropdown menu, you'll need to add an
+-- entry onto the styleEnv and styleChar tables. If the style name you've
+-- chosen contains spaces or symbols, you'll need to surround it with brackets
+-- and single quotes.
+
 function mapMenu()
   	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
     addMapMenu("Style Room")
@@ -1700,14 +1708,6 @@ function mapMenu()
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
 end
-
--- Room styling is based on the 2014-09-19 version of Fenton's Discworld Mapper
--- for faster styling of selected rooms. styleRooms is passed the name of the
--- mapEvent that called it, as well as the room IDs of the selected rooms. If
--- you're adding another room style to the dropdown menu, you'll need to add an
--- entry onto the styleEnv and styleChar tables. If the style name you've
--- chosen contains spaces or symbols, you'll need to surround it with brackets
--- and single quotes.
 
 function styleRooms (...)
   for i, v in ipairs(arg) do            --loop through all of the arguments passed to the function
