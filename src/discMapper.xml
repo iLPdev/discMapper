@@ -1710,7 +1710,7 @@ function mapMenu()
 end
 
 function styleRooms (...)
-  for i, v in ipairs(arg) do            --loop through all of the arguments passed to the function
+  for i,v in ipairs(arg) do            --loop through all of the arguments passed to the function
     if i &gt; 2 then                       --skip the first two, as those are not room ID's
       setRoomEnv(v, styleEnv[arg[2]])   --set the color of the room to that specified in the styleEnv table
       setRoomChar(v, styleChar[arg[2]]) --set the character of the room to that specified in the styleChar table
