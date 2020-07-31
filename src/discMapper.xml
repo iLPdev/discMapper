@@ -1958,6 +1958,7 @@ local function create_room(name, exits, dir, coords)
         addRoom(newID)
         setRoomArea(newID, map.currentArea)
         setRoomName(newID, name)
+        setRoomEnv(newID, styleEnv["Street"]) -- most new rooms are streets, so style them as such
         for k,v in ipairs(exits) do
             if stubmap[v] then
                 if stubmap[v] &lt;= 12 then
