@@ -1379,7 +1379,7 @@ function initialize(_, name)
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper package.")
     enableGMCP()
-    send("look", true)
+    send("look", false)
 end
 
 function enableGMCP()
@@ -3214,7 +3214,7 @@ function map.eventHandler(event, ...)
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
             setCustomRoomColors()
             map.find_prompt()
-            send("look", true)
+            send("look", false)
             tempTimer(3, function() map.show_help("quick_start"); help_shown = true end)
         end
     elseif event == "mapStop" then
