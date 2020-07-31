@@ -1737,8 +1737,7 @@ end
 
 -- Table of colors assigned by room type. The numbers refer to color table in
 -- the "color" menu when you right-click on the map.
-styleEnv =
-  {
+styleEnv = {
     Custom = 292,
     Food = 294,
     House = 291,
@@ -1752,11 +1751,10 @@ styleEnv =
         ['T-Shop'] = 264,
     Street = 295,
     Temple = 293
-  }
+}
   
 -- a table of characters assigned to rooms.
-styleChar =
-  {
+styleChar = {
     Custom = "",
     Food = "",
     House = "",
@@ -1770,7 +1768,7 @@ styleChar =
         ['T-Shop'] = "T",
     Street = "",
     Temple = ""
-  }
+}
 
 local function add_door(roomID, dir, status)
     -- create or remove a door in the designated direction
