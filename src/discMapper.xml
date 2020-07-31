@@ -1373,8 +1373,9 @@ local move_queue, lines = {}, {}
 local find_portal, vision_fail, room_detected, random_move, force_portal, find_prompt, downloading, walking, help_shown
 local mt = getmetatable(map) or {}
 
-function uninstallGMS(_, name)
+function initialize(_, name)
     if name ~= "discMapper" then return end
+    map.echo("Initializing discMapper v"..version..".")
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper package")
     enableGMCP()
@@ -3225,7 +3226,7 @@ end
 registerAnonymousEventHandler("sysDownloadDone", "map.eventHandler")
 registerAnonymousEventHandler("sysLoadEvent", "map.eventHandler")
 registerAnonymousEventHandler("sysConnectionEvent", "map.eventHandler")
-registerAnonymousEventHandler("sysInstallPackage", "uninstallGMS")
+registerAnonymousEventHandler("sysInstallPackage", "initialize")
 registerAnonymousEventHandler("sysInstall", "map.eventHandler")
 registerAnonymousEventHandler("sysDataSendRequest", "map.eventHandler")
 registerAnonymousEventHandler("onMoveFail", "map.eventHandler")
