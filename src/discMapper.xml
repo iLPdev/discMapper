@@ -1379,7 +1379,6 @@ function initialize(_, name)
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper package.")
     setCustomRoomColors()
-    mapMenu()
     enableGMCP()
     send("look", false)
 end
@@ -3211,6 +3210,7 @@ function map.eventHandler(event, ...)
     elseif event == "sysLoadEvent" or event == "sysInstall" then
         config()
     elseif event == "mapOpenEvent" then
+        mapMenu()
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
             map.find_prompt()
             send("look", false)
