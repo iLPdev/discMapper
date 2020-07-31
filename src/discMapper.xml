@@ -1377,14 +1377,14 @@ function initialize(_, name)
     if name ~= "discMapper" then return end
     map.echo("Initializing discMapper v"..version..".")
     uninstallPackage("generic_mapper")
-    map.echo("Uninstalled generic_mapper package")
+    map.echo("Uninstalled generic_mapper package.")
     enableGMCP()
     send("look", true)
 end
 
 function enableGMCP()
     sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-    map.echo("GMCP Core Supports activated")
+    map.echo("Activated GMCP Core Supports.")
 end
 
 local function config()
@@ -1708,6 +1708,7 @@ function mapMenu()
             addMapEvent("T-Shop", "styleRooms", "Shop", "T-Shop")
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
+    map.echo("Installed additional mapper context menus.")    
 end
 
 function styleRooms (...)
