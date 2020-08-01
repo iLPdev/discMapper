@@ -3240,6 +3240,7 @@ registerAnonymousEventHandler("onNewLine", "map.eventHandler")
 registerAnonymousEventHandler("mapOpenEvent", "map.eventHandler")
 registerAnonymousEventHandler("mapStop", "map.eventHandler")
 registerAnonymousEventHandler("onPrompt", "map.eventHandler")
+registerAnonymousEventHandler("styleRooms", "styleRooms")
 </script>
 			<eventHandlerList />
 		</Script>
