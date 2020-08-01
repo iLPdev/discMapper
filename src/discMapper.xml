@@ -1729,7 +1729,7 @@ function setCustomRoomColors()
 	setCustomEnvColor(294, 255,0,0,255)      -- Food
   setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
 	setCustomEnvColor(291, 132,66,0,255)     -- House 
-	setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
+	setCustomEnvColor(290, 255,123,33,255)   -- Services and Bank
  	setCustomEnvColor(295, 64,64,64,255)     -- Street
 	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
 end
