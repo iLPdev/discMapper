@@ -1374,7 +1374,9 @@ local find_portal, vision_fail, room_detected, random_move, force_portal, find_p
 local mt = getmetatable(map) or {}
 
 function initialize(_, name)
-    if name ~= "discMapper" then return end
+    if name ~= "discMapper" then 
+        return 
+    end
     map.echo("Initializing discMapper v"..version..".")
     uninstallPackage("generic_mapper")
     map.echo("Uninstalled generic_mapper package.")
