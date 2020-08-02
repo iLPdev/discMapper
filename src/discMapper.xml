@@ -3130,7 +3130,7 @@ function map.showMap(shown)
             x = "-"..x
         end
     end
-    local mapper = Geyser.Mapper:new({name = "my_mapper", x = x, y = y, w = w, h = h})
+    local mapper = Geyser.Mapper:new({name = "discMapper", x = x, y = y, w = w, h = h})
     mapper:resize(w,h)
     mapper:move(x,y)
     if shown then
