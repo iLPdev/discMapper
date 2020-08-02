@@ -735,7 +735,7 @@ end</script>
 			<packageName></packageName>
 			<script>-- discMapper
             
-local version = "0.4.0-beta"
+local version = "0.4.1-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -1500,15 +1500,15 @@ local err_tag = "&lt;105,105,105&gt;(&lt;178,34,34&gt;error&lt;105,105,105&gt;):
 
 
 local function parse_help_text(text)
-  text = text:gsub("%$ROOM_NAME_STATUS", (map.currentName and map.currentName ~= "") and '✔️' or '❌')
-  text = text:gsub("%$ROOM_NAME", map.currentName or '')
+    text = text:gsub("%$ROOM_NAME_STATUS", (map.currentName and map.currentName ~= "") and '✔️' or '❌')
+    text = text:gsub("%$ROOM_NAME", map.currentName or '')
 
-  text = text:gsub("%$ROOM_EXITS_STATUS", (not map.currentExits or table.is_empty(map.currentExits)) and '❌' or '✔️')
-  text = text:gsub("%$ROOM_EXITS", map.currentExits and table.concat(map.currentExits, ' ') or '')
+    text = text:gsub("%$ROOM_EXITS_STATUS", (not map.currentExits or table.is_empty(map.currentExits)) and '❌' or '✔️')
+    text = text:gsub("%$ROOM_EXITS", map.currentExits and table.concat(map.currentExits, ' ') or '')
 
-  text = text:gsub("%$VERSION", version)
+    text = text:gsub("%$VERSION", version)
 
-  return text
+    return text
 end
 
 function map.show_help(cmd)
@@ -1715,61 +1715,63 @@ function mapMenu()
 end
 
 function styleRooms (...)
-  for i,v in ipairs(arg) do            --loop through all of the arguments passed to the function
-    if i &gt; 2 then                       --skip the first two, as those are not room ID's
-      setRoomEnv(v, styleEnv[arg[2]])   --set the color of the room to that specified in the styleEnv table
-      setRoomChar(v, styleChar[arg[2]]) --set the character of the room to that specified in the styleChar table
+    for i, v in ipairs(arg) do            --loop through all of the arguments passed to the function
+        if i &gt; 2 then                  --skip the first two, as those are not room ID's
+        setRoomEnv(v, styleEnv[arg[2]])   --set the color of the room to that specified in the styleEnv table
+        setRoomChar(v, styleChar[arg[2]]) --set the character of the room to that specified in the styleChar table
+        end
     end
-  end
 end
 
 -- Add the colors used in Kefka's maps that are not already present in Mudlet's
 -- reserved defaults
 function setCustomRoomColors() 
-  map.echo("Installed custom room colors.")
-	setCustomEnvColor(292, 132,132,198,255)  -- Custom  
-	setCustomEnvColor(294, 255,0,0,255)      -- Food
-  setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
-	setCustomEnvColor(291, 132,66,0,255)     -- House 
-	setCustomEnvColor(290, 255,123,33,255)   -- Services and Bank
- 	setCustomEnvColor(295, 64,64,64,255)     -- Street
-	setCustomEnvColor(293, 0,255,255,255)    -- Temple 
+    map.echo("Custom room colors initialized")
+        setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
+        setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
+        setCustomEnvColor(291, 132,66,0,255)     -- House 
+        setCustomEnvColor(292, 132,132,198,255)  -- Custom  
+        setCustomEnvColor(293, 0,255,255,255)    -- Temple 
+        setCustomEnvColor(294, 255,0,0,255)      -- Food
+        setCustomEnvColor(295, 64,64,64,255)     -- Street
 end
 
 -- Table of colors assigned by room type. The numbers refer to color table in
 -- the "color" menu when you right-click on the map.
-styleEnv = {
-    Custom = 292,
-    Food = 294,
-    House = 291,
-        ['Player House'] = 269,
-    Park = 258,
-    Services = 290,
-        Bank = 290,
-    Shop = 266,
+styleEnv =
+    {
         ['General Store'] = 289,
+        Shop = 266,
+        Services = 290,
+        Bank = 290,
+        House = 291,
+        Custom = 292,
+        Temple = 293,
+        Street = 295,
+        ['Player House'] = 269,
         ['Player Shop'] = 269,
+        Food = 294,
         ['T-Shop'] = 264,
-    Street = 295,
-    Temple = 293
-}
+        Park = 258,
+    }
   
 -- a table of characters assigned to rooms.
-styleChar = {
-    Custom = "",
-    Food = "",
-    House = "",
-        ['Player House'] = "",
-    Park = "",
-    Services = "",
-        Bank = "$",
-    Shop = "",
+styleChar =
+    {
         ['General Store'] = "",
+        Shop = "",
+        Services = "",
+        Bank = "$",
+        House = "",
+        Custom = "",
+        Temple = "",
+        Street = "",
+        ['Player House'] = "",
         ['Player Shop'] = "",
+        Food = "",
         ['T-Shop'] = "T",
-    Street = "",
-    Temple = ""
-}
+        Park = "",
+    }
 
 local function add_door(roomID, dir, status)
     -- create or remove a door in the designated direction
@@ -3137,7 +3139,7 @@ function map.showMap(shown)
             x = "-"..x
         end
     end
-    local mapper = Geyser.Mapper:new({name = "my_mapper", x = x, y = y, w = w, h = h})
+    local mapper = Geyser.Mapper:new({name = "discMapper", x = x, y = y, w = w, h = h})
     mapper:resize(w,h)
     mapper:move(x,y)
     if shown then
