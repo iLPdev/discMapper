@@ -78,7 +78,7 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
   - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   - Room Name detection using GMCP Room Name data
 - Quick style rooms based on the type of room (e.g., shop, player house, food, etc.)
-  - Set Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
+  - Set Map Room Color based on Room Type ~~- Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme~~ (Pending v0.5.0-beta)
   - Set Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 - Self-updating package - Set it and forget it!
 - Speedwalking and pathfinding - Efficiently get where you're going - and fast!
@@ -100,9 +100,9 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
-- **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
+- **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
-- **Current Release**: v0.4.0-beta release sees numerous bugfixes for the automated update process, improved installation process, and the introduction of the room styling feature set.
+- **Current Release**: v0.4.1-beta patches a missing event handler for the room styling feature set (thanks @Vadi2!) and fixes redundant initialization bug when installed as a module.
 
 **[^Top](#table-of-contents)**
 
