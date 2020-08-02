@@ -78,7 +78,7 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
   - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   - Room Name detection using GMCP Room Name data
 - Quick style rooms based on the type of room (e.g., shop, player house, food, etc.)
-  - Set Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
+  - Set Map Room Color based on Room Type ~~- Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme~~ (Pending v0.5.0-beta)
   - Set Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 - Self-updating package - Set it and forget it!
 - Speedwalking and pathfinding - Efficiently get where you're going - and fast!
@@ -100,9 +100,9 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 [![Status Ventis][status-ventis]][andivionian-status-classifier] ![Travis (.com) branch](https://img.shields.io/travis/com/iLPdev/discMapper/develop?style=flat)
 
-- **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in dire need of beta testing prior to moving forward with the v1.0.0 release.
+- **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
-- **Current Release**: v0.4.0-beta release sees numerous bugfixes for the automated update process, improved installation process, and the introduction of the room styling feature set.
+- **Current Release**: v0.4.1-beta patches a missing event handler for the room styling feature set (thanks @Vadi2!) and fixes redundant initialization bug when installed as a module.
 
 **[^Top](#table-of-contents)**
 
@@ -182,8 +182,8 @@ See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a li
 
 - [@vadi2](https://github.com/vadi2) for inital logic development, seemingly unending patience with me, tireless support, general commraderie, and what seems to be steadfastly optimistic and effective leadership
 - [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names, being genuinely happy to help others, general commraderie when I've been down, a familiar scarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for complexities in life
-- [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wilshire! ;-P
-- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support
+- [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wiltshire! ;-P
+- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support and commraderie
 - [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community
 - [Generic Map Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by [@JorMox](https://github.com/JorMox) was forked from the 10/20/2019 v2.0.16 as included in Mudlet 4.8.2
 - [Simple Discworld Mapping Script for Mudlet V3](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
