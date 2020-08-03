@@ -102,7 +102,7 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 - **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
-- **Current Release**: v0.4.1-beta patches a missing event handler for the room styling feature set (thanks @Vadi2!) and fixes redundant initialization bug when installed as a module.
+- **Current Release**: v0.4.2-beta hotfix is a patch that restores stashed commits that I left on local when I released v0.4.1-beta (I really need to standardize a release checklist for precisely these sort of reasons).
 
 **[^Top](#table-of-contents)**
 
