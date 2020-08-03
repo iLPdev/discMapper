@@ -1737,19 +1737,25 @@ end
 -- the "color" menu when you right-click on the map.
 styleEnv =
     {
-        ['General Store'] = 289,
-        Shop = 266,
-        Services = 290,
-        Bank = 290,
-        House = 291,
-        Custom = 292,
-        Temple = 293,
-        Street = 295,
-        ['Player House'] = 269,
-        ['Player Shop'] = 269,
-        Food = 294,
-        ['T-Shop'] = 264,
+        Craft = 267,
+        Custom = 289,
+        Drink = 265,
+        Eat = 265,
+        Garden = 258,
+        Guild = 263,
+        House = 290,
+            ['Club House'] = 290,
+            ['Player House'] = 290,
         Park = 258,
+        Service = 291,
+            Bank = 291,
+        Shop = 266,
+            ['General Store'] = 262,
+            ['Player Shop'] = 269,
+            ['T-Shop'] = 271,
+        Street = 292,
+        Temple = 270,
+        Water = 268,
     }
   
 -- a table of characters assigned to rooms.
