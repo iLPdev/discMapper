@@ -1695,22 +1695,28 @@ end
 function mapMenu()
   	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
     addMapMenu("Style Room")
+        addMapEvent("Craft", "styleRooms", "Style Room", "Craft")
         addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
-        addMapEvent("Food", "styleRooms", "Style Room", "Food")
+        addMapEvent("Drink", "styleRooms", "Style Room", "Drink")
+        addMapEvent("Eat", "styleRooms", "Style Room", "Eat")
+        addMapEvent("Garden", "styleRooms", "Style Room", "Garden")
+        addMapEvent("Guild", "styleRooms", "Style Room", "Guild")
+        addMapMenu("Houses", "Style Room")
+            addMapEvent("House", "styleRooms", "Houses", "House")
+            addMapEvent("Club House", "styleRooms", "Houses", "Club House")
+            addMapEvent("Player House", "styleRooms", "Houses", "Player House")
         addMapEvent("Park", "styleRooms", "Style Room", "Park")
-        addMapMenu("House", "Style Room")
-            addMapEvent("House", "styleRooms", "House", "House")
-            addMapEvent("Player House", "styleRooms", "House", "Player House")
-        addMapMenu("Service", "Style Room")
-            addMapEvent("Service", "styleRooms", "Service", "Service")
-            addMapEvent("Bank", "styleRooms", "Service", "Bank")
-        addMapMenu("Shop", "Style Room")
-            addMapEvent("Shop", "styleRooms", "Shop", "Shop")
-            addMapEvent("General Store", "styleRooms", "Shop", "General Store")
-            addMapEvent("Player Shop", "styleRooms", "Shop", "Player Shop")
-            addMapEvent("T-Shop", "styleRooms", "Shop", "T-Shop")
+        addMapMenu("Services", "Style Room")
+            addMapEvent("Service", "styleRooms", "Services", "Service")
+            addMapEvent("Bank", "styleRooms", "Services", "Bank")
+        addMapMenu("Shops", "Style Room")
+            addMapEvent("Shop", "styleRooms", "Shops", "Shop")
+            addMapEvent("General Store", "styleRooms", "Shops", "General Store")
+            addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
+            addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
+        addMapEvent("Water", "styleRooms", "Style Room", "Water")
     map.echo("Installed additional mapper context menus.")    
 end
 
@@ -1727,50 +1733,59 @@ end
 -- reserved defaults
 function setCustomRoomColors() 
     map.echo("Custom room colors initialized")
-        setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
-        setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
-        setCustomEnvColor(291, 132,66,0,255)     -- House 
-        setCustomEnvColor(292, 132,132,198,255)  -- Custom  
-        setCustomEnvColor(293, 0,255,255,255)    -- Temple 
-        setCustomEnvColor(294, 255,0,0,255)      -- Food
-        setCustomEnvColor(295, 64,64,64,255)     -- Street
+        setCustomEnvColor(289, 132,132,255,255)  -- Custom  
+        setCustomEnvColor(290, 132,66,0,255)     -- Houses 
+        setCustomEnvColor(291, 255,132,66,255)   -- Services
+        setCustomEnvColor(292, 64,64,64,255)     -- Streets
 end
 
 -- Table of colors assigned by room type. The numbers refer to color table in
 -- the "color" menu when you right-click on the map.
 styleEnv =
     {
-        ['General Store'] = 289,
-        Shop = 266,
-        Services = 290,
-        Bank = 290,
-        House = 291,
-        Custom = 292,
-        Temple = 293,
-        Street = 295,
-        ['Player House'] = 269,
-        ['Player Shop'] = 269,
-        Food = 294,
-        ['T-Shop'] = 264,
+        Craft = 267,
+        Custom = 289,
+        Drink = 265,
+        Eat = 265,
+        Garden = 258,
+        Guild = 263,
+        House = 290,
+            ['Club House'] = 290,
+            ['Player House'] = 290,
         Park = 258,
+        Service = 291,
+            Bank = 291,
+        Shop = 266,
+            ['General Store'] = 262,
+            ['Player Shop'] = 269,
+            ['T-Shop'] = 271,
+        Street = 292,
+        Temple = 270,
+        Water = 268,
     }
   
 -- a table of characters assigned to rooms.
 styleChar =
     {
-        ['General Store'] = "",
-        Shop = "",
-        Services = "",
-        Bank = "$",
-        House = "",
+        Craft = "",
         Custom = "",
-        Temple = "",
-        Street = "",
-        ['Player House'] = "",
-        ['Player Shop'] = "",
-        Food = "",
-        ['T-Shop'] = "T",
+        Drink = "",
+        Eat = "",
+        Garden = "",
+        Guild = "",
+        House = "",
+            ['Club House'] = "C",
+            ['Player House'] = "P",
         Park = "",
+        Service = "",
+            Bank = "$",
+        Shop = "",
+            ['General Store'] = "",
+            ['Player Shop'] = "P",
+            ['T-Shop'] = "T",
+        Street = "",
+        Temple = "",
+        Water = "",
     }
 
 local function add_door(roomID, dir, status)
