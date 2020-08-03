@@ -733,9 +733,9 @@ end</script>
 		<Script isActive="yes" isFolder="no">
 			<name>discMapper</name>
 			<packageName></packageName>
-            <script>-- discMapper
+			<script>-- discMapper
             
-local version = "0.4.1-beta"
+local version = "0.5.0-beta"
 
     -- look into options for non-standard door usage for speedwalk
     -- come up with aliases to set translations and custom exits, add appropriate help info
@@ -1373,17 +1373,21 @@ local move_queue, lines = {}, {}
 local find_portal, vision_fail, room_detected, random_move, force_portal, find_prompt, downloading, walking, help_shown
 local mt = getmetatable(map) or {}
 
-function uninstallGMS(_, name)
-    if name ~= "discMapper" then return end
+function initialize(_, name)
+    if name ~= "discMapper" then 
+        return 
+    end
+    map.echo("Initializing discMapper v"..version..".")
     uninstallPackage("generic_mapper")
-    map.echo("Uninstalled generic_mapper package")
+    map.echo("Uninstalled generic_mapper package.")
+    setCustomRoomColors()
     enableGMCP()
-    send("look", true)
+    send("look", false)
 end
 
 function enableGMCP()
     sendGMCP("core.supports.set \[\"char.login\", \"char.info\", \"room.info\", \"room.map\", \"room.writtenmap\", \"Char.Vitals\",\"Window.Frame.map\"\]")
-    map.echo("GMCP Core Supports activated")
+    map.echo("Activated GMCP Core Supports.")
 end
 
 local function config()
@@ -1680,24 +1684,6 @@ local function set_room(roomID)
     raiseEvent("onMoveMap", map.currentRoom)
 end
 
-function mapMenu()
-  	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
-    addMapMenu("Style Room")
-        addMapEvent("Street", "styleRooms", "Style Room", "Street")
-        addMapEvent("Shop", "styleRooms", "Style Room", "Shop")
-        addMapEvent("General Store", "styleRooms", "Style Room", "General Store")
-        addMapEvent("Services", "styleRooms", "Style Room", "Services")
-        addMapEvent("Bank", "styleRooms", "Style Room", "Bank")
-        addMapEvent("House", "styleRooms", "Style Room", "House")
-        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
-        addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
-        addMapEvent("Player House", "styleRooms", "Style Room", "Player House")
-        addMapEvent("Player Shop", "styleRooms", "Style Room", "Player Shop")
-        addMapEvent("Food", "styleRooms", "Style Room", "Food")
-        addMapEvent("T-Shop", "styleRooms", "Style Room", "T-Shop")
-        addMapEvent("Park", "styleRooms", "Style Room", "Park")
-end
-
 -- Room styling is based on the 2014-09-19 version of Fenton's Discworld Mapper
 -- for faster styling of selected rooms. styleRooms is passed the name of the
 -- mapEvent that called it, as well as the room IDs of the selected rooms. If
@@ -1705,6 +1691,34 @@ end
 -- entry onto the styleEnv and styleChar tables. If the style name you've
 -- chosen contains spaces or symbols, you'll need to surround it with brackets
 -- and single quotes.
+
+function mapMenu()
+  	-- addMapEvent("Show Room Info", "showRoomID") -- place holder
+    addMapMenu("Style Room")
+        addMapEvent("Craft", "styleRooms", "Style Room", "Craft")
+        addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
+        addMapEvent("Drink", "styleRooms", "Style Room", "Drink")
+        addMapEvent("Eat", "styleRooms", "Style Room", "Eat")
+        addMapEvent("Garden", "styleRooms", "Style Room", "Garden")
+        addMapEvent("Guild", "styleRooms", "Style Room", "Guild")
+        addMapMenu("Houses", "Style Room")
+            addMapEvent("House", "styleRooms", "Houses", "House")
+            addMapEvent("Club House", "styleRooms", "Houses", "Club House")
+            addMapEvent("Player House", "styleRooms", "Houses", "Player House")
+        addMapEvent("Park", "styleRooms", "Style Room", "Park")
+        addMapMenu("Services", "Style Room")
+            addMapEvent("Service", "styleRooms", "Services", "Service")
+            addMapEvent("Bank", "styleRooms", "Services", "Bank")
+        addMapMenu("Shops", "Style Room")
+            addMapEvent("Shop", "styleRooms", "Shops", "Shop")
+            addMapEvent("General Store", "styleRooms", "Shops", "General Store")
+            addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
+            addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
+        addMapEvent("Street", "styleRooms", "Style Room", "Street")
+        addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
+        addMapEvent("Water", "styleRooms", "Style Room", "Water")
+    map.echo("Installed additional mapper context menus.")    
+end
 
 function styleRooms (...)
     for i, v in ipairs(arg) do            --loop through all of the arguments passed to the function
@@ -1719,50 +1733,59 @@ end
 -- reserved defaults
 function setCustomRoomColors() 
     map.echo("Custom room colors initialized")
-        setCustomEnvColor(289, 0,132,132,255)    -- ['General Store']
-        setCustomEnvColor(290, 255,123,33,255)   -- Services &amp; Bank
-        setCustomEnvColor(291, 132,66,0,255)     -- House 
-        setCustomEnvColor(292, 132,132,198,255)  -- Custom  
-        setCustomEnvColor(293, 0,255,255,255)    -- Temple 
-        setCustomEnvColor(294, 255,0,0,255)      -- Food
-        setCustomEnvColor(295, 64,64,64,255)     -- Street
+        setCustomEnvColor(289, 132,132,255,255)  -- Custom  
+        setCustomEnvColor(290, 132,66,0,255)     -- Houses 
+        setCustomEnvColor(291, 255,132,66,255)   -- Services
+        setCustomEnvColor(292, 64,64,64,255)     -- Streets
 end
 
 -- Table of colors assigned by room type. The numbers refer to color table in
 -- the "color" menu when you right-click on the map.
 styleEnv =
     {
-        ['General Store'] = 289,
-        Shop = 266,
-        Services = 290,
-        Bank = 290,
-        House = 291,
-        Custom = 292,
-        Temple = 293,
-        Street = 295,
-        ['Player House'] = 269,
-        ['Player Shop'] = 269,
-        Food = 294,
-        ['T-Shop'] = 264,
+        Craft = 267,
+        Custom = 289,
+        Drink = 265,
+        Eat = 265,
+        Garden = 258,
+        Guild = 263,
+        House = 290,
+            ['Club House'] = 290,
+            ['Player House'] = 290,
         Park = 258,
+        Service = 291,
+            Bank = 291,
+        Shop = 266,
+            ['General Store'] = 262,
+            ['Player Shop'] = 269,
+            ['T-Shop'] = 271,
+        Street = 292,
+        Temple = 270,
+        Water = 268,
     }
   
 -- a table of characters assigned to rooms.
 styleChar =
     {
-        ['General Store'] = "",
-        Shop = "",
-        Services = "",
-        Bank = "$",
-        House = "",
+        Craft = "",
         Custom = "",
-        Temple = "",
-        Street = "",
-        ['Player House'] = "",
-        ['Player Shop'] = "",
-        Food = "",
-        ['T-Shop'] = "T",
+        Drink = "",
+        Eat = "",
+        Garden = "",
+        Guild = "",
+        House = "",
+            ['Club House'] = "C",
+            ['Player House'] = "P",
         Park = "",
+        Service = "",
+            Bank = "$",
+        Shop = "",
+            ['General Store'] = "",
+            ['Player Shop'] = "P",
+            ['T-Shop'] = "T",
+        Street = "",
+        Temple = "",
+        Water = "",
     }
 
 local function add_door(roomID, dir, status)
@@ -1953,6 +1976,7 @@ local function create_room(name, exits, dir, coords)
         addRoom(newID)
         setRoomArea(newID, map.currentArea)
         setRoomName(newID, name)
+        setRoomEnv(newID, styleEnv["Street"]) -- most new rooms are streets, so style them as such
         for k,v in ipairs(exits) do
             if stubmap[v] then
                 if stubmap[v] &lt;= 12 then
@@ -3207,9 +3231,8 @@ function map.eventHandler(event, ...)
     elseif event == "mapOpenEvent" then
         mapMenu()
         if not help_shown and not map.save.prompt_pattern[map.character or ""] then
-            setCustomRoomColors()
             map.find_prompt()
-            send("look", true)
+            send("look", false)
             tempTimer(3, function() map.show_help("quick_start"); help_shown = true end)
         end
     elseif event == "mapStop" then
@@ -3222,7 +3245,7 @@ end
 registerAnonymousEventHandler("sysDownloadDone", "map.eventHandler")
 registerAnonymousEventHandler("sysLoadEvent", "map.eventHandler")
 registerAnonymousEventHandler("sysConnectionEvent", "map.eventHandler")
-registerAnonymousEventHandler("sysInstallPackage", "uninstallGMS")
+registerAnonymousEventHandler("sysInstallPackage", "initialize")
 registerAnonymousEventHandler("sysInstall", "map.eventHandler")
 registerAnonymousEventHandler("sysDataSendRequest", "map.eventHandler")
 registerAnonymousEventHandler("onMoveFail", "map.eventHandler")
