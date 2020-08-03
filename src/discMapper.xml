@@ -1761,19 +1761,25 @@ styleEnv =
 -- a table of characters assigned to rooms.
 styleChar =
     {
-        ['General Store'] = "",
-        Shop = "",
-        Services = "",
-        Bank = "$",
-        House = "",
+        Craft = "",
         Custom = "",
-        Temple = "",
-        Street = "",
-        ['Player House'] = "",
-        ['Player Shop'] = "",
-        Food = "",
-        ['T-Shop'] = "T",
+        Drink = "",
+        Eat = "",
+        Garden = "",
+        Guild = "",
+        House = "",
+            ['Club House'] = "C",
+            ['Player House'] = "P",
         Park = "",
+        Service = "",
+            Bank = "$",
+        Shop = "",
+            ['General Store'] = "",
+            ['Player Shop'] = "P",
+            ['T-Shop'] = "T",
+        Street = "",
+        Temple = "",
+        Water = "",
     }
 
 local function add_door(roomID, dir, status)
