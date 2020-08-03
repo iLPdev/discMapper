@@ -65,6 +65,7 @@ The repo started with a [README-first approach](https://tom.preston-werner.com/2
 - v0.2.1-beta - Help system and configuration functional
 - v0.3.0-beta - Automated updates implemented
 - v0.4.0-beta - Room Styling implemented
+- v0.5.0-beta - Clean install process and initial default colors
 
 ### Vision
 
@@ -102,7 +103,7 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 
 - **Project State**: discMapper is under active development. The application can be used, but may be unstable. We are in need of beta testing prior to moving forward with the v1.0.0 release.
 
-- **Current Release**: v0.4.1-beta patches a missing event handler for the room styling feature set (thanks @Vadi2!) and fixes redundant initialization bug when installed as a module.
+- **Current Release**: v0.5.0-beta introduces Kefke map matched colors, Street room defaults, cleaner install process, and various minor bugfixes.
 
 **[^Top](#table-of-contents)**
 
