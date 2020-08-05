@@ -79,7 +79,7 @@ As complement to a planned Mudlet UI for Discworld MUD, the aim of this project 
   - Character Tracking using GMCP Identifier data - No more misidentified player locations on map!
   - Room Name detection using GMCP Room Name data
 - Quick style rooms based on the type of room (e.g., shop, player house, food, etc.)
-  - Set Map Room Color based on Room Type ~~- Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme~~ (Pending v0.5.0-beta)
+  - Set Map Room Color based on Room Type - Defaults to [Kefka's Discworld MUD Maps](http://dw.daftjunk.com/) color scheme
   - Set Map Room Symbols based on Room Type - Choose and apply your preferred room symbols
 - Self-updating package - Set it and forget it!
 - Speedwalking and pathfinding - Efficiently get where you're going - and fast!
