@@ -116,7 +116,9 @@ The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could 
 
 Copy/paste the following command into Mudlet's input line to install discMapper: 
 
-```lua function d(a,b)if not b:find("oci",1,true)then return end installPackage(b)os.remove(b)cecho("<lime_green>discMapper package installed!\n")end registerAnonymousEventHandler("sysDownloadDone","d")downloadFile(getMudletHomeDir().."/oci.mpackage","https://github.com/iLPdev/discMapper/releases/download/v0.5.0-beta/discMapper_v0.5.0-beta.mpackage")```
+```lua
+lua function d(a,b)if not b:find("oci",1,true)then return end installPackage(b)os.remove(b)cecho("<lime_green>discMapper package installed!\n")end registerAnonymousEventHandler("sysDownloadDone","d")downloadFile(getMudletHomeDir().."/oci.mpackage","https://github.com/iLPdev/discMapper/releases/download/v0.5.0-beta/discMapper_v0.5.0-beta.mpackage")
+```
 
 ### Package Install Method
 
