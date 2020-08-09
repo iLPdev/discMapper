@@ -110,11 +110,11 @@ Version numbering approximates the [Semantic Versioning](http://semver.org) appr
 <!-- GETTING STARTED -->
 ## Install
 
-The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs. 
+The [Mudlet Makers](https://github.com/Mudlet/Mudlet/graphs/contributors) could not have made it easier to install preconfigured custom aliases, triggers, scripts, keybindings, and UIs.
 
 ### One-Click Install Method
 
-Copy/paste the following command into Mudlet's input line to install discMapper: 
+Copy/paste the following command into Mudlet's input line to install discMapper:
 
 ```lua
 lua function d(a,b)if not b:find("oci",1,true)then return end installPackage(b)os.remove(b)cecho("<lime_green>discMapper package installed!\n")end registerAnonymousEventHandler("sysDownloadDone","d")downloadFile(getMudletHomeDir().."/oci.mpackage","https://github.com/iLPdev/discMapper/releases/download/v0.5.0-beta/discMapper_v0.5.0-beta.mpackage")
