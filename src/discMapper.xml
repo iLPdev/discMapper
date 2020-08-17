@@ -1752,6 +1752,7 @@ function mapMenu()
             addMapEvent("Shoe", "styleRooms", "Shops", "Shoe")
             addMapEvent("Tool", "styleRooms", "Shops", "Tool")
             addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
+            addMapEvent("Weapon", "styleRooms", "Shops", "Weapon")
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
         addMapEvent("Water", "styleRooms", "Style Room", "Water")
@@ -1811,6 +1812,7 @@ styleEnv =
             Shoe = 266,
             Tool = 266,
             ['T-Shop'] = 271,
+            Weapon = 266,
         Street = 292,
         Temple = 270,
         Water = 268,
@@ -1849,6 +1851,7 @@ styleChar =
             Shoe = "",
             Tool = "",
             ['T-Shop'] = "T",
+            Weapon = "",
         Street = "",
         Temple = "",
         Water = "",
