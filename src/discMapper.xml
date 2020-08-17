@@ -1742,6 +1742,7 @@ function mapMenu()
             addMapEvent("Shop", "styleRooms", "Shops", "Shop")
             addMapEvent("Armor", "styleRooms", "Shops", "Armor")
             addMapEvent("Clothing", "styleRooms", "Shops", "Clothing")
+            addMapEvent("Flower", "styleRooms", "Shops", "Flower")
             addMapEvent("General Store", "styleRooms", "Shops", "General Store")
             addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
             addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
@@ -1794,6 +1795,7 @@ styleEnv =
         Shop = 266,
             Armor = 266,
             Clothing = 266,
+            Flower = 266,
             ['General Store'] = 262,
             ['Player Shop'] = 269,
             ['T-Shop'] = 271,
@@ -1825,6 +1827,7 @@ styleChar =
         Shop = "",
             Armor = "",
             Clothing = "",
+            Flower = "",
             ['General Store'] = "",
             ['Player Shop'] = "P",
             ['T-Shop'] = "T",
