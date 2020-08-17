@@ -1720,8 +1720,10 @@ function mapMenu()
     addMapMenu("Style Room")
         addMapEvent("Craft", "styleRooms", "Style Room", "Craft")
         addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
-        addMapEvent("Drink", "styleRooms", "Style Room", "Drink")
-        addMapEvent("Eat", "styleRooms", "Style Room", "Eat")
+        addMapMenu("Drinks", "Style Room")
+            addMapEvent("Drink", "styleRooms", "Drinks", "Drink")
+            addMapEvent("Alcohol", "styleRooms", "Drinks", "Alcohol")
+        addMapEvent("Food", "styleRooms", "Style Room", "Food")
         addMapEvent("Garden", "styleRooms", "Style Room", "Garden")
         addMapEvent("Guild", "styleRooms", "Style Room", "Guild")
         addMapMenu("Houses", "Style Room")
@@ -1732,11 +1734,25 @@ function mapMenu()
         addMapMenu("Services", "Style Room")
             addMapEvent("Service", "styleRooms", "Services", "Service")
             addMapEvent("Bank", "styleRooms", "Services", "Bank")
+            addMapEvent("Job", "styleRooms", "Services", "Job")
+            addMapEvent("Language", "styleRooms", "Services", "Language")
+            addMapEvent("Mail", "styleRooms", "Services", "Mail")
+            addMapEvent("Smithy", "styleRooms", "Services", "Smithy")
         addMapMenu("Shops", "Style Room")
             addMapEvent("Shop", "styleRooms", "Shops", "Shop")
+            addMapEvent("Armor", "styleRooms", "Shops", "Armor")
+            addMapEvent("Clothing", "styleRooms", "Shops", "Clothing")
+            addMapEvent("Flower", "styleRooms", "Shops", "Flower")
+            addMapEvent("Furniture", "styleRooms", "Shops", "Furniture")
             addMapEvent("General Store", "styleRooms", "Shops", "General Store")
+            addMapEvent("Hat", "styleRooms", "Shops", "Hat")
+            addMapEvent("Jewelry", "styleRooms", "Shops", "Jewelry")
+            addMapEvent("Pet", "styleRooms", "Shops", "Pet")
             addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
+            addMapEvent("Shoe", "styleRooms", "Shops", "Shoe")
+            addMapEvent("Tool", "styleRooms", "Shops", "Tool")
             addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
+            addMapEvent("Weapon", "styleRooms", "Shops", "Weapon")
         addMapEvent("Street", "styleRooms", "Style Room", "Street")
         addMapEvent("Temple", "styleRooms", "Style Room", "Temple")
         addMapEvent("Water", "styleRooms", "Style Room", "Water")
@@ -1769,7 +1785,8 @@ styleEnv =
         Craft = 267,
         Custom = 289,
         Drink = 265,
-        Eat = 265,
+            Alcohol = 265,
+        Food = 265,
         Garden = 258,
         Guild = 263,
         House = 290,
@@ -1778,10 +1795,24 @@ styleEnv =
         Park = 258,
         Service = 291,
             Bank = 291,
+            Job = 266,
+            Language = 291,
+            Mail = 291,
+            Smithy = 291,
         Shop = 266,
+            Armor = 266,
+            Clothing = 266,
+            Flower = 266,
+            Furniture = 266,
             ['General Store'] = 262,
+            Hat = 266,
+            Jewlery = 266,
             ['Player Shop'] = 269,
+            Pet = 266,
+            Shoe = 266,
+            Tool = 266,
             ['T-Shop'] = 271,
+            Weapon = 266,
         Street = 292,
         Temple = 270,
         Water = 268,
@@ -1793,7 +1824,8 @@ styleChar =
         Craft = "",
         Custom = "",
         Drink = "",
-        Eat = "",
+            Alcohol = "",
+        Food = "",
         Garden = "",
         Guild = "",
         House = "",
@@ -1802,10 +1834,24 @@ styleChar =
         Park = "",
         Service = "",
             Bank = "$",
+            Job = "!",
+            Language = "",
+            Mail = "",
+            Smithy = "",
         Shop = "",
+            Armor = "",
+            Clothing = "",
+            Flower = "",
+            Furniture = "",
             ['General Store'] = "",
+            Hat = "",
+            Jewelry = "",
+            Pet = "",
             ['Player Shop'] = "P",
+            Shoe = "",
+            Tool = "",
             ['T-Shop'] = "T",
+            Weapon = "",
         Street = "",
         Temple = "",
         Water = "",
