@@ -43,7 +43,7 @@ Project Link: [https://github.com/iLPdev/discMapper]
 ## Background
 
 <p align="center">
-    <a href=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" title="Downtown Ankh-Morpork"><img src=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" width="75%" /></a>
+    <a href=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" alt="" title="Downtown Ankh-Morpork"><img src=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" height="300" align="left"/></a> <a href=".github/images/screenshot_0.6.0-beta_styleRooms.jpg" alt="" title="Downtown Ankh-Morpork"><img src=".github/images/screenshot_0.6.0-beta_styleRooms.jpg" height="300" align="float"/></a>
 </p>
 
 ### History
