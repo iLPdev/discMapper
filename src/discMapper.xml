@@ -1720,8 +1720,9 @@ function mapMenu()
     addMapMenu("Style Room")
         addMapEvent("Craft", "styleRooms", "Style Room", "Craft")
         addMapEvent("Custom", "styleRooms", "Style Room", "Custom")
-        addMapEvent("Drink", "styleRooms", "Style Room", "Drink")
         addMapMenu("Drinks", "Style Room")
+            addMapEvent("Drink", "styleRooms", "Drinks", "Drink")
+            addMapEvent("Alcohol", "styleRooms", "Drinks", "Alcohol")
         addMapEvent("Food", "styleRooms", "Style Room", "Food")
         addMapEvent("Garden", "styleRooms", "Style Room", "Garden")
         addMapEvent("Guild", "styleRooms", "Style Room", "Guild")
@@ -1770,6 +1771,7 @@ styleEnv =
         Craft = 267,
         Custom = 289,
         Drink = 265,
+            Alcohol = 265,
         Food = 265,
         Garden = 258,
         Guild = 263,
@@ -1794,6 +1796,7 @@ styleChar =
         Craft = "",
         Custom = "",
         Drink = "",
+            Alcohol = "",
         Food = "",
         Garden = "",
         Guild = "",
