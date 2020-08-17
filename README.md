@@ -42,7 +42,9 @@ Project Link: [https://github.com/iLPdev/discMapper]
 <!-- ABOUT THE PROJECT -->
 ## Background
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+<p align="center">
+    <a href=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" alt="" title="Downtown Ankh-Morpork"><img src=".github/images/screenshot_0.6.0-beta_downtown_AM.jpg" height="300" align="left"/></a> <a href=".github/images/screenshot_0.6.0-beta_styleRooms.jpg" alt="" title="Downtown Ankh-Morpork"><img src=".github/images/screenshot_0.6.0-beta_styleRooms.jpg" height="300" align="float"/></a>
+</p>
 
 ### History
 
@@ -287,6 +289,5 @@ information, seelicense in [`COPYING`](https://github.com/iLPdev/discMapper/blob
 [standard-readme-url]: https://github.com/RichardLitt/standard-readme
 [andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-ventis-
 [status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
-[product-screenshot]: images/screenshot.png
 [mudlet-url]: https://www.mudlet.org
 [ac-url]: https://github.com/all-contributors/all-contributors
