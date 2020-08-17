@@ -1734,6 +1734,7 @@ function mapMenu()
         addMapMenu("Services", "Style Room")
             addMapEvent("Service", "styleRooms", "Services", "Service")
             addMapEvent("Bank", "styleRooms", "Services", "Bank")
+            addMapEvent("Job", "styleRooms", "Services", "Job")
         addMapMenu("Shops", "Style Room")
             addMapEvent("Shop", "styleRooms", "Shops", "Shop")
             addMapEvent("General Store", "styleRooms", "Shops", "General Store")
@@ -1781,6 +1782,7 @@ styleEnv =
         Park = 258,
         Service = 291,
             Bank = 291,
+            Job = 266,
         Shop = 266,
             ['General Store'] = 262,
             ['Player Shop'] = 269,
@@ -1806,6 +1808,7 @@ styleChar =
         Park = "",
         Service = "",
             Bank = "$",
+            Job = "!",
         Shop = "",
             ['General Store'] = "",
             ['Player Shop'] = "P",
