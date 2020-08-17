@@ -1737,6 +1737,7 @@ function mapMenu()
             addMapEvent("Job", "styleRooms", "Services", "Job")
             addMapEvent("Language", "styleRooms", "Services", "Language")
             addMapEvent("Mail", "styleRooms", "Services", "Mail")
+            addMapEvent("Smithy", "styleRooms", "Services", "Smithy")
         addMapMenu("Shops", "Style Room")
             addMapEvent("Shop", "styleRooms", "Shops", "Shop")
             addMapEvent("General Store", "styleRooms", "Shops", "General Store")
@@ -1787,6 +1788,7 @@ styleEnv =
             Job = 266,
             Language = 291,
             Mail = 291,
+            Smithy = 291,
         Shop = 266,
             ['General Store'] = 262,
             ['Player Shop'] = 269,
@@ -1815,6 +1817,7 @@ styleChar =
             Job = "!",
             Language = "",
             Mail = "",
+            Smithy = "",
         Shop = "",
             ['General Store'] = "",
             ['Player Shop'] = "P",
