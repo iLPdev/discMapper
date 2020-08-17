@@ -1740,6 +1740,7 @@ function mapMenu()
             addMapEvent("Smithy", "styleRooms", "Services", "Smithy")
         addMapMenu("Shops", "Style Room")
             addMapEvent("Shop", "styleRooms", "Shops", "Shop")
+            addMapEvent("Armor", "styleRooms", "Shops", "Armor")
             addMapEvent("General Store", "styleRooms", "Shops", "General Store")
             addMapEvent("Player Shop", "styleRooms", "Shops", "Player Shop")
             addMapEvent("T-Shop", "styleRooms", "Shops", "T-Shop")
@@ -1790,6 +1791,7 @@ styleEnv =
             Mail = 291,
             Smithy = 291,
         Shop = 266,
+            Armor = 266,
             ['General Store'] = 262,
             ['Player Shop'] = 269,
             ['T-Shop'] = 271,
@@ -1819,6 +1821,7 @@ styleChar =
             Mail = "",
             Smithy = "",
         Shop = "",
+            Armor = "",
             ['General Store'] = "",
             ['Player Shop'] = "P",
             ['T-Shop'] = "T",
