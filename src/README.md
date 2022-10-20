@@ -1,6 +1,6 @@
 # discMapper Mudlet Module
 
-For developers, the XML [Mudlet Module](https://wiki.mudlet.org/w/Mudlet_Packages#What_is_a_Mudlet_module) file allows live git updates to your cloned repositories from within Mudlet's editor! You should also be anle to use the same cloned XML file across multiple Mudlet profiles simultaneously.
+For developers, the XML [Mudlet Module](https://wiki.mudlet.org/w/Mudlet_Packages#What_is_a_Mudlet_module) file allows live git updates to your cloned repositories from within Mudlet's editor! You should also be able to use the same cloned XML file across multiple Mudlet profiles simultaneously.
 
 ## Installation
 
