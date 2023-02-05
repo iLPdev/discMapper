@@ -23,7 +23,7 @@
 </p>
 
 <!-- LONG DESCRIPTION -->
-The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correcly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
+The discMapper project gives [Discworld MUD](http://discworld.starturtle.net/lpc) players improved access to the advanced mapping features of the [Mudlet](https://www.mudlet.org) MUD client. By leveraging the specific "out of band" packets sent by Discworld MUD's server, discMapper correctly identifies rooms, stops creation of duplicate rooms, and accurately tracks your character's location on the map as you move about the disc. Additional convenience features include autosetting colors and symbols on the map based on the room type.
 
 Project Link: [https://github.com/iLPdev/discMapper]
 
@@ -50,9 +50,9 @@ Project Link: [https://github.com/iLPdev/discMapper]
 
 The discMapper project was unofficially started sometime during the early weeks of April 2020. The Coronavirus Pandemic and Stay-at-Home orders prompted [@Stack](https://github.com/iLPdev) to make an unexpected return to MUDs after more than two decades. A robust and stable LPmud derivative under continuous development since 1991, [Discworld MUD](http://discworld.starturtle.net/lpc) seemed like a promising quarantine-life distraction from our collective global trauma. Various MUD clients were tested. Among them, [Mudlet](https://www.mudlet.org) appeared the most desirable. Unfortunately, of the regular 80-100 online Discworld players, almost none appeared to be using Mudlet due to a severe lack of game-specific scripts relative to an old, alternative MUD client. A college try was made with the amazing scripts available for the alternative client, but it was too late... Mudlet's clean, modern appeal and advanced features had already won out -- if only there were Mudlet scripts for Discworld MUD.
 
-Inspired and seeking assistance in learning, the [Mudlet Discord chat server](https://discord.gg/S9zVg7H) was found to be a friendly, engaging community of creative and dedicatedly caring coders. After several weeks of struggling to achieve reliable mapping with text-based detection routines, a basic GMCP room detection approach was developed as possible solution. Considerable progress was made in learning and incoporating game-specific GMCP support into an existing [generic mapping script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml).
+Inspired and seeking assistance in learning, the [Mudlet Discord chat server](https://discord.gg/S9zVg7H) was found to be a friendly, engaging community of creative and dedicatedly caring coders. After several weeks of struggling to achieve reliable mapping with text-based detection routines, a basic GMCP room detection approach was developed as possible solution. Considerable progress was made in learning and incorporating game-specific GMCP support into an existing [generic mapping script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml).
 
-On May 24, 2020, [@vadi2](https://github.com/vadi2) was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custon mapping script for Discworld MUD, we spent a brief period exploring extension of the [IRE mapping script](https://github.com/IRE-Mudlet-Mapping/ire-mapping-script), but affirmed the lack of GMCP exit data supplied by [FluffOS](<(https://github.com/fluffos/fluffos)>) was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues.
+On May 24, 2020, [@vadi2](https://github.com/vadi2) was gracious enough to volunteer three hours helping @Stack live on a public audio chat. After initial assessment of the unique challenges of developing a custom mapping script for Discworld MUD, we spent a brief period exploring extension of the [IRE mapping script](https://github.com/IRE-Mudlet-Mapping/ire-mapping-script), but affirmed the lack of GMCP exit data supplied by [FluffOS](<(https://github.com/fluffos/fluffos)>) was too great an obstacle. A return was made to the hybrid approach of adding GMCP room detection/indexing to the text-based exit detection of the generic mapping script included with Mudlet. At the end of three hours, we had achieved basic functionality with only a couple minor issues.
 
 Unfortunately, it was soon realized that cleanly installing this initial version of the discMapper to a new Mudlet profile with no prior mapping settings caused the script to break entirely. Many confused hours were spent chasing quasi-solutions and residue problems until it became painfully clear that a more rigorously tracked and structured approach would be required: Enter this project's GitHub repository.
 
@@ -71,7 +71,7 @@ The repo started with a [README-first approach](https://tom.preston-werner.com/2
 
 ### Vision
 
-As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegeant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. Ultimately, my hope is that discMapper might become a part of a larger Mudlet package for Discworld MUD, including guild-specific UI feature setss.
+As complement to a planned Mudlet UI for Discworld MUD, the aim of this project is to provide existing and potential players with a newbie-friendly (accessible) and reliable means to map and navigate the Discworld MUD in an elegant, modern MUD client. In line with that aim, the goal of this project is to release a Mudlet package with all the requisite aliases, triggers, and scripts. Ultimately, my hope is that discMapper might become a part of a larger Mudlet package for Discworld MUD, including guild-specific UI feature sets.
 
 ### Features
 
@@ -124,7 +124,7 @@ lua function d(a,b)if not b:find("oci",1,true)then return end installPackage(b)o
 
 ### Package Install Method
 
-Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and droppping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
+Just like any other package as of Mudlet v4.8+, you may install discMapper by simply dragging and dropping the package file into Mudlet. discMapper will then be merged into your active Mudlet profile, and you may delete the original file.
 
 To install discMapper, just follow these steps:
 
@@ -192,16 +192,16 @@ See also the [open issues](https://github.com/iLPdev/discMapper/issues) for a li
 <!-- State anyone or anything that significantly helped with the development of your project.
      State public contact hyper-links if applicable. -->
 
-- [@vadi2](https://github.com/vadi2) for inital logic development, seemingly unending patience with me, tireless support, general commraderie, and what seems to be steadfastly optimistic and effective leadership
-- [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names, being genuinely happy to help others, general commraderie when I've been down, a familiar scarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for complexities in life
+- [@vadi2](https://github.com/vadi2) for initial logic development, seemingly unending patience with me, tireless support, general camaraderie, and what seems to be steadfastly optimistic and effective leadership
+- [@demonnic](https://github.com/demonnic) for initial perl regex trigger for `map.prompt.room` solution to room names, being genuinely happy to help others, general camaraderie when I've been down, a familiar sarcasm to spare me embarassment from all my "stupid" questions, fine taste in music, and an appreciation for complexities in life
 - [@SlySven](https://github.com/SlySven) for his humor and living next door to one of my personal heroes from Wiltshire! ;-P
-- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support and commraderie
-- [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwaivering encouragement and for promoting an engaging and creative community
+- [@Eraene](https://github.com/Eraene) for the Mudlet [Dark Theme package](https://forums.mudlet.org/viewtopic.php?p=45078&sid=d915196a57ea13828b99f6ba587cd937#p45078) and hours of general mapping/code support and camaraderie
+- [@Delra](https://github.com/Delra) and [@Kebap](https://github.com/Kebap) for unwavering encouragement and for promoting an engaging and creative community
 - [Generic Map Script](https://github.com/Mudlet/Mudlet/blob/development/src/mudlet-lua/lua/generic-mapper/generic_mapper.xml) (aka _generic_mapper_) by [@JorMox](https://github.com/JorMox) was forked from the 10/20/2019 v2.0.16 as included in Mudlet 4.8.2
 - [Simple Discworld Mapping Script for Mudlet V3](https://forums.mudlet.org/viewtopic.php?p=17917#p17917) by Carudan - The Autoset Map Room Color and Character (Symbol) script routines were ported directly
 - `README.md`:
   - [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for initial inspiration
-  - [Standard Readme](https://github.com/RichardLitt/standard-readme) specifcation
+  - [Standard Readme](https://github.com/RichardLitt/standard-readme) specification
   - [Shields.io](https://shields.io/) for serving badges
 
 **[^Top](#table-of-contents)**
@@ -213,7 +213,7 @@ Contributions are what make the open source community such an amazing space to b
 
 See the [open issues](https://github.com/iLPdev/discMapper/issues) for a list of ideas, questions, proposed features, and known issues.
 
-There is not an explicit workflow requirement for this project, yet. I'm currently exprimenting with the [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) approach and [Conventional Commits](https://www.conventionalcommits.org/), but you don't need to.
+There is not an explicit workflow requirement for this project, yet. I'm currently experimenting with the [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) approach and [Conventional Commits](https://www.conventionalcommits.org/), but you don't need to.
 
 Basically, to contribute to this project, you're invited to:
 
@@ -269,7 +269,7 @@ Thanks go to these amazing folks ([emoji key](https://allcontributors.org/docs/e
 ## License
 
 Copyleft (2020) _iLP development_. Distributed under GPL v3.0-and-later. For more
-information, seelicense in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
+information, see license in [`COPYING`](https://github.com/iLPdev/discMapper/blob/master/COPYING).
 
 **[^Top](#table-of-contents)**
 
